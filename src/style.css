@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600;700&display=swap');
+
+@tailwind base;
+
+/* width */
+::-webkit-scrollbar {
+ width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+ background: #ddd;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+ background: #bbb;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+ background: #999;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+ body {
+  font-family: 'Poppins', 'Helvetica', sans-serif;
+  @apply text-sm leading-normal bg-gray-100 selection:bg-yellow-200;
+ }
+
+ #app {
+  display: grid;
+  grid-template-areas:
+   'sidebar content aside'
+   'sidebar content aside';
+  grid-template-columns: 0.7fr 2.5fr 0.12fr;
+  grid-template-rows: 1fr;
+  @apply relative h-screen max-h-screen overflow-hidden md:overflow-auto;
+ }
+
+ aside {
+  grid-area: sidebar;
+ }
+ main {
+  grid-area: content;
+ }
+ nav {
+  grid-area: aside;
+ }
+
+ h1 {
+  @apply text-4xl md:text-5xl mb-5;
+ }
+
+ h2 {
+  @apply text-lg md:text-xl mb-3;
+ }
+
+ a {
+  @apply hover:text-yellow-500 transition-all;
+ }
+
+ h3 {
+  @apply text-base md:text-lg mb-3;
+ }
+
+ h4 {
+  @apply text-base font-semibold;
+ }
+
+ p {
+  @apply my-2 text-justify;
+ }
+
+ button,
+ .button {
+  @apply bg-yellow-400 text-black font-semibold py-3 px-5 shadow-lg hover:bg-black hover:text-white transition-colors cursor-pointer;
+ }
+
+ footer {
+  @apply flex items-center justify-between bg-gray-100 p-5 font-normal text-gray-500;
+ }
+
+ strong,
+ b {
+  @apply font-semibold;
+ }
+}
+
+section {
+ @apply flex flex-col mx-8 my-7 gap-x-10 gap-y-2 md:px-2;
+}
+
+.icon {
+ @apply cursor-pointer;
+}
+
+.row {
+ @apply flex md:flex-row md:justify-center flex-col gap-x-8;
+}
+
+.button-container {
+ @apply flex justify-between gap-2 mt-8 mb-4 md:my-8 w-full md:w-auto;
+}
+
+.icon-container {
+ @apply flex relative items-center gap-x-5 bg-gray-50 pl-4 pr-8 py-4 cursor-pointer shadow-md rounded hover:translate-y-1 transition-transform flex-col md:flex-row text-center md:text-left;
+}
+
+.secondary {
+ @apply bg-white text-black hover:bg-black hover:text-white;
+}
+
+/** Navigation links **/
+ul.navigation li a.router-link-active span {
+ @apply opacity-100 decoration-yellow-500;
+}
+
+ul.navigation li a.router-link-active span svg {
+ @apply fill-yellow-500;
+}
+
+ul.navigation li a.router-link-active {
+ @apply underline underline-offset-8 decoration-yellow-500;
+}
+
+ul.navigation li:hover a span {
+ @apply opacity-70;
+}
+
+ul.navigation li a span {
+ @apply opacity-0 transition-opacity;
+}
+
+.timeline-current {
+ @apply border-yellow-500;
+}
+
+.text-h1 {
+ @apply mt-10 text-center font-semibold underline underline-offset-8 decoration-yellow-500;
+}
+
+.text-h2 {
+ @apply text-xl font-semibold underline-offset-8 underline decoration-yellow-500;
+}
+
+.text-h3 {
+ @apply font-semibold underline-offset-8 underline decoration-yellow-500;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+ #app {
+  display: grid;
+  grid-template-areas: 'sidebar'
+  'content';
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+ }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

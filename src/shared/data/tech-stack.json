@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "vi-file-type-typescript-official",
+    "title": "Typescript"
+  },
+  {
+    "icon": "vi-file-type-node",
+    "title": "Node JS"
+  },
+  {
+    "icon": "vi-file-type-tailwind",
+    "title": "Tailwind"
+  },
+  {
+    "icon": "vi-file-type-vue",
+    "title": "Vue JS"
+  },
+  {
+    "icon": "vi-file-type-reactjs",
+    "title": "React JS"
+  }
+]

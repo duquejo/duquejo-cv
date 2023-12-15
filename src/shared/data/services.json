@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "hi-database",
+    "title": "Desarrollo Backend",
+    "content": "Implementación de lógica del lado del servidor, bases de datos, programación de APIs, integraciones con terceros, definiciones de arquitectura y despliegue contínuo basado en buenas prácticas de desarrollo."
+  },
+  {
+    "icon": "md-laptopmac",
+    "title": "Desarrollo Frontend",
+    "content": "Programación de lógica del lado del cliente, basado en prácticas de estructuración semántica, adaptabilidad, accesibilidad y mantenibilidad."
+  },
+  {
+    "icon": "bi-filetype-html",
+    "title": "Programación de sitios web",
+    "content": "Creación y mantenimiento de Sitios Web a la medida, sitios informativos, E-Commerces, Funnels, Cursos y desarrollo de complementos personalizados para WordPress."
+  },
+  {
+    "icon": "hi-academic-cap",
+    "title": "Mentoría & Asesoría",
+    "content": "Mentorías y asesorías en maquetación, optimización, seguridad y buenas prácticas de desarrollo desde sus diferentes frentes en general."
+  }
+]
