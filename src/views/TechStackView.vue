@@ -5,7 +5,7 @@
     </section>
     <section>
       <!-- General Services -->
-      <h2 class="text-h2">Servicios generales</h2>
+      <h2 class="text-h2 hidden md:block">Servicios generales</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
         <IconCardComponent
           v-for="({ content, title, icon }) in SERVICES"
@@ -19,7 +19,7 @@
       <div class="basis-full">
 
         <!-- Experience -->
-        <h3 class="text-h3 mb-6 mt-10">Experiencia</h3>
+        <h3 class="text-h3 mb-6 mt-5">Experiencia</h3>
         <TimelineComponent
           v-for="({ role, type, additional_info, date_range, enterprise, isRecent, project, resume }, index) in EXPERIENCE"
           :role="role"
@@ -50,6 +50,19 @@
 
       </div>
       <div class="basis-1/2">
+
+        <!-- Idiomas -->
+        <h3 class="text-h3 mb-6 mt-5">Idiomas</h3>
+        <div class="grid grid-cols-2 gap-x-8 gap-y-6">
+          <IconCardComponent
+            v-for="({ content, title, icon }) in LANGUAGE"
+            :content="content"
+            :title="title"
+            :icon="icon"
+            :order="Order.Col"
+          />
+        </div>
+
         <!-- Languages -->
         <h3 class="text-h3 mb-6 mt-10">Lenguajes</h3>
         <ProgressBarComponent v-for="(language, i) in orderedLanguages" :key="`${language.tag}-${i}`" :color="language.color"
@@ -62,13 +75,14 @@
 
         <!-- Knowledges -->
         <h3 class="text-h3 mb-6 mt-10">Herramientas & Capacidades</h3>
-        <div class="flex flex-wrap gap-2 md:gap-3 justify-evenly md:justify-normal">
+        <div class="flex flex-wrap gap-2 lg:gap-3 justify-evenly lg:justify-normal">
           <PillComponent v-for="(knowledge, i) in KNOWLEDGES" :key="`${knowledge}-${i}`" :text="knowledge" />
         </div>
 
         <!-- Certifications -->
         <h3 class="text-h3 mb-6 mt-10">Certificaciones</h3>
-        <div class="flex flex-col gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-1 gap-4">
+          <CCardComponent />
           <CCardComponent />
         </div>
       </div>
@@ -79,14 +93,17 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import LANGUAGES from '../shared/data/languages.json';
+import LANGUAGES from '../shared/data/main-languages.json';
+import LANGUAGE from '../shared/data/language.json';
 import FRAMELIBS from '../shared/data/framelibs.json';
 import EXPERIENCE from '../shared/data/experience.json';
 import KNOWLEDGES from '../shared/data/knowledges.json';
 import EDUCATION from '../shared/data/education.json';
 import SERVICES from '../shared/data/services.json';
 
-import { Bars, Type } from '../interfaces';
+import type { Bars } from '../interfaces';
+import { Order } from '../interfaces/icon-card';
+import { Type } from '../interfaces/experience';
 import { orderObjectListByKey } from '../shared/helpers/orderByValue';
 
 import TimelineComponent from '../components/timeline/TimelineComponent.vue';

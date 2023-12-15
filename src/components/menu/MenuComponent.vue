@@ -1,5 +1,5 @@
 <template>
-  <nav class="md:flex md:flex-col md:items-center md:justify-end hidden md:mb-4 relative">
+  <nav class="lg:flex lg:flex-col lg:items-center lg:justify-end hidden lg:mb-4 relative">
     <div :class="menuClasses">
       <div class="bg-white rounded p-4 my-8 mx-4 shadow cursor-pointer">
         <h3 class="text-h3 pb-2">Recent posts</h3>

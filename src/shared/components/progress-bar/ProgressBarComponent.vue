@@ -2,16 +2,36 @@
 
 <template>
   <div class="flex justify-between mb-1">
-    <strong>{{ props.tag }}</strong>
-    <strong>{{ props.value }}%</strong>
+    <strong class="text-xs">{{ props.tag }}</strong>
+    <strong class="text-xs">{{ progress }}%</strong>
   </div>
   <div class="w-full bg-gray-100 rounded-full mb-4">
-    <div class="h-1.5 rounded-full" :style="{ 'width': `${props.value}%`, backgroundColor: props.color }"></div>
+    <div class="h-1.5 rounded-full" :style="{ 'width': `${progress}%`, backgroundColor: props.color }"></div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
+
 import { Bars } from '../../../interfaces/bars';
 interface Props extends Bars {};
 const props = defineProps<Props>();
+
+const progress = ref<number>(0);
+
+
+onMounted(() => {
+  let progressInterval: number;
+  let intervalSpeed = 20;
+  let incrementSpeed = 1;
+
+  progressInterval = setInterval(() => {
+    progress.value += incrementSpeed;
+    if( progress.value >= props.value ) {
+      clearInterval(progressInterval);
+    }
+  }, intervalSpeed);
+
+});
+
 </script>
