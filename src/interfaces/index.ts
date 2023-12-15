@@ -1,5 +1,6 @@
 import type { Bars } from './bars';
-import type { Experience, Type } from './experience';
+import type { Experience } from './experience';
+import type { IconCard } from './icon-card';
 
 
-export type { Bars, Experience, Type };
+export { Bars, Experience, IconCard };

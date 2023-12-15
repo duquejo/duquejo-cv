@@ -2,11 +2,11 @@
   <ol class="pt-1 relative border-s border-gray-200">
     <li class="cursor-auto mb-8 ms-4">
       <div :class="currentDetail" />
-      <div class="flex items-center justify-between md:justify-normal">
+      <div class="flex items-center justify-between lg:justify-normal">
         <time :class="dateClass" v-text="date_range" />
-        <span v-if="enterprise" class="text-black text-xs font-normal ml-2 text-right md:text-left" v-text="enterprise" />
+        <span v-if="enterprise" class="text-black text-xs font-normal ml-2 text-right lg:text-left" v-text="enterprise" />
       </div>
-      <span v-if="project" class="block text-xs mt-3 font-semibold mb-3 md:mb-0">{{ project }}</span>
+      <span v-if="project" class="block text-xs mt-3 font-semibold mb-3 lg:mb-0">{{ project }}</span>
       <span v-if="role" class="block text-base font-semibold">{{ role }}</span>
 
       <!-- Content -->

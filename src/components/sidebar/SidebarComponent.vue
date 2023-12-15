@@ -1,9 +1,9 @@
 <template>
   <aside id="sidebar" :class="classes">
     <UpperHeaderComponent :isOpen="isOpen" @click="emit('toggle')"/>
-    <div class="flex flex-col justify-center items-center w-full md:p-0 px-8 py-10 text-center">
+    <div class="flex flex-col justify-center items-center w-full lg:p-0 px-8 py-10 text-center">
       <picture>
-        <img class="rounded-full w-40 h-40 sm:w-32 sm:h-32 object-cover grayscale" src="../../assets/avatar-small.jpg" alt="José Duque" />
+        <img class="rounded-full w-32 h-32 sm:w-40 sm:h-40 object-cover grayscale hover:grayscale-0 transition-all duration-200" src="../../assets/avatar-small.jpg" alt="José Duque" />
       </picture>
       <span class="text-2xl font-semibold mt-5 sm:text-xl">José Duque</span>
       <span class="text-gray-500">Desarrollador<br/>Fullstack</span>
@@ -20,7 +20,7 @@
         </i> -->
       </div>
     </div>
-    <ul class="navigation text-right my-5 space-y-2 w-full md:p-0 px-8 py-10">
+    <ul class="navigation text-right my-5 space-y-2 w-full lg:p-0 px-8 py-10">
       <li>
         <router-link :to="{ name: ROUTES.RESUME }" @click="emit('toggle')">
           Currículo<span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9" /></span>
@@ -58,7 +58,7 @@ const props = defineProps<Props>();
 const emit = defineEmits<Emit>();
 
 const classes = computed(() => ({
-  'transition-all duration-500 absolute flex flex-col items-center justify-between md:px-8 md:py-10 md:my-2 md:mx-2 text-base rounded-lg bg-white md:h-auto z-10 w-full md:w-auto md:relative md:opacity-100 md:left-0 h-screen': true,
+  'transition-all duration-500 absolute flex flex-col items-center justify-between lg:px-8 lg:py-10 lg:my-2 lg:mx-2 text-base rounded-lg bg-white lg:h-auto z-10 w-full lg:w-auto lg:relative lg:opacity-100 lg:left-0 h-screen': true,
   'opacity-0 left-full': props.isOpen,
   'opacity-100 left-0': ! props.isOpen,
 }));

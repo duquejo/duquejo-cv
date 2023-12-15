@@ -20,6 +20,8 @@ import {
   ViFileTypeReactjs,
   ViFileTypeNode,
   ViFileTypeVue,
+  RiEnglishInput,
+  BiGlobe2
 } from 'oh-vue-icons/icons';
 import './style.css';
 
@@ -41,6 +43,8 @@ addIcons(
   ViFileTypeReactjs,
   ViFileTypeNode,
   ViFileTypeVue,
+  RiEnglishInput,
+  BiGlobe2
 );
 
 createApp(App)

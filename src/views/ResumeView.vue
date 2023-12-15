@@ -1,26 +1,26 @@
 <template>
   <article>
     <section class="row items-center mx-0 mt-0">
-      <div class="w-full order-2 md:basis-1/2 md:order-1 px-8 pt-8 md:m-auto">
+      <div class="w-full order-2 lg:basis-1/2 lg:order-1 px-8 pt-8 lg:m-auto">
         <span class="text-gray-400 text-lg">Desarrollador Fullstack</span>
         <h1 class="mt-2">Hola, Soy <strong>José Duque.</strong></h1>
         <p>Ingeniero informático de Colombia con más de 6 años de experiencia en desarrollo de aplicaciones para la web utilizando los lenguajes más influyentes del mercado laboral, empleando tanto <strong>arquitecturas monolíticas</strong>, como <strong>arquitecturas orientadas a microservicios</strong>.</p>
         <div class="button-container">
             <v-icon v-for="stack in TECH_STACK" class="hover:animate-wiggle" :name="stack.icon" scale="2.5" :title="stack.title" />
         </div>
-        <!-- <div class="button-container md:justify-normal z-10">
-          <button class="md:basis-auto inline-flex items-center justify-center gap-2 w-auto">
+        <!-- <div class="button-container lg:justify-normal z-10">
+          <button class="lg:basis-auto inline-flex items-center justify-center gap-2 w-auto">
             Download CV <v-icon name="bi-filetype-pdf"/>
           </button>
-          <button class="md:basis-auto inline-flex items-center justify-center gap-2 w-auto secondary">
+          <button class="lg:basis-auto inline-flex items-center justify-center gap-2 w-auto secondary">
             <router-link :to="{ name: ROUTES.CONTACT }">
               Contact <v-icon name="md-email-outlined" scale="0.8"/>
             </router-link>
           </button>
         </div> -->
       </div>
-      <picture class="w-full order-1 md:basis-1/2 md:order-2">
-        <img class="shadow grayscale" src="../assets/avatar.png" alt="José Duque" />
+      <picture class="w-full order-1 lg:basis-1/2 lg:order-2 overflow-hidden">
+        <img class="shadow grayscale hover:grayscale-0 transition-all duration-500 scale-110 hover:rotate-3" src="../assets/avatar.png" alt="José Duque" />
       </picture>
     </section>
     <section>
