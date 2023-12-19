@@ -1,5 +1,6 @@
 <template>
-  <nav class="lg:flex lg:flex-col lg:items-center lg:justify-end hidden lg:mb-4 relative">
+  <nav class="lg:flex lg:flex-col lg:items-center lg:justify-between hidden lg:my-4 relative">
+    <LangSelectComponent />
     <div :class="menuClasses">
       <div class="bg-white rounded p-4 my-8 mx-4 shadow cursor-pointer">
         <h3 class="text-h3 pb-2">Recent posts</h3>
@@ -17,6 +18,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import LangSelectComponent from '../../shared/components/language-select/LangSelectComponent.vue';
 
 interface Props {
   isOpen: boolean;
