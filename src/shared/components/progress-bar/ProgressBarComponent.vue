@@ -12,16 +12,14 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-
 import { Bars } from '../../../interfaces/bars';
+
 interface Props extends Bars {};
 const props = defineProps<Props>();
-
 const progress = ref<number>(0);
 
-
 onMounted(() => {
-  let progressInterval: number;
+  let progressInterval: ReturnType<typeof setInterval>;
   let intervalSpeed = 20;
   let incrementSpeed = 1;
 

@@ -1,4 +1,45 @@
 {
+  "general": {
+    "role": "Fullstack developer",
+    "menu": {
+      "resume": "Resume",
+      "services": "Services"
+    },
+    "resume": {
+      "greetings": "Hi, I'm",
+      "excerpt": "Computer engineer from Colombia with more than 6 years of experience in developing web applications using the most influential languages ​​on the labor market, using both <strong>monolithic architectures</strong> and <strong>microservices-oriented architectures</strong>.",
+      "description": {
+        "title": "What have I done?",
+        "content": "During my working life, I have had the opportunity to have a broad view of the client's specific needs to solve any technological challenge that arises; I have played roles as advisor and coordinator in development teams for public sector companies such as the <strong>Alcaldia de Itagüí</strong>, <strong>Alcaldía de Bogotá</strong>, <strong>Ministerio de Educación Nacional</strong > and <strong>EAFIT University</strong>. I have also participated in custom development projects and website development with <strong>Marketing agencies</strong> full-time and alternatively as a <strong>Freelancer</strong> part-time.<br/></ br />With <strong>software factories</strong> I have had the opportunity to work for <strong>Educational Startups</strong> with great regional reach, as well as for the <strong>Banking</strong> sector, < strong>Insurance</strong> and <strong>Health</strong>, which have allowed us to expand knowledge and comply with the rigidity of the policies of said market.<br/></br />In accordance with the search for a more specialized orientation to the most popular technologies, I have participated in national intensive learning sessions of <strong>Node JS</strong> and carried out individual studies on Frontend technologies such as <strong>React JS</strong>, <strong> Vue JS</strong>, as well as other basic approaches in <strong>Angular</strong>.<br/></br />From the Backend, studies in <strong>architectures based on microservices</strong> using < strong>Amazon Web Services</strong> and <strong>Azure DevOps</strong>, this in search of profiling myself as a competent Full Stack developer for the needs of the current market."
+      }
+    },
+    "services": {
+      "title": "Services",
+      "title2": "Technology stack",
+      "subtitle": "General services",
+      "experience": {
+        "title": "Experience"
+      },
+      "education": {
+        "title": "Academic studies"
+      },
+      "languages": {
+        "title": "Languages"
+      },
+      "tech_languages": {
+        "title": "Tech languages"
+      },
+      "framelibs": {
+        "title": "Libraries & Frameworks"
+      },
+      "knowledges": {
+        "title": "Tools & Soft-skills"
+      },
+      "certifications": {
+        "title": "Certifications"
+      }
+    }
+  },
   "education": [
     {
       "date_range": "November 2021",
@@ -239,7 +280,6 @@
     "CircleCI",
     "SEO",
     "Next JS",
-    "Astro",
     "SCSS",
     "Express.js"
   ],
@@ -302,22 +342,6 @@
       "icon": "hi-academic-cap",
       "title": "Consulting & Mentoring",
       "content": "Mentoring and consulting services in general topics, like optimization, security and good development practices."
-    }
-  ],
-  "social": [
-    {
-      "order": 1,
-      "icon": "bi-github",
-      "title": "Github",
-      "name": "github",
-      "url": "https://github.com/duquejo01"
-    },
-    {
-      "order": 2,
-      "icon": "co-linkedin-in",
-      "title": "LinkedLn",
-      "name": "linkedln",
-      "url": "https://www.linkedin.com/in/duquejo"
     }
   ]
 }

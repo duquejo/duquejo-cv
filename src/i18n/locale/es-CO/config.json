@@ -1,4 +1,45 @@
 {
+  "general": {
+    "role": "Desarrollador Fullstack",
+    "menu": {
+      "resume": "Currículo",
+      "services": "Servicios"
+    },
+    "resume": {
+      "greetings": "Hola, soy ",
+      "excerpt": "Ingeniero informático de Colombia con más de 6 años de experiencia en desarrollo de aplicaciones para la web utilizando los lenguajes más influyentes del mercado laboral, empleando tanto <strong>arquitecturas monolíticas</strong> como <strong>arquitecturas orientadas a microservicios</strong>.",
+      "description": {
+        "title": "¿Qué he realizado?",
+        "content": "Durante mi vida laboral, he tenido la oportunidad poder tener una vista amplia de las necesidades puntuales del cliente para resolver cualquier reto tecnológico que se presente; he desempeñado roles como asesor y coordinador en equipos de desarrollo para empresas del sector público como la <strong>Alcaldía de Itagüí</strong>, <strong>Alcaldía de Bogotá</strong>, <strong>Ministerio de Educación Nacional</strong> y la <strong>Universidad EAFIT</strong>. También he participado en proyectos de desarrollos a la medida y desarrollo de sitios web con <strong>agencias de Marketing</strong> a tiempo completo y alternativamente como <strong>Freelancer</strong> a tiempo parcial.<br/></br />Con <strong>fábricas de software</strong> he tenido la oportunidad de trabajar para <strong>Startups educativas</strong> con gran alcance regional, así como para el sector <strong>Banca</strong>, <strong>Seguros</strong> y <strong>Salud</strong>, los cuales han permitido expandir conocimientos e ir acorde a la rigidez de las políticas de dicho mercado.<br/></br />Conforme a la búsqueda de una orientación más especializada a las tecnologías más populares, he participado sesiones de aprendizaje intensivo nacionales de <strong>Node JS</strong> y realizado de manera individual estudios sobre tecnologías Frontend como <strong>React JS</strong>, <strong>Vue JS</strong>, así como otros acercamientos básicos en <strong>Angular</strong>.<br/></br />Desde el Backend, estudios en <strong>arquitecturas basadas en microservicios</strong> usando <strong>Amazon Web Services</strong> y <strong>Azure DevOps</strong>, esto en búsqueda de perfilarme como un desarrollador Full Stack competente para las necesidades del mercado actual."
+      }
+    },
+    "services": {
+      "title": "Servicios",
+      "title2": "Stack de tecnologías",
+      "subtitle": "Servicios generales",
+      "experience": {
+        "title": "Experiencia"
+      },
+      "education": {
+        "title": "Estudios académicos"
+      },
+      "languages": {
+        "title": "Idiomas"
+      },
+      "tech_languages": {
+        "title": "Lenguajes"
+      },
+      "framelibs": {
+        "title": "Librerías & Frameworks"
+      },
+      "knowledges": {
+        "title": "Herramientas & Habilidades blandas"
+      },
+      "certifications": {
+        "title": "Certificaciones"
+      }
+    }
+  },
   "education": [
     {
       "date_range": "Noviembre 2021",
@@ -239,7 +280,6 @@
     "CircleCI",
     "SEO",
     "Next JS",
-    "Astro",
     "SCSS",
     "Express.js"
   ],
@@ -302,44 +342,6 @@
       "icon": "hi-academic-cap",
       "title": "Mentoría & Asesoría",
       "content": "Mentorías y asesorías en maquetación, optimización, seguridad y buenas prácticas de desarrollo desde sus diferentes frentes en general."
-    }
-  ],
-  "social": [
-    {
-      "order": 1,
-      "icon": "bi-github",
-      "title": "Github",
-      "name": "github",
-      "url": "https://github.com/duquejo01"
-    },
-    {
-      "order": 2,
-      "icon": "co-linkedin-in",
-      "title": "LinkedLn",
-      "name": "linkedln",
-      "url": "https://www.linkedin.com/in/duquejo"
-    }
-  ],
-  "tech-stack": [
-    {
-      "icon": "vi-file-type-typescript-official",
-      "title": "Typescript"
-    },
-    {
-      "icon": "vi-file-type-node",
-      "title": "Node JS"
-    },
-    {
-      "icon": "vi-file-type-tailwind",
-      "title": "Tailwind"
-    },
-    {
-      "icon": "vi-file-type-vue",
-      "title": "Vue JS"
-    },
-    {
-      "icon": "vi-file-type-reactjs",
-      "title": "React JS"
     }
   ]
 }

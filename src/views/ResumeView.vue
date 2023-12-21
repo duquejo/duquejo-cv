@@ -3,8 +3,8 @@
     <section class="row items-center mx-0 mt-0">
       <div class="w-full order-2 lg:basis-1/2 lg:order-1 px-8 pt-8 lg:m-auto">
         <span class="text-gray-400 text-lg">{{ t('general.role') }}</span>
-        <h1 class="mt-2">{{ t('resume.greetings') }} <strong>José Duque.</strong></h1>
-        <p v-html="htmlSanitizer(t('resume.excerpt'))" />
+        <h1 class="mt-2">{{ t('general.resume.greetings') }} <strong>José Duque.</strong></h1>
+        <p v-html="htmlSanitizer(t('general.resume.excerpt'))" />
         <div class="button-container">
           <v-icon v-for="stack in TECH_STACK" class="hover:animate-wiggle" :name="stack.icon" scale="2.5" :title="stack.title" />
         </div>
@@ -14,8 +14,8 @@
       </picture>
     </section>
     <section>
-      <h2 class="text-h2" v-text="t('resume.description.title')" />
-      <p v-html="htmlSanitizer(t('resume.description.content'))" />
+      <h2 class="text-h2" v-text="t('general.resume.description.title')" />
+      <p v-html="htmlSanitizer(t('general.resume.description.content'))" />
     </section>
   </article>
 </template>
@@ -25,5 +25,5 @@ import TECH_STACK from '../shared/data/stack.json';
 import { useI18n } from 'vue-i18n';
 import { htmlSanitizer } from '../shared/helpers/htmlSanitizer';
 
-const { t } = useI18n({ useScope: 'global' });
+const { t } = useI18n();
 </script>

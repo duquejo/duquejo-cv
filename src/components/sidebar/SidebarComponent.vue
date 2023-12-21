@@ -1,7 +1,7 @@
 <template>
   <aside id="sidebar" :class="classes">
     <UpperHeaderComponent :isOpen="isOpen" @click="emit('toggle')"/>
-    <div class="flex flex-col justify-center items-center w-full lg:p-0 px-8 py-10 text-center">
+    <div class="flex flex-col justify-center items-center w-full lg:p-0 px-8 py-10 text-center text-base">
       <picture>
         <img class="rounded-full w-32 h-32 sm:w-40 sm:h-40 object-cover grayscale hover:grayscale-0 transition-all duration-200" src="../../assets/avatar-small.jpg" alt="José Duque" />
       </picture>
@@ -13,11 +13,6 @@
             <v-icon :name="link.icon" scale="1.3" class="fill-gray-400 hover:fill-yellow-500 transition-colors" />
           </a>
         </i>
-        <!-- <i class="icon">
-          <router-link :to="{ name: ROUTES.CONTACT }">
-            <v-icon name="md-email-outlined" scale="1.3" class="fill-gray-400 hover:fill-yellow-500 transition-colors" />
-          </router-link>
-        </i> -->
       </div>
       <LangSelectComponent class="lg:hidden" />
     </div>
@@ -32,11 +27,6 @@
           {{ t('general.menu.services') }}<span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9" /></span>
         </router-link>
       </li>
-      <!-- <li>
-        <router-link :to="{ name: ROUTES.BLOG }" @click="emit('toggle')">
-          Blog<span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9" /></span>
-        </router-link>
-      </li> -->
     </ul>
   </aside>
 </template>
@@ -44,10 +34,10 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { ROUTES } from '../../router';
-import { social as SOCIAL_LINKS} from '../../shared/locale/es-CO/config.json';
-import UpperHeaderComponent from '../../shared/components/upper-header/UpperHeaderComponent.vue';
-import LangSelectComponent from '../../shared/components/language-select/LangSelectComponent.vue';
+import { ROUTES } from '@/router';
+import SOCIAL_LINKS from '@/shared/data/social.json';
+import UpperHeaderComponent from '@/shared/components/upper-header/UpperHeaderComponent.vue';
+import LangSelectComponent from '@/shared/components/language-select/LangSelectComponent.vue';
 
 interface Props {
   isOpen: boolean;
@@ -57,12 +47,12 @@ interface Emit {
   (e: 'toggle'): void;
 }
 
-const { t } = useI18n({ useScope: 'global' });
+const { t } = useI18n();
 const props = defineProps<Props>();
 const emit = defineEmits<Emit>();
 
 const classes = computed(() => ({
-  'transition-all duration-500 absolute flex flex-col items-center justify-between lg:px-8 lg:py-10 lg:my-2 lg:mx-2 text-base rounded-lg bg-white lg:h-auto z-10 w-full lg:w-auto lg:relative lg:opacity-100 lg:left-0 h-screen': true,
+  'transition-all duration-500 absolute flex flex-col items-center justify-between lg:px-8 lg:py-10 lg:my-2 lg:mx-2 rounded-lg bg-white lg:h-auto z-10 w-full lg:w-auto lg:relative lg:opacity-100 lg:left-0 h-screen': true,
   'opacity-0 left-full': props.isOpen,
   'opacity-100 left-0': ! props.isOpen,
 }));
