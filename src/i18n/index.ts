@@ -1,13 +1,16 @@
-import { createI18n } from 'vue-i18n';
+import {  createI18n } from 'vue-i18n';
+import Translation from './translation';
 
 import en from '@/i18n/locale/en-US/config.json';
 import es from '@/i18n/locale/es-CO/config.json';
 
-type MessageSchema = typeof es;
+export type MessageSchema = typeof es;
+
+const tConfig = Translation.getInstance();
 
 const i18n = createI18n<[MessageSchema], 'es' | 'en'>({
-  locale: import.meta.env.VITE_I18N_LOCALE || 'es',
-  fallbackLocale: import.meta.env.VITE_I18N_FALLBACK_LOCALE || 'es',
+  locale: tConfig.defineDefaultLocale(),
+  fallbackLocale: tConfig.fallbackLocale,
   legacy: false, // Vue 3
   globalInjection: true,
   warnHtmlMessage: false,

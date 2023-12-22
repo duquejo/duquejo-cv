@@ -22,8 +22,8 @@
 
 <script setup lang="ts">
 import TECH_STACK from '../shared/data/stack.json';
-import { useI18n } from 'vue-i18n';
 import { htmlSanitizer } from '../shared/helpers/htmlSanitizer';
+import useLanguageContext from '../composables/useLanguageContext';
 
-const { t } = useI18n();
+const { t } = useLanguageContext();
 </script>
