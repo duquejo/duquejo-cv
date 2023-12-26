@@ -14,8 +14,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import SOCIAL_LINKS from '@/shared/data/social.json';
+
 const currentYear = computed(() => new Date().getFullYear() );
 </script>
-
-<style scoped>
-</style>

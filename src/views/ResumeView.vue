@@ -21,9 +21,9 @@
 </template>
 
 <script setup lang="ts">
-import TECH_STACK from '../shared/data/stack.json';
-import { htmlSanitizer } from '../shared/helpers/htmlSanitizer';
-import useLanguageContext from '../composables/useLanguageContext';
+import TECH_STACK from '@/shared/data/stack.json';
+import { htmlSanitizer } from '@/shared/helpers/htmlSanitizer';
+import useLanguageContext from '@/composables/useLanguageContext';
 
 const { t } = useLanguageContext();
 </script>

@@ -70,17 +70,16 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import type { Bars } from '../interfaces';
-import { Order } from '../interfaces/icon-card';
-import { Type } from '../interfaces/experience';
+import { Order, Type, Bars } from '../interfaces';
 
-import useLanguageContext from '../composables/useLanguageContext';
-import TimelineComponent from '../components/timeline/TimelineComponent.vue';
-import CCardComponent from '../components/certification-card/CCardComponent.vue';
-import ProgressBarComponent from '../shared/components/progress-bar/ProgressBarComponent.vue';
-import { orderObjectListByKey } from '../shared/helpers/orderByValue';
-import PillComponent from '../shared/components/pill/PillComponent.vue';
-import IconCardComponent from '../shared/components/card/IconCardComponent.vue';
+import useLanguageContext from '@/composables/useLanguageContext';
+import TimelineComponent from '@/components/timeline/TimelineComponent.vue';
+import CCardComponent from '@/components/certification-card/CCardComponent.vue';
+import ProgressBarComponent from '@/components/progress-bar/ProgressBarComponent.vue';
+import PillComponent from '@/components/pill/PillComponent.vue';
+import IconCardComponent from '@/components/card/IconCardComponent.vue';
+
+import { orderObjectListByKey } from '@/shared/helpers/orderByValue';
 
 const { t, languageSources } = useLanguageContext();
 

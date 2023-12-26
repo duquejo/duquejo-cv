@@ -36,8 +36,8 @@ import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { ROUTES } from '@/router';
 import SOCIAL_LINKS from '@/shared/data/social.json';
-import UpperHeaderComponent from '@/shared/components/upper-header/UpperHeaderComponent.vue';
-import LangSelectComponent from '@/shared/components/language-select/LangSelectComponent.vue';
+import UpperHeaderComponent from '@/components/upper-header/UpperHeaderComponent.vue';
+import LangSelectComponent from '@/components/language-select/LangSelectComponent.vue';
 
 interface Props {
   isOpen: boolean;

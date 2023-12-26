@@ -47,7 +47,7 @@
 </template>
 
 <script setup lang="ts">
-import { Event } from '../../../interfaces/github-events';
+import { Event } from '@/interfaces/github-events';
 import { toRefs, computed } from 'vue';
 import { checkText } from 'smile2emoji';
 import PillComponent from '../pill/PillComponent.vue';

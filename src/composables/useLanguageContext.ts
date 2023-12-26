@@ -1,7 +1,7 @@
 import { ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import Translation from '@/i18n/translation';
-import { MessageSchema } from '@/i18n';
+import { MessageSchema } from '@/i18n/config';
 
 const useLanguageContext = () => {
 

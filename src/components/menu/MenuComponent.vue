@@ -22,8 +22,8 @@
 import { ref, computed } from 'vue';
 import { Event } from '@/interfaces/github-events';
 import events from '@/events.json';
-import LangSelectComponent from '@/shared/components/language-select/LangSelectComponent.vue';
-import RecentCardComponent from '@/shared/components/recent-card/RecentCardComponent.vue';
+import LangSelectComponent from '@/components/language-select/LangSelectComponent.vue';
+import RecentCardComponent from '@/components/recent-card/RecentCardComponent.vue';
 import { useI18n } from 'vue-i18n';
 
 interface Props {

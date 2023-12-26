@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import { Bars } from '../../../interfaces/bars';
+import { Bars } from '@/interfaces/bars';
 
 interface Props extends Bars {};
 const props = defineProps<Props>();
