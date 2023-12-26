@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -8,6 +10,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        'primary': ['Poppins', ...defaultTheme.fontFamily.sans ],
+      },
       animation: {
         typewriter: 'typewriter 2s steps(11) forwards',
         caret: 'typewriter 2s steps(11) forwards, blink 1s steps(11) infinite 2s',

@@ -11,8 +11,8 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import type { IconCard } from '../../../interfaces';
-import { Order } from '../../../interfaces/icon-card';
+import type { IconCard } from '@/interfaces';
+import { Order } from '@/interfaces';
 
 interface Props extends IconCard {
   order?: Order;

@@ -1,53 +1,15 @@
 import { createApp } from 'vue';
+import { OhVueIcon, addIcons } from 'oh-vue-icons';
 import App from './App.vue';
 import router from './router';
-import { OhVueIcon, addIcons } from 'oh-vue-icons';
-import {
-  BiGithub,
-  CoLinkedinIn,
-  MdEmailOutlined,
-  BiChevronRight,
-  BiChevronUp,
-  CoHamburgerMenu,
-  HiDatabase,
-  MdLaptopmac,
-  HiAcademicCap,
-  BiFiletypeHtml,
-  PrTimes,
-  BiFiletypePdf,
-  ViFileTypeTypescriptOfficial,
-  ViFileTypeTailwind,
-  ViFileTypeReactjs,
-  ViFileTypeNode,
-  ViFileTypeVue,
-  RiEnglishInput,
-  BiGlobe2
-} from 'oh-vue-icons/icons';
+import i18n from './i18n/config';
+import { iconsToAdd } from './assets/icons';
 import './style.css';
 
-addIcons(
-  BiGithub,
-  CoLinkedinIn,
-  MdEmailOutlined,
-  BiChevronRight,
-  CoHamburgerMenu,
-  HiDatabase,
-  BiChevronUp,
-  MdLaptopmac,
-  HiAcademicCap,
-  BiFiletypeHtml,
-  PrTimes,
-  BiFiletypePdf,
-  ViFileTypeTypescriptOfficial,
-  ViFileTypeTailwind,
-  ViFileTypeReactjs,
-  ViFileTypeNode,
-  ViFileTypeVue,
-  RiEnglishInput,
-  BiGlobe2
-);
+addIcons(...iconsToAdd);
 
 createApp(App)
   .component('v-icon', OhVueIcon )
+  .use(i18n)
   .use(router)
   .mount('#app');

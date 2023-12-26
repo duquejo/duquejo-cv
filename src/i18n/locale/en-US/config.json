@@ -1,0 +1,350 @@
+{
+  "general": {
+    "role": "Fullstack developer",
+    "menu": {
+      "resume": "Resume",
+      "services": "Services",
+      "events": "Recent coding activity",
+      "events_repo_commit_link": "Check in Github",
+      "events_repo_general_link": "See more activity in Github"
+    },
+    "resume": {
+      "greetings": "Hi, I'm",
+      "excerpt": "Computer engineer from Colombia with more than 6 years of experience in developing web applications using the most influential languages ​​on the labor market, using both <strong>monolithic architectures</strong> and <strong>microservices-oriented architectures</strong>.",
+      "description": {
+        "title": "What have I done?",
+        "content": "During my working life, I have had the opportunity to have a broad view of the client's specific needs to solve any technological challenge that arises; I have played roles as advisor and coordinator in development teams for public sector companies such as the <strong>Alcaldia de Itagüí</strong>, <strong>Alcaldía de Bogotá</strong>, <strong>Ministerio de Educación Nacional</strong > and <strong>EAFIT University</strong>. I have also participated in custom development projects and website development with <strong>Marketing agencies</strong> full-time and alternatively as a <strong>Freelancer</strong> part-time.<br/></ br />With <strong>software factories</strong> I have had the opportunity to work for <strong>Educational Startups</strong> with great regional reach, as well as for the <strong>Banking</strong> sector, < strong>Insurance</strong> and <strong>Health</strong>, which have allowed us to expand knowledge and comply with the rigidity of the policies of said market.<br/></br />In accordance with the search for a more specialized orientation to the most popular technologies, I have participated in national intensive learning sessions of <strong>Node JS</strong> and carried out individual studies on Frontend technologies such as <strong>React JS</strong>, <strong> Vue JS</strong>, as well as other basic approaches in <strong>Angular</strong>.<br/></br />From the Backend, studies in <strong>architectures based on microservices</strong> using < strong>Amazon Web Services</strong> and <strong>Azure DevOps</strong>, this in search of profiling myself as a competent Full Stack developer for the needs of the current market."
+      }
+    },
+    "services": {
+      "title": "Services",
+      "title2": "Technology stack",
+      "subtitle": "General services",
+      "experience": {
+        "title": "Experience"
+      },
+      "education": {
+        "title": "Academic studies"
+      },
+      "languages": {
+        "title": "Languages"
+      },
+      "tech_languages": {
+        "title": "Tech languages"
+      },
+      "framelibs": {
+        "title": "Libraries & Frameworks"
+      },
+      "knowledges": {
+        "title": "Tools & Soft-skills"
+      },
+      "certifications": {
+        "title": "Certifications"
+      }
+    }
+  },
+  "education": [
+    {
+      "date_range": "November 2021",
+      "enterprise": "Ruta N Corporation - Ceiba Software S.A.S - Globant",
+      "isRecent": false,
+      "project": "Certification",
+      "role": "Boot-camp Node JS",
+      "type": "paragraph",
+      "resume": "",
+      "additional_info": ""
+    },
+    {
+      "date_range": "2010 - 2016",
+      "enterprise": "Politécnico Colombiano Jaime Isaza Cadavid",
+      "isRecent": false,
+      "project": "Professional",
+      "role": "Informatics Engineering",
+      "type": "paragraph",
+      "resume": "",
+      "additional_info": ""
+    }
+  ],
+  "experience": [
+    {
+      "date_range": "2023 - Present",
+      "enterprise": "SURA Seguros - Ceiba Software S.A.S",
+      "isRecent": true,
+      "project": "SURA - Integrations team bus",
+      "role": "Backend developer",
+      "type": "paragraph",
+      "resume": "Design and creation of serverless services for the Azure Cloud, implementing event-oriented architectures (RabbitMQ / ServiceBus) and HTTP/REST feature services aimed at solving all the required integrations between Salesforce Industries and SURA Colombia in the sales and shipping process vehicle insurance business.",
+      "additional_info": "Skills: Azure Functions, Azure Service Bus, CosmoDB, Terraform, Microservices, Node.js, JMeter, Unit Tests, Integration Tests, SonarQube, Git Flow, JWT, Scrum."
+    },
+    {
+      "date_range": "11/07/2022 - 28/04/2023",
+      "enterprise": "Aval Digital Labs - Grupo Aval AV Villas - Ceiba Software S.A.S",
+      "isRecent": false,
+      "project": "Aval Digital Labs - AV Villas Bank / Credit Card Infrastructure Migration team",
+      "role": "Senior backend developer",
+      "type": "list",
+      "resume": "<li>Migration of legacy (manually) infrastructure from Amazon Web Services to Infrastructure as Code using Serverless Framework and Terraform guaranteeing enterprise standards and full supervision of the configuration of the application architecture components.</li><li>Refactoring and optimization of the legacy code given to lambdas (Node-JS/Java) and monoliths (Java Springboot) involved in the application, improving up to a percentage greater than or equal to 85% of the Quality Gates standards against good practices required by the company, improving in a high percentage the execution performance of lambdas and code associated with step functions used in the application. </li><li>Generation of new components with business logic added to support the work cell in parallel to production activities. migration, allowing flexibility between migration loads.</li><li>Generation of security policies and vulnerability corrections in accordance with the OWASP standard, the results of which adequately responded to the high internal demands of the organization <i>Aval Digital Labs </i> as well as Banco AV Villas.</li>",
+      "additional_info": "Skills: DynamoDB, Node.js, Spring Framework, Express, Angular, HTML, AWS, Gradle, Jira, Maven, JMeter, Jenkins, Docker, Unit Test, Functional test, AWS Cognito, Microservices, Git Flow, JWT."
+    },
+    {
+      "date_range": "07/02/2022 - 06/07/2022",
+      "enterprise": "Aval Digital Labs & Los Nogales school - MentuApp - Ceiba Software S.A.S",
+      "isRecent": false,
+      "project": "Mentu App",
+      "role": "Full-Stack developer",
+      "type": "list",
+      "resume": "<li>Development of a learning platform for primary and secondary school.</li><li>Starting from a hexagonal architecture, oriented to microservices and using Serverless Framework with AWS Node JS (Typescript) AWS Lambdas, SOLID principles were favored, maintainability and optimization of resources guaranteeing high availability and high persistence of information through AWS DocumentDB using Mongoose as ODM for the final application and TypeORM for AWS RDS relational databases of external Postgres and MySQL services.</li><li>With the Serverless framework, strategies were made available with AWS Cloudformation to decentralize each Lambda to correspond to the desired Datalake, connecting Amazon Web Services services, such as API Gateway, S3 (hooks), SNS, SQS, among others.</li><li>An ETL was made available that delivers standardized and optimized information for the Metabase platform, generating updated and complete information through AWS Eventbridge.</li><li>The frontend was built with React JS, Webpack and Typescript, dividing the core of the business in different microservices through Module Federation and generalizing graphical frontend components through a common NPM library based on good practices from the library. </li><li>External applications were connected through microservices such as Mixpanel, Concerto, Hotjar, Analytics to guarantee UX strategies for the target audience (Teachers and students).</li>",
+      "additional_info": "Skills: MySQL, MongoDB, PostgreSQL, Nest JS, AWS SQS, Node.js, HTML, CSS, React.js, Tailwind, AWS Cognito, Typescript, Serverless Framework."
+    },
+    {
+      "date_range": "12/12/2021 - 27/12/2021",
+      "enterprise": "Ceiba Software S.A.S",
+      "isRecent": false,
+      "project": "ADN Ceiba",
+      "role": "Software architect developer",
+      "type": "list",
+      "resume": "<li>A hexagonal architecture was defined and developed where domain orientation, solid principles and maintainability of the projects are favored.</li><li>All this under a continuous integration process with static code analysis and execution of tests that guarantee the quality of the developed project.</li><li>It was possible to build front implemented under a core, share and feature architecture, with management of this global using Redux.</li>",
+      "additional_info": "Skills: PostgreSQL, MySQL, SASS, HTML, CSS3, React.js, TypeScript, Redux, Nest JS, JMeter, NPM, Jenkins, Sonar, Git, Unit test, Integration test, E2E Test."
+    },
+    {
+      "date_range": "05/05/2019 - 10/12/2021",
+      "enterprise": "SM Digital",
+      "isRecent": false,
+      "project": "SM Digital - Creation of websites and integrations between third parties",
+      "role": "Tech-lead developer",
+      "type": "list",
+      "resume": "<li>Creation of various websites using WordPress as a CMS, modularization of business logic functionalities through good practices via Plugins, creation of custom themes, fully responsive and optimized for the web, designed with the aim of optimizing profits and generate customer visibility through Marketing strategies. </li><li>Implementation of virtual stores and integrations with third parties, such as payment gateways, ERP, CRM, specialized for collecting leads used in Marketing, in addition implementation of SSO (Single Sign-On) services with social networks such as Facebook/Twitter/Instagram, among others. </li><li>Implementation of customized automated messaging strategies for platforms via WhatsApp, using authorized APIs for the business , which made it possible to communicate reports to lists of authorized clients in a simple way.</li><li>Various strategies were used for the frontend and backend, highlighting HTML, CSS, JS (jQuery Frameworks, Angular JS and React JS), PHP and Node JS respectively for the creation of websites and generation of applications for third parties, as well as integrators between unsupported platforms.</li>",
+      "additional_info": "Skills: MySQL, MongoDB, jQuery, Node.js, Express, React.js, Bootstrap, SASS, HTML5, CSS3, Jira, Trello, WordPress CMS, WooCommerce, JavaScript, TypeScript, PHP, Auth0, JWT, Laravel."
+    },
+    {
+      "date_range": "05/04/2020 - 29/11/2020",
+      "enterprise": "Nutresa Group - SM Digital",
+      "isRecent": false,
+      "project": "E-learning Escuela de clientes",
+      "role": "Desarrollador Full-Stack",
+      "type": "list",
+      "resume": "<li>Full-Stack project developed from scratch, which had to be built under the WordPress CMS framework which exposed REST services to be consumed from the application client.</li><li>The frontend had to be built with Angular JS and the use of libraries was allowed for the manipulation of multimedia content. </li><li>Implement UX strategies due to the target population (50 years or older)</li><li>The delivery of multimedia resources had to be optimized and respond to a high flow of users, using AWS S3, AWS CloudFront, among others.</li>",
+      "additional_info": "Skills: MySQL, Angular JS, Bootstrap, SASS, HTML, CSS3, AWS, Jira, Trello, Git, Javascript, PHP, MVC."
+    },
+    {
+      "date_range": "14/12/2019 - 04/05/2021",
+      "enterprise": "SURA Insurances - Colombia - SM Digital",
+      "isRecent": false,
+      "project": "SURA Advisors",
+      "role": "Full-Stack developer",
+      "type": "list",
+      "resume": "<li>Full-Stack project where the integration of a SEUS 4 (Active Directory - SAML) was required, integrating it with an E-Commerce using WordPress with WooCommerce as CMS.</li><li>According to the good practices for WordPress, it was required to set up an adaptable plugin, based on an MVC architecture, which favored the division of its logic and components.</li><li>The application had to have custom reports, generated via CSV which come from different sources such as Google Docs and external REST APIs. </li><li>The project was completed by complying with the functional requirements and the quality of the software advocated by the client.</li>",
+      "additional_info": "Skills: SASS, CSS3, jQuery, Bootstrap, Wordpress, WooCommerce, NPM, Jira, Trello, SAML, PHP, JWT, Azure Active Directory MySQL, Git, JavaScript."
+    },
+    {
+      "date_range": "16/05/2019 - 23/06/2019",
+      "enterprise": "Zenú meat foods - Colombia - SM Digital",
+      "isRecent": false,
+      "project": "Corporate Zenú - Game Advance and learn!",
+      "role": "Programador Frontend",
+      "type": "list",
+      "resume": "<li>Interactive Frontend project developed from scratch, with Angular 7 technology under the architecture recommended by the Angular style guide.</li><li>It sought to satisfy the principles of maintainability, respecting concepts of clean code and design patterns suggested by the framework.</li>",
+      "additional_info": "Skills: Angular JS, AWS, Jira, Trello, PHP, JavaScript, TypeScript, Functional Test."
+    },
+    {
+      "date_range": "16/05/2019 - 23/06/2019",
+      "enterprise": "Grupo Familia",
+      "isRecent": false,
+      "project": ">Grupo familia - Napkin simulator - SM Digital",
+      "role": "Full-Stack developer",
+      "type": "list",
+      "resume": "<li>Full-Stack interactive project developed from scratch, under the WordPress CMS Framework</li><li>Due to the infrastructure suggested by the client, it was necessary to use jQuery and libraries focused on manipulating the DOM.< /li><li>The project required respecting very specific brand directives directly related to the functional requirements.</li>",
+      "additional_info": "Skills: MySQL, Bootstrap, SASS, HTML, Jira, Trello, WordPress, PHP, MVC, jQuery."
+    },
+    {
+      "date_range": "14/12/2019 - 04/05/2021",
+      "enterprise": "COLGAS",
+      "isRecent": false,
+      "project": "Insa (NORGAS) - Energy quote generator - SM Digital",
+      "role": "Frontend developer",
+      "type": "list",
+      "resume": "<li>Frontend project developed from scratch, which required using entirely JavaScript (Vanilla) technology.</li><li>This quote used very precise calculations that are carried out in detail due to the company's quality policies, therefore that the interaction with the client had to be constant.</li><li>The continuous deployment process was properly configured through scheduled tasks on a remote server in the cloud.</li>",
+      "additional_info": "Skills: MySQL, Bootstrap, SASS, HTML, Jira, JavaScript."
+    },
+    {
+      "date_range": "03/02/2019 - 12/06/2021 - SM Digital",
+      "enterprise": "Grupo Presente Éxito",
+      "isRecent": false,
+      "project": "Vacation resort quote generator",
+      "role": "Full-Stack developer",
+      "type": "list",
+      "resume": "<li>Full-Stack project developed from scratch, with PHP technologies and using the Framework for WordPress web pages. </li><li>In accordance with the good practices of the Wordpress CMS, it was required to build entirely using a plugin, implementing a MVC architecture. </li><li>It was important for the client to respond clearly to the functional requirements, whose importance lay in the calculation, the evaluation of results and their deployment (PDF - Email), which were used for strategies of Marketing and Digital Guidelines. It was essential that it be fully manageable and configurable.</li>",
+      "additional_info": "Skills: MySQL, Bootstrap, SASS, HTML, CSS, WordPress, Jira, JavaScript, MVC, Trello, PHP, jQuery."
+    },
+    {
+      "date_range": "07/11/2017 - 10/10/2018",
+      "enterprise": "Universidad EAFIT",
+      "isRecent": false,
+      "project": "Universidad EAFIT - Plataforma Línea en Informática Educativa (Conexa EAFIT)",
+      "role": "Full-Stack developer",
+      "type": "list",
+      "resume": "<li>Full-Stack project developed from scratch, under the WordPress CMS Framework (PHP).</li><li>It required using good CMS practices for its construction, so its modules were developed under the Kernel architecture /Plugin, common in CMS such as WordPress.</li><li>It required managing information dynamically from the frontend using jQuery and Ajax.</li><li>Different cloud service structures had to be maintained for its users and collaborators, using the AWS suite for this (S3, Glacier, Cloudfront, Route 53, etc.) and administration of Azure and Office 365 Cloud services.</li>",
+      "additional_info": "Skills: MySQL, Bootstrap, SASS, HTML, CSS, WordPress, Jira, JavaScript, AWS, MVC, Trello, PHP, jQuery, Office 365."
+    }
+  ],
+  "framelibs": [
+    {
+      "color": "#10b981",
+      "tag": "Vue JS",
+      "value": 80
+    },
+    {
+      "color": "#06b6d4",
+      "tag": "React JS",
+      "value": 85
+    },
+    {
+      "color": "#ef4444",
+      "tag": "Angular",
+      "value": 30
+    },
+    {
+      "color": "#000",
+      "tag": "Next JS",
+      "value": 55
+    }
+  ],
+  "knowledges": [
+    "AWS",
+    "Azure",
+    "CSS3",
+    "Tailwind",
+    "HTML5",
+    "Laravel",
+    "React.js",
+    "Vue.js",
+    "WordPress",
+    "RabbitMQ",
+    "AWS SQS",
+    "Redis",
+    "MySQL",
+    "MongoDB",
+    "Handlebars",
+    "PostgreSQL",
+    "Distributed architectures",
+    "Monolythic architectures",
+    "Clean Code",
+    "Terraform",
+    "Serverless framework",
+    "Storybook",
+    "Design Systems",
+    "i18n",
+    "Responsive design",
+    "AWS RMS",
+    "AWS Lambda",
+    "Docker",
+    "Azure Functions",
+    "Azure CosmoDB",
+    "Bootstrap",
+    "Kanban",
+    "Jenkins",
+    "Node JS",
+    "Lodash",
+    "Spring framework",
+    "Nest JS",
+    "Agile development",
+    "OOP",
+    "Time-management",
+    "Flexibility",
+    "JWT",
+    "Security",
+    "Github actions",
+    "ORM",
+    "ODM",
+    "Monitoring",
+    "SPA",
+    "Observability",
+    "Webpack",
+    "Vite",
+    "Jest",
+    "Cypress",
+    "SonarQube",
+    "Unit tests",
+    "Integration tests",
+    "e2e tests",
+    "SASS",
+    "PostCSS",
+    "Datadog",
+    "Microservices resiliency",
+    "AWS Cognito",
+    "AWS DocumentDB",
+    "Material UI",
+    "Redux",
+    "Pinia",
+    "VueX",
+    "TanStack Query",
+    "jQuery",
+    "Wordpress Plugin Development",
+    "CircleCI",
+    "SEO",
+    "Next JS",
+    "SCSS",
+    "Express.js"
+  ],
+  "languages": [
+    {
+      "title": "Spanish",
+      "content": "Native - C2",
+      "icon": "bi-globe2"
+    },
+    {
+      "title": "English",
+      "content": "Proficient - B2",
+      "icon": "ri-english-input"
+    }
+  ],
+  "main_languages": [
+    {
+      "color": "#3b82f6",
+      "tag": "Typescript",
+      "value": 93
+    },
+    {
+      "color": "#eab308",
+      "tag": "Javascript",
+      "value": 95
+    },
+    {
+      "color": "#6366f1",
+      "tag": "PHP",
+      "value": 75
+    },
+    {
+      "color": "#f97316",
+      "tag": "Java",
+      "value": 35
+    },
+    {
+      "color": "#0ea5e9",
+      "tag": "Python",
+      "value": 17
+    }
+  ],
+  "services": [
+    {
+      "icon": "hi-database",
+      "title": "Backend development",
+      "content": "Server-side logic programming, databases, API programming, third-party integrations, architecture definitions and continuous deployment based on good development practices."
+    },
+    {
+      "icon": "md-laptopmac",
+      "title": "Frontend development",
+      "content": "Client-side logic programming, based on semantic structuring practices, adaptability, accessibility and maintainability."
+    },
+    {
+      "icon": "bi-filetype-html",
+      "title": "Website development",
+      "content": "Creation and maintenance of custom websites, informational sites, E-Commerces, Funnels, Courses and development of custom plugins for WordPress."
+    },
+    {
+      "icon": "hi-academic-cap",
+      "title": "Consulting & Mentoring",
+      "content": "Mentoring and consulting services in general topics, like optimization, security and good development practices."
+    }
+  ]
+}

@@ -1,11 +1,14 @@
 <template>
-  <nav class="lg:flex lg:flex-col lg:items-center lg:justify-end hidden lg:mb-4 relative">
+  <nav class="lg:flex lg:flex-col lg:items-center lg:justify-between hidden lg:my-4 relative">
+    <LangSelectComponent />
     <div :class="menuClasses">
-      <div class="bg-white rounded p-4 my-8 mx-4 shadow cursor-pointer">
-        <h3 class="text-h3 pb-2">Recent posts</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptate incidunt velit iusto doloremque vitae placeat dolores possimus! Pariatur, doloribus.</p>
-        {{ props.isOpen }}
+      <h4 class="mt-8 mb-2.5 text-h4 mx-4 text-center">{{ t('general.menu.events') }}</h4>
+      <div class="overflow-y-auto">
+        <RecentCardComponent v-for="event in allEvents" :key="event.id" :event="event" />
       </div>
+      <p class="mx-4 mt-0 text-xs text-center">
+        <a href="https://github.com/duquejo01" target="_blank">{{ t('general.menu.events_repo_general_link') }}</a>
+      </p>
     </div>
     <br>
     <i class="icon" @click="emit('toggle')">
@@ -16,7 +19,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { ref, computed } from 'vue';
+import { Event } from '@/interfaces/github-events';
+import events from '@/events.json';
+import LangSelectComponent from '@/components/language-select/LangSelectComponent.vue';
+import RecentCardComponent from '@/components/recent-card/RecentCardComponent.vue';
+import { useI18n } from 'vue-i18n';
 
 interface Props {
   isOpen: boolean;
@@ -26,6 +34,7 @@ interface Emits {
   (e: 'toggle' ): void;
 }
 
+const { t } = useI18n();
 const props = defineProps<Props>();
 const emit = defineEmits<Emits>();
 
@@ -34,4 +43,8 @@ const menuClasses = computed(() => ({
   'opacity-0 translate-x-full right-0': ! props.isOpen,
   'opacity-100 translate-x-0 right-12': props.isOpen,
 }));
+
+
+
+const allEvents = ref<Event[]>(events as any);
 </script>
