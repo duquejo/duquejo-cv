@@ -14,10 +14,10 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import SidebarComponent from './components/sidebar/SidebarComponent.vue';
-import MenuComponent from './components/menu/MenuComponent.vue';
-import UpperHeaderComponent from './shared/components/upper-header/UpperHeaderComponent.vue';
-import FooterComponent from './shared/components/footer/FooterComponent.vue';
+import SidebarComponent from '@/components/sidebar/SidebarComponent.vue';
+import MenuComponent from '@/components/menu/MenuComponent.vue';
+import UpperHeaderComponent from '@/components/upper-header/UpperHeaderComponent.vue';
+import FooterComponent from '@/components/footer/FooterComponent.vue';
 
 const isOpen = ref<boolean>(true);
 const isOpenMenu = ref<boolean>(false);

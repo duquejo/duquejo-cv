@@ -27,5 +27,5 @@
 </template>
 
 <script setup lang="ts">
-import BCardComponent from '../components/blog-card/BCardComponent.vue';
+import BCardComponent from '@/components/blog-card/BCardComponent.vue';
 </script>
