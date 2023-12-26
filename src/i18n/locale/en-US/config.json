@@ -3,7 +3,10 @@
     "role": "Fullstack developer",
     "menu": {
       "resume": "Resume",
-      "services": "Services"
+      "services": "Services",
+      "events": "Recent coding activity",
+      "events_repo_commit_link": "Check in Github",
+      "events_repo_general_link": "See more activity in Github"
     },
     "resume": {
       "greetings": "Hi, I'm",

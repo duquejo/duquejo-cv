@@ -1,10 +1,23 @@
 <template>
-  <span class="border-yellow-500 border-2 text-xs font-semibold px-2.5 py-1.5 rounded hover:translate-y-0.5 transition-transform">{{ props.text }}</span>
+  <span :class="elementClasses">{{ props.text }}</span>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+type Sizes = 'small' | 'large' | 'medium';
+
 interface Props {
   text: string;
+  size?: Sizes;
 }
-const props = defineProps<Props>();
+
+const props = withDefaults(defineProps<Props>(), {
+  size: 'medium',
+});
+
+const elementClasses = computed(() => ({
+  'border-yellow-500 border-2 font-semibold rounded hover:translate-y-0.5 transition-transform': true,
+  'text-xs px-2.5 py-1.5': props.size === 'medium',
+  'text-[0.6rem] px-2 py-0.5': props.size === 'small',
+}));
 </script>

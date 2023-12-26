@@ -107,7 +107,7 @@ section {
 }
 
 .icon-container {
- @apply flex relative items-center gap-x-5 bg-gray-50 py-4 cursor-pointer shadow-md rounded hover:translate-y-1 transition-transform;
+ @apply flex relative items-center gap-x-5 bg-gray-50 py-4 cursor-pointer shadow-md rounded hover:translate-y-1 transition-transform lg:items-start;
 }
 
 .secondary {
@@ -149,6 +149,10 @@ ul.navigation li a span {
 
 .text-h3 {
  @apply font-semibold underline-offset-8 underline decoration-yellow-500;
+}
+
+.text-h4 {
+ @apply font-semibold underline-offset-2 underline decoration-yellow-500;
 }
 
 /* Extra small devices (phones, 600px and down) */

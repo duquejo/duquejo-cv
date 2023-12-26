@@ -3,7 +3,10 @@
     "role": "Desarrollador Fullstack",
     "menu": {
       "resume": "Currículo",
-      "services": "Servicios"
+      "services": "Servicios",
+      "events": "Actividad reciente en programación",
+      "events_repo_commit_link": "Ir a Github",
+      "events_repo_general_link": "Ver más actividad en Github"
     },
     "resume": {
       "greetings": "Hola, soy ",

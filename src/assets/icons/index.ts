@@ -18,7 +18,11 @@ import {
   ViFileTypeNode,
   ViFileTypeVue,
   RiEnglishInput,
-  BiGlobe2
+  BiGlobe2,
+  
+  OiRepoPush,
+  IoGitPullRequestSharp,
+  IoGitBranch,
 } from 'oh-vue-icons/icons';
 
 export const iconsToAdd: CustomizeIconType[] = [
@@ -40,5 +44,9 @@ export const iconsToAdd: CustomizeIconType[] = [
   ViFileTypeNode,
   ViFileTypeVue,
   RiEnglishInput,
-  BiGlobe2
+  BiGlobe2,
+
+  OiRepoPush,
+  IoGitPullRequestSharp,
+  IoGitBranch,
 ];
