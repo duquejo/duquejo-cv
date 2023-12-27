@@ -6,7 +6,13 @@ import { URL, fileURLToPath } from 'url';
 import { configDefaults, defineConfig } from 'vitest/config';
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue({
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => ['v-icon'].includes(tag),
+      }
+    }
+  })],
   test: {
     globals: true,
     environment: 'jsdom',

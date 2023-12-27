@@ -16,6 +16,9 @@ import { Order } from '@/interfaces';
 
 interface Props extends IconCard {
   order?: Order;
+  title: string;
+  content: string;
+  icon: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {

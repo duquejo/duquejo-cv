@@ -1,12 +1,12 @@
 <template>
-  <SidebarComponent :isOpen="isOpen" @toggle="onToggleMenu"/>
+  <SidebarComponent :social-links="SOCIAL_LINKS" :isOpen="isOpen" @toggle="onToggleMenu"/>
   <UpperHeaderComponent :isOpen="isOpen" @click="onToggleMenu"/>
   <main :class="mainClasses" @click="onOutsideClick">
     <router-view v-slot="{ Component }">
       <transition name="slide" mode="out-in">
         <component :is="Component" :key="$route.path" />
       </transition>
-      <FooterComponent />
+      <FooterComponent :social-links="SOCIAL_LINKS" />
     </router-view>
   </main>
   <MenuComponent :isOpen="isOpenMenu" @toggle="onToggleSidebarMenu"/>
@@ -14,6 +14,9 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+
+import SOCIAL_LINKS from '@/shared/data/social.json';
+
 import SidebarComponent from '@/components/sidebar/SidebarComponent.vue';
 import MenuComponent from '@/components/menu/MenuComponent.vue';
 import UpperHeaderComponent from '@/components/upper-header/UpperHeaderComponent.vue';

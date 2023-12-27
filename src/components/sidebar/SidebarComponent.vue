@@ -7,8 +7,8 @@
       </picture>
       <span class="text-2xl font-semibold mt-5 sm:text-xl">José Duque</span>
       <span class="text-gray-500">{{ t('general.role') }}</span>
-      <div v-if="SOCIAL_LINKS" class="flex flex-row justify-evenly my-2 gap-x-3">
-        <i class="icon" v-for="link in SOCIAL_LINKS" :key="link.name">
+      <div v-if="props.socialLinks" class="flex flex-row justify-evenly my-2 gap-x-3">
+        <i class="icon" v-for="link in props.socialLinks" :key="link.name">
           <a :href="link.url" target="_blank">
             <v-icon :name="link.icon" scale="1.3" class="fill-gray-400 hover:fill-yellow-500 transition-colors" />
           </a>
@@ -35,12 +35,14 @@
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { ROUTES } from '@/router';
-import SOCIAL_LINKS from '@/shared/data/social.json';
+
 import UpperHeaderComponent from '@/components/upper-header/UpperHeaderComponent.vue';
 import LangSelectComponent from '@/components/language-select/LangSelectComponent.vue';
+import { SocialLinks } from '../../interfaces/social-links';
 
 interface Props {
   isOpen: boolean;
+  socialLinks?: SocialLinks[];
 }
 
 interface Emit {

@@ -3,6 +3,7 @@ import type { Experience } from './experience';
 import type { IconCard } from './icon-card';
 import { Type } from './experience';
 import { Order } from './icon-card';
+import type { SocialLinks } from './social-links'
 
 
-export { Bars, Experience, IconCard, Order, Type };
+export { SocialLinks, Bars, Experience, IconCard, Order, Type };
