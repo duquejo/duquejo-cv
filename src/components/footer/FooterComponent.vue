@@ -16,7 +16,7 @@ import { computed } from 'vue';
 import { SocialLinks } from '@/interfaces/social-links';
 
 interface Props {
-  socialLinks: SocialLinks[];
+  socialLinks?: SocialLinks[];
 }
 const props = defineProps<Props>();
 

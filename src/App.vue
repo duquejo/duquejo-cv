@@ -9,13 +9,16 @@
       <FooterComponent :social-links="SOCIAL_LINKS" />
     </router-view>
   </main>
-  <MenuComponent :isOpen="isOpenMenu" @toggle="onToggleSidebarMenu"/>
+  <MenuComponent :events="(EVENTS as Event[])" :isOpen="isOpenMenu" @toggle="onToggleSidebarMenu"/>
 </template>
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 
 import SOCIAL_LINKS from '@/shared/data/social.json';
+import EVENTS from "@/events.json";
+
+import type { Event } from '@/interfaces/github-events';
 
 import SidebarComponent from '@/components/sidebar/SidebarComponent.vue';
 import MenuComponent from '@/components/menu/MenuComponent.vue';
