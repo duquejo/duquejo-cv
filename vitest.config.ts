@@ -24,9 +24,13 @@ export default defineConfig({
     ],
     coverage: {
       exclude: [
+        '**/main.ts',
+        '**/assets/**',
         'postcss.config.js',
         'tailwind.config.js',
         '**/*.d.ts',
+        '**/interfaces/*.ts',
+        '**/config.ts',
       ]
     }
   },

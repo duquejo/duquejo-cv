@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`+ BlogView tests > Should match the snapshot 1`] = `
+"<article>
+  <section>
+    <h1 class="text-h1">Blog</h1>
+  </section>
+  <section>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste debitis, ut error unde dicta nobis assumenda alias, voluptas porro, quidem quae a ea sit repudiandae quod illum incidunt tempora. Incidunt rem dolor consequatur nihil porro numquam, corrupti laborum cum nam eum sed odit eos odio, necessitatibus quas officia quia pariatur? </p>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora perferendis deserunt aut non esse modi vero voluptatum, architecto adipisci, ex ipsum cum expedita odio provident! Nemo, blanditiis corrupti iure ipsa quasi laboriosam, perspiciatis accusamus repellat repellendus tenetur debitis autem dicta, officiis voluptates. Impedit modi ab adipisci odit enim debitis deleniti perspiciatis harum tempore magni quidem ducimus, nisi unde asperiores, voluptatibus distinctio. Vel, tempore quis delectus ducimus iure aperiam optio veritatis quibusdam quas quaerat eos eum at impedit vitae recusandae modi animi. Quos, dolorum dicta vel eaque, sit ab aperiam, debitis temporibus architecto alias maiores voluptate nisi esse culpa aliquam enim. </p>
+  </section>
+  <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="group max-w-xs bg-white border border-gray-200 rounded-lg shadow">
+      <div class="max-h-52 overflow-hidden"><img class="grayscale rounded-t-lg object-cover hover:grayscale-0 hover:scale-110 transition-all" src="/src/assets/avatar.png" alt="Alt image"></div>
+      <div class="p-5 flex flex-col justify-between items-start">
+        <h5 class="w-full text-lg font-semibold">Async acquisitions 2021</h5>
+        <p class="mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quod nihil distinctio cum mollitia cumque. Voluptatum dolore praesentium quas expedita.</p><a href="#" class="button shadow pl-4 pr-2 py-2 text-sm"> Read more <v-icon class="ml-2" name="bi-chevron-right" scale="0.9"></v-icon></a>
+      </div>
+    </div>
+  </section>
+</article>"
+`;

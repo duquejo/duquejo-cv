@@ -110,8 +110,12 @@
   @apply opacity-0 transition-opacity;
  }
 
- .timeline-current {
-  @apply border-yellow-500;
+ .timeline--current-detail {
+  @apply absolute w-2 h-2 rounded-full mt-1.5 -start-1;
+ }
+
+ .timeline--time {
+  @apply border-2 rounded px-2 py-1 font-semibold text-xs;
  }
 
  .text-h1 {
@@ -128,6 +132,14 @@
 
  .text-h4 {
   @apply font-semibold underline-offset-2 underline decoration-yellow-500;
+ }
+
+ .sidebar {
+  @apply transition-all duration-500 absolute flex flex-col items-center justify-between lg:px-8 lg:py-10 lg:my-2 lg:mx-2 rounded-lg bg-white lg:h-auto z-10 w-full lg:w-auto lg:relative lg:opacity-100 lg:left-0 h-screen;
+ }
+
+ .sidebar-news--container {
+  @apply flex flex-row justify-evenly my-2 gap-x-3;
  }
 }
 

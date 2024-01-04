@@ -12,7 +12,8 @@ const createVueI18n = (locale = defaultLocale, messages: any = defaultOptions) =
   fallbackLocale: defaultLocale,
   legacy: false,
   allowComposition: true,
-  warnHtmlMessage: false,
+  missingWarn: false,
+  fallbackWarn: false,
   messages,
 });
 

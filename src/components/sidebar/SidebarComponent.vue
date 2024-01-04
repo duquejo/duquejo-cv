@@ -7,7 +7,7 @@
       </picture>
       <span class="text-2xl font-semibold mt-5 sm:text-xl">José Duque</span>
       <span class="text-gray-500">{{ t('general.role') }}</span>
-      <div v-if="props.socialLinks" class="flex flex-row justify-evenly my-2 gap-x-3">
+      <div v-if="props.socialLinks?.length" class="sidebar-news--container">
         <i class="icon" v-for="link in props.socialLinks" :key="link.name">
           <a :href="link.url" target="_blank">
             <v-icon :name="link.icon" scale="1.3" class="fill-gray-400 hover:fill-yellow-500 transition-colors" />
@@ -54,7 +54,7 @@ const props = defineProps<Props>();
 const emit = defineEmits<Emit>();
 
 const classes = computed(() => ({
-  'transition-all duration-500 absolute flex flex-col items-center justify-between lg:px-8 lg:py-10 lg:my-2 lg:mx-2 rounded-lg bg-white lg:h-auto z-10 w-full lg:w-auto lg:relative lg:opacity-100 lg:left-0 h-screen': true,
+  'sidebar': true,
   'opacity-0 left-full': props.isOpen,
   'opacity-100 left-0': ! props.isOpen,
 }));

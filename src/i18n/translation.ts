@@ -9,7 +9,7 @@ class Translation {
 
   private constructor() {
     this._currentLocale = import.meta.env.VITE_I18N_LOCALE || 'es';
-    this._supportedLocales = import.meta.env.VITE_I18N_SUPPORTED_LOCALE || ['es', 'en'];
+    this._supportedLocales = import.meta.env.VITE_I18N_SUPPORTED_LOCALE?.split(',') || ['es', 'en'];
     this._defaultLocale = import.meta.env.VITE_I18N_LOCALE || 'es';
     this._fallbackLocale = import.meta.env.VITE_I18N_FALLBACK_LOCALE || 'es';
   }
@@ -35,14 +35,27 @@ class Translation {
    * @returns The function `defineDefaultLocale()` returns the default locale as a fallback if none of
    * the user's preferred locales are supported.
    */
-  public defineDefaultLocale(): string {
+  public defineDefaultLocale() {
     const userPersistedLocale = this.getPersistedLocale();
-    if (userPersistedLocale) return userPersistedLocale;
+
+    if (userPersistedLocale) {
+      this._currentLocale = userPersistedLocale;
+      return;
+    }
 
     const userPreferredLocale = this.getUserLocale(); // Retrieves data from navigator.
-    if (this.isLocaleSupported(userPreferredLocale.locale)) return userPreferredLocale.locale;
-    if (this.isLocaleSupported(userPreferredLocale.localeNoRegion)) return userPreferredLocale.localeNoRegion;
-    return this._defaultLocale; // Default fallback
+
+    if (this.isLocaleSupported(userPreferredLocale.locale)) {
+      this._currentLocale = userPreferredLocale.locale;
+      return;
+    }
+
+    if (this.isLocaleSupported(userPreferredLocale.localeNoRegion)) {
+      this._currentLocale = userPreferredLocale.localeNoRegion;
+      return;
+    }
+    
+    this._currentLocale = this._defaultLocale; // Default fallback
   }
 
   /**

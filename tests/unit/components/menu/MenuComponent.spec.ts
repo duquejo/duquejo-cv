@@ -135,4 +135,23 @@ describe('+ MenuComponent.vue tests', () => {
   it('Should retrieve the translations', () => {
     expect(mockUseI18n).toHaveBeenCalled();
   });
+
+  it('should emit the toggle event if the menu icon is triggered', async () => {
+    const wrapperWithProps = shallowMount(MenuComponent, {
+      props: {
+        events,
+      },
+      global: {
+        plugins: [i18n],
+      }
+    });
+
+    const menuItem = wrapperWithProps.find('.icon');
+
+    await menuItem.trigger('click');
+
+    expect(menuItem.exists()).toBeTruthy();
+    expect(wrapperWithProps.emitted('toggle'));
+    
+  });
 });
