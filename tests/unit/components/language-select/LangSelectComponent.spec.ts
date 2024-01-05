@@ -9,6 +9,9 @@ describe('+ LangSelectComponent.vue tests', () => {
 
   let wrapper: VueWrapper;
   wrapper = mount(LangSelectComponent, {
+    props: {
+      id: 'foo-bar',
+    },
     global: {
       plugins: [i18n],
     },

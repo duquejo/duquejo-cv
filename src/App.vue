@@ -1,7 +1,7 @@
 <template>
   <SidebarComponent :social-links="SOCIAL_LINKS" :isOpen="isOpen" @toggle="onToggleMenu"/>
   <UpperHeaderComponent :isOpen="isOpen" @click="onToggleMenu"/>
-  <main :class="mainClasses" @click="onOutsideClick">
+  <main class="overflow-y-scroll bg-white scroll-smooth transition-all duration-1000 relative" :class="mainClasses" @click="onOutsideClick">
     <router-view v-slot="{ Component }">
       <transition name="slide" mode="out-in">
         <component :is="Component" :key="$route.path" />
@@ -13,20 +13,30 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 
 import SOCIAL_LINKS from '@/shared/data/social.json';
 import EVENTS from "@/events.json";
 
 import type { Event } from '@/interfaces/github-events';
 
+import useScreenResize from '@/composables/useScreenResize';
+
 import SidebarComponent from '@/components/sidebar/SidebarComponent.vue';
 import MenuComponent from '@/components/menu/MenuComponent.vue';
 import UpperHeaderComponent from '@/components/upper-header/UpperHeaderComponent.vue';
 import FooterComponent from '@/components/footer/FooterComponent.vue';
 
-const isOpen = ref<boolean>(true);
+const { isMobile } = useScreenResize();
+
+const isOpen = ref<boolean>(false);
 const isOpenMenu = ref<boolean>(false);
+
+onMounted(() => {
+  if(isMobile()) {
+    isOpen.value = true;
+  }
+})
 
 const onToggleMenu = () => {
   isOpen.value = ! isOpen.value;
@@ -43,7 +53,6 @@ const onToggleSidebarMenu = () => {
 }
 
 const mainClasses = computed(() => ({
-  'overflow-y-scroll bg-white scroll-smooth transition-all duration-1000 relative': true,
   'blur-sm': isOpenMenu.value,
 }));
 </script>

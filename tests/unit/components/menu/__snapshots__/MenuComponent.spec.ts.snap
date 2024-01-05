@@ -2,7 +2,7 @@
 
 exports[`+ MenuComponent.vue tests > Should match the snapshot with the defaults 1`] = `
 "<nav class="lg:flex lg:flex-col lg:items-center lg:justify-between hidden lg:my-4 relative">
-  <lang-select-component-stub></lang-select-component-stub>
+  <lang-select-component-stub id="menu-language-selector"></lang-select-component-stub>
   <!--v-if-->
   <!--v-if-->
 </nav>"
@@ -10,13 +10,13 @@ exports[`+ MenuComponent.vue tests > Should match the snapshot with the defaults
 
 exports[`+ MenuComponent.vue tests > should render the menu selector and the fixed aside container if events are given 1`] = `
 "<nav class="lg:flex lg:flex-col lg:items-center lg:justify-between hidden lg:my-4 relative">
-  <lang-select-component-stub></lang-select-component-stub>
+  <lang-select-component-stub id="menu-language-selector"></lang-select-component-stub>
   <div class="fixed w-80 h-auto top-0 bottom-0 my-4 rounded z-10 bg-gray-100 shadow-md flex flex-col justify-between gap-2 transition-all duration-500 ease-in-out opacity-0 translate-x-full right-0">
     <h4 class="mt-8 mb-2.5 text-h4 mx-4 text-center">general.menu.events</h4>
     <div class="overflow-y-auto">
       <recent-card-component-stub event="[object Object]"></recent-card-component-stub>
+      <p class="mx-4 mt-0 text-xs text-center"><a href="https://github.com/duquejo01" target="_blank">general.menu.events_repo_general_link</a></p>
     </div>
-    <p class="mx-4 mt-0 text-xs text-center"><a href="https://github.com/duquejo01" target="_blank">general.menu.events_repo_general_link</a></p>
   </div><i class="icon">
     <v-icon name="co-hamburger-menu" scale="1.5" fill="gray"></v-icon>
   </i>

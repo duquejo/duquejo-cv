@@ -1,7 +1,7 @@
 
 <template>
   <div class="bg-white rounded pl-5 pr-4 py-4 last:mb-8 first:mt-1 mx-2 my-4 shadow flex-col">
-    <span class="text-xs font-extrabold text-right">{{ event.created_at }}</span>
+    <span v-if="parseDate" class="text-xs font-extrabold text-right">{{ parseDate }}</span>
     <div class="flex items-center text-xs mb-2 justify-between gap-x-5">
       <span class="flex items-center gap-x-2">
         <img :src="event.actor.avatar_url" :alt="`@${event.actor.display_login}`" class="max-h-7 rounded-full" />
@@ -47,11 +47,12 @@
 </template>
 
 <script setup lang="ts">
-import { Event } from '@/interfaces/github-events';
 import { toRefs, computed } from 'vue';
-import { checkText } from 'smile2emoji';
-import PillComponent from '../pill/PillComponent.vue';
 import { useI18n } from 'vue-i18n';
+import { checkText } from 'smile2emoji';
+
+import { Event } from '@/interfaces/github-events';
+import PillComponent from '@/components/pill/PillComponent.vue';
 
 
 interface Props {
@@ -59,10 +60,12 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-const { t } = useI18n();
 const { event } = toRefs(props);
 
+const { t } = useI18n();
+
 const markdownText = (text: string): string => checkText(text);
+
 const icon = computed(() => {
   switch (event.value.type) {
     case 'PullRequestEvent':
@@ -85,5 +88,9 @@ const icon = computed(() => {
         icon: 'oi-repo-push'
       };
   };
+});
+
+const parseDate = computed(() => {
+  return new Date(event.value.created_at).toLocaleString() || null;
 });
 </script>
