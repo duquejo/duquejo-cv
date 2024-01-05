@@ -1,6 +1,6 @@
 
 <template>
-  <div class="bg-white rounded p-4 last:mb-8 first:mt-1 mx-2 my-4 shadow flex-col">
+  <div class="bg-white rounded pl-5 pr-4 py-4 last:mb-8 first:mt-1 mx-2 my-4 shadow flex-col">
     <span class="text-xs font-extrabold text-right">{{ event.created_at }}</span>
     <div class="flex items-center text-xs mb-2 justify-between gap-x-5">
       <span class="flex items-center gap-x-2">

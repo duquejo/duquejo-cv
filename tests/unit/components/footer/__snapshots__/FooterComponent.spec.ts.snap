@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`+ FooterComponent.vue tests > Should match the snapshot 1`] = `
+"<footer>
+  <ul class="flex gap-x-4">
+    <li class="icon"><a href="https://github.com" target="_blank" title="gitHub">
+        <v-icon name="bi-github" scale="1"></v-icon>
+      </a></li>
+    <li class="icon"><a href="https://linkedin.com" target="_blank" title="linkedIn">
+        <v-icon name="bi-linkedin" scale="1"></v-icon>
+      </a></li>
+  </ul><span>©️ 2024 José Duque</span>
+</footer>"
+`;

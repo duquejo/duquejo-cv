@@ -1,17 +1,16 @@
 <template>
   <nav class="lg:flex lg:flex-col lg:items-center lg:justify-between hidden lg:my-4 relative">
     <LangSelectComponent />
-    <div :class="menuClasses">
+    <div v-if="events" :class="menuClasses">
       <h4 class="mt-8 mb-2.5 text-h4 mx-4 text-center">{{ t('general.menu.events') }}</h4>
       <div class="overflow-y-auto">
-        <RecentCardComponent v-for="event in allEvents" :key="event.id" :event="event" />
+        <RecentCardComponent v-for="event in events" :key="event.id" :event="event" />
       </div>
       <p class="mx-4 mt-0 text-xs text-center">
         <a href="https://github.com/duquejo01" target="_blank">{{ t('general.menu.events_repo_general_link') }}</a>
       </p>
     </div>
-    <br>
-    <i class="icon" @click="emit('toggle')">
+    <i v-if="events" class="icon" @click="emit('toggle')">
       <v-icon name="co-hamburger-menu" scale="1.5" fill="gray"/>
     </i>
   </nav>
@@ -19,15 +18,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
-import { Event } from '@/interfaces/github-events';
-import events from '@/events.json';
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+import type { Event } from '@/interfaces/github-events';
+
 import LangSelectComponent from '@/components/language-select/LangSelectComponent.vue';
 import RecentCardComponent from '@/components/recent-card/RecentCardComponent.vue';
-import { useI18n } from 'vue-i18n';
 
 interface Props {
-  isOpen: boolean;
+  isOpen?: boolean;
+  events?: Event[],
 }
 
 interface Emits {
@@ -35,7 +35,9 @@ interface Emits {
 }
 
 const { t } = useI18n();
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  isOpen: false,
+});
 const emit = defineEmits<Emits>();
 
 const menuClasses = computed(() => ({
@@ -44,7 +46,4 @@ const menuClasses = computed(() => ({
   'opacity-100 translate-x-0 right-12': props.isOpen,
 }));
 
-
-
-const allEvents = ref<Event[]>(events as any);
 </script>

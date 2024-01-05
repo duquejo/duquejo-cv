@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`+ ProgressBarComponent.vue tests > Should match the snapshot. 1`] = `
+"<div class="flex justify-between mb-1"><strong class="text-xs">foo</strong><strong class="text-xs">0%</strong></div>
+<div class="w-full bg-gray-100 rounded-full mb-4">
+  <div data-test="progress" class="h-1.5 rounded-full" style="width: 0%; background-color: rgb(16, 185, 129);"></div>
+</div>"
+`;

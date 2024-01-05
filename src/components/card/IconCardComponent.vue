@@ -3,8 +3,8 @@
   <div :class="iconClasses">
     <v-icon :name="props.icon" scale="2" />
     <div class="mt-3 lg:mt-0">
-      <h4 v-if="props.title" v-text="props.title" />
-      <p v-if="props.content" v-text="props.content" />
+      <h4 v-text="props.title" />
+      <p v-text="props.content" />
     </div>
   </div>
 </template>
@@ -16,6 +16,9 @@ import { Order } from '@/interfaces';
 
 interface Props extends IconCard {
   order?: Order;
+  title: string;
+  content: string;
+  icon: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {

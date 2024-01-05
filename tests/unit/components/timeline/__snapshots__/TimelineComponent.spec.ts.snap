@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`+ TimelineComponent.vue tests > Should match the snapshot - List 1`] = `
+"<ol class="pt-1 relative border-s border-gray-200">
+  <li class="cursor-auto mb-8 ms-4">
+    <div class="timeline--current-detail bg-gray-400"></div>
+    <div class="flex items-center justify-between lg:justify-normal"><time class="timeline--time border-gray-400">11/07/2022 - 28/04/2023</time><span class="text-black text-xs font-normal ml-2 text-right lg:text-left">Foo bar SAS</span></div><span class="block text-xs mt-3 font-semibold mb-3 lg:mb-0">Foo Bar SAS - Project</span><span class="block text-base font-semibold">Senior backend developer</span><!-- Content -->
+    <ul class="my-1 list-disc ml-4 space-y-2 text-justify">
+      <li>foo bar</li>
+      <li>lorem ipsum sit amet.</li>
+    </ul><small class="block font-semibold mt-2 text-black text-justify">Skills: Git Flow, JWT.</small>
+  </li>
+</ol>"
+`;
+
+exports[`+ TimelineComponent.vue tests > Should match the snapshot - Paragraph 1`] = `
+"<ol class="pt-1 relative border-s border-gray-200">
+  <li class="cursor-auto mb-8 ms-4">
+    <div class="timeline--current-detail bg-gray-400"></div>
+    <div class="flex items-center justify-between lg:justify-normal"><time class="timeline--time border-gray-400">2023 - Present</time><span class="text-black text-xs font-normal ml-2 text-right lg:text-left">John Doe Co</span></div><span class="block text-xs mt-3 font-semibold mb-3 lg:mb-0">John Doe Company Project</span><span class="block text-base font-semibold">Backend developer</span><!-- Content -->
+    <p class="my-1 text-justify">foo bar, lorem ipsum sit amet-</p><small class="block font-semibold mt-2 text-black text-justify">Skills: Azure Functions, Azure Service Bus.</small>
+  </li>
+</ol>"
+`;
