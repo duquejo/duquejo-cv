@@ -10,6 +10,8 @@ export interface Experience {
   additional_info: string;
 }
 
+export type Sizes = 'small' | 'large' | 'medium';
+
 export enum Type {
   List = 'list',
   Paragraph = 'paragraph',

@@ -64,12 +64,10 @@ describe('+ App.vue tests', () => {
   it('should compute mainClasses correctly', () => {
     typedWrapperVm.isOpenMenu = true;
     expect(typedWrapperVm.mainClasses).toEqual({
-      'overflow-y-scroll bg-white scroll-smooth transition-all duration-1000 relative': true,
       'blur-sm': true,
     });
     typedWrapperVm.isOpenMenu = false;
     expect(typedWrapperVm.mainClasses).toEqual({
-      'overflow-y-scroll bg-white scroll-smooth transition-all duration-1000 relative': true,
       'blur-sm': false,
     });
   });

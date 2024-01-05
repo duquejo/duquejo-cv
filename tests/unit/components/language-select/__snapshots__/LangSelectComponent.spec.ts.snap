@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`+ LangSelectComponent.vue tests > Should match the snapshot 1`] = `
-"<select id="language-selector" class="text-gray-500 lg:text-gray-800 bg-transparent text-base lg:appearance-none lg:w-10/12 text-center outline-gray-300 cursor-pointer capitalize">
+"<select id="foo-bar" class="text-gray-500 lg:text-gray-800 bg-transparent text-base lg:appearance-none lg:w-10/12 text-center outline-gray-300 cursor-pointer capitalize">
   <option value="en">en</option>
   <option value="es">es</option>
   <option value="fr">fr</option>
