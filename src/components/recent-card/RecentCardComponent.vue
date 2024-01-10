@@ -98,6 +98,11 @@ const icon = computed(() => {
 
 const parseDate = computed(() => {
   const date = new Date(event.value.created_at);
-  return date instanceof Date ? date.toLocaleString() : false;
+
+  if( ! ( date instanceof Date && ! isNaN(date.getTime()) ) ) {
+    return false
+  }
+
+  return date.toLocaleString();
 });
 </script>

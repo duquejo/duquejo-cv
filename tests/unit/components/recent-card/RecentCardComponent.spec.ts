@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import { describe, expect, it, vi, afterEach } from 'vitest';
+import { describe, expect, it, vi, afterEach, beforeEach, MockInstance } from 'vitest';
 
 import RecentCardComponent from '../../../../src/components/recent-card/RecentCardComponent.vue';
 import PillComponent from '../../../../src/components/pill/PillComponent.vue';
@@ -8,6 +8,9 @@ import events from '../../../mocks/events.json';
 
 describe('+ RecentCardComponent.vue tests', () => {
 
+  let mockDate: MockInstance<[locales?: Intl.LocalesArgument, options?: Intl.DateTimeFormatOptions], string>;
+
+  const mockedDate = '12/22/2023, 1:00:00 PM';
   const i18n = createVueI18n('en');
 
   const pushEvent = events[0];
@@ -23,12 +26,18 @@ describe('+ RecentCardComponent.vue tests', () => {
       plugins: [i18n],
     }
   });
+  
+
+  beforeEach(() => {
+    mockDate = vi.spyOn(Date.prototype, 'toLocaleString').mockReturnValue(mockedDate);
+  });
 
   afterEach(() => {
     vi.clearAllMocks();
   });
 
   it('Should match the snapshot', () => {
+
     const wrapper = createShallowMount();
     expect(wrapper.html()).toMatchSnapshot();
   });
@@ -126,6 +135,6 @@ describe('+ RecentCardComponent.vue tests', () => {
     const typeIcon = typeContainer.find('v-icon');
 
     expect(typeIcon.attributes()).toEqual({ name: 'oi-repo-push', scale: '1' });
-    expect(date.exists()).toBeTruthy();
+    expect(date.exists()).toBeFalsy();
   });
 });
