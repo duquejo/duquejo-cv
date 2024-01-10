@@ -4,7 +4,7 @@
     <v-icon :name="props.icon" scale="2" />
     <div class="mt-3 lg:mt-0">
       <h4 v-text="props.title" />
-      <p v-text="props.content" />
+      <p class="text-center lg:text-justify" v-text="props.content" />
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@ const props = withDefaults(defineProps<Props>(), {
 const iconClasses = computed(() => ({
   'icon-container': true,
   'flex-col lg:flex-row pl-4 pr-8 text-center lg:text-left': props.order === Order.Row,
-  'flex-col px-4 text-center justify-start lg:justify-normal': props.order === Order.Col,
+  'flex-col px-4 text-center justify-start lg:justify-evenly lg:items-center': props.order === Order.Col,
 }));
 
 </script>

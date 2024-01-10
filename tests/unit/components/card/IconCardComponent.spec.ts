@@ -46,7 +46,8 @@ describe('+ IconCardComponent.vue tests', () => {
       'px-4',
       'text-center',
       'justify-start',
-      'lg:justify-normal',
+      'lg:justify-evenly',
+      'lg:items-center'
     ]);
   });
 

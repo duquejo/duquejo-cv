@@ -19,7 +19,7 @@ import {
   ViFileTypeVue,
   RiEnglishInput,
   BiGlobe2,
-  
+  RiEye2Line,
   OiRepoPush,
   IoGitPullRequestSharp,
   IoGitBranch,
@@ -45,7 +45,7 @@ export const iconsToAdd: CustomizeIconType[] = [
   ViFileTypeVue,
   RiEnglishInput,
   BiGlobe2,
-
+  RiEye2Line,
   OiRepoPush,
   IoGitPullRequestSharp,
   IoGitBranch,

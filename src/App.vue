@@ -9,18 +9,16 @@
       <FooterComponent :social-links="SOCIAL_LINKS" />
     </router-view>
   </main>
-  <MenuComponent :events="(EVENTS as Event[])" :isOpen="isOpenMenu" @toggle="onToggleSidebarMenu"/>
+  <MenuComponent v-if="events && ! isLoading" :events="events" :isOpen="isOpenMenu" @toggle="onToggleSidebarMenu"/>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
 
 import SOCIAL_LINKS from '@/shared/data/social.json';
-import EVENTS from "@/events.json";
-
-import type { Event } from '@/interfaces/github-events';
 
 import useScreenResize from '@/composables/useScreenResize';
+import useQueryClient from '@/composables/useQueryClient';
 
 import SidebarComponent from '@/components/sidebar/SidebarComponent.vue';
 import MenuComponent from '@/components/menu/MenuComponent.vue';
@@ -32,11 +30,13 @@ const { isMobile } = useScreenResize();
 const isOpen = ref<boolean>(false);
 const isOpenMenu = ref<boolean>(false);
 
-onMounted(() => {
+const { events, isLoading } = useQueryClient();
+
+onMounted( async () => {
   if(isMobile()) {
     isOpen.value = true;
   }
-})
+});
 
 const onToggleMenu = () => {
   isOpen.value = ! isOpen.value;

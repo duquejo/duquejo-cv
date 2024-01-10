@@ -242,4 +242,5 @@ export enum EventType {
   CreateEvent = 'CreateEvent',
   PullRequestEvent = 'PullRequestEvent',
   PushEvent = 'PushEvent',
+  WatchEvent = 'WatchEvent',
 }
