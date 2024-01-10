@@ -32,7 +32,7 @@ export default defineConfig({
         '**/interfaces/*.ts',
         '**/config.ts',
       ]
-    }
+    },
   },
   resolve: {
     alias: [

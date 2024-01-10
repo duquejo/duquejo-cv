@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`+ RecentCardComponent.vue tests > Should match the snapshot 1`] = `
+"<div class="bg-white rounded pl-5 pr-4 py-4 last:mb-8 first:mt-1 mx-2 my-4 shadow flex-col"><time class="text-xs font-extrabold text-right">12/22/2023, 1:05:37 PM</time>
+  <div class="flex items-center text-xs mb-2 justify-between gap-x-5"><span class="flex items-center gap-x-2"><img src="https://avatars.githubusercontent.com/u/47703424?" alt="@duquejo01" class="max-h-7 rounded-full"><a class="font-semibold underline underline-offset-2" href="https://github.com/duquejo01/vue-cv" target="_blank">duquejo01/vue-cv</a></span>
+    <!--v-if-->
+  </div>
+  <p class="bg-gray-100 rounded-lg p-3 my- text-xs leading-relaxed text-left"><strong></strong>
+  <ul class="block">
+    <li>✨ Translation manager helper class <a class="text-[0.7rem] font-semibold text-gray-700" target="_blank" href="https://github.com/duquejo01/vue-cv/commits/9e288ef7b8ade3c0f1be25902f08e0754ea479b4" title="general.menu.events_repo_commit_link">
+        <v-icon name="bi-github" scale="0.8"></v-icon>
+      </a></li>
+  </ul>
+  </p>
+  <div data-test="rc-type" class="flex items-center px-2 py-2 rounded-3xl gap-x-3 shadow-md relative hover:translate-y-0.5 transition-transform ring-1 ring-gray-200 text-xs"><span class="p-1 rounded-full leading-none max-h-7 bg-red-400"><v-icon name="oi-repo-push" scale="1"></v-icon></span> PushEvent</div>
+</div>"
+`;

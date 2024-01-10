@@ -1,11 +1,11 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { VueWrapper, shallowMount } from '@vue/test-utils';
 import AppComponent from '../../src/App.vue';
 import createVueI18n from '../mocks/mock-i18n';
 import MenuComponent from '../../src/components/menu/MenuComponent.vue';
 import SidebarComponent from '../../src/components/sidebar/SidebarComponent.vue';
 import UpperHeaderComponent from '../../src/components/upper-header/UpperHeaderComponent.vue';
-
+import createVueQuery from '../mocks/mock-vueQuery';
 
 describe('+ App.vue tests', () => {
 
@@ -15,16 +15,19 @@ describe('+ App.vue tests', () => {
   let typedWrapperVm: any;
 
   beforeEach(() => {
-    vi.clearAllMocks();
     wrapper = shallowMount(AppComponent, {
       global: {
-        plugins: [i18n],
+        plugins: [i18n, createVueQuery],
         stubs: {
           'router-view': true
         }
       }
     });
     typedWrapperVm = (wrapper.vm as any);
+  });
+
+  afterEach(() => {
+    vi.clearAllMocks();
   });
 
   it('should match the snapshot', () => {
