@@ -1,7 +1,7 @@
 
 <template>
   <div class="bg-white rounded pl-5 pr-4 py-4 last:mb-8 first:mt-1 mx-2 my-4 shadow flex-col">
-    <date v-if="parseDate" class="text-xs font-extrabold text-right">{{ parseDate }}</date>
+    <time v-if="parseDate" class="text-xs font-extrabold text-right">{{ parseDate }}</time>
     <div class="flex items-center text-xs mb-2 justify-between gap-x-5">
       <span class="flex items-center gap-x-2">
         <img :src="event.actor.avatar_url" :alt="`@${event.actor.display_login}`" class="max-h-7 rounded-full" />

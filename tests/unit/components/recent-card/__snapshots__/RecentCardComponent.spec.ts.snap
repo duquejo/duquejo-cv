@@ -1,8 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`+ RecentCardComponent.vue tests > Should match the snapshot 1`] = `
-"<div class="bg-white rounded pl-5 pr-4 py-4 last:mb-8 first:mt-1 mx-2 my-4 shadow flex-col">
-  <date class="text-xs font-extrabold text-right">12/22/2023, 1:05:37 PM</date>
+"<div class="bg-white rounded pl-5 pr-4 py-4 last:mb-8 first:mt-1 mx-2 my-4 shadow flex-col"><time class="text-xs font-extrabold text-right">12/22/2023, 1:05:37 PM</time>
   <div class="flex items-center text-xs mb-2 justify-between gap-x-5"><span class="flex items-center gap-x-2"><img src="https://avatars.githubusercontent.com/u/47703424?" alt="@duquejo01" class="max-h-7 rounded-full"><a class="font-semibold underline underline-offset-2" href="https://github.com/duquejo01/vue-cv" target="_blank">duquejo01/vue-cv</a></span>
     <!--v-if-->
   </div>

@@ -121,7 +121,7 @@ describe('+ RecentCardComponent.vue tests', () => {
       created_at: 'foo-bar', // Invalid date
     });
 
-    const date = wrapper.find('date');
+    const date = wrapper.find('time');
     const typeContainer = wrapper.find('[data-test="rc-type"]');
     const typeIcon = typeContainer.find('v-icon');
 

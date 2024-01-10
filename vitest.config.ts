@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [vue({
     template: {
       compilerOptions: {
-        isCustomElement: (tag) => ['v-icon', 'date'].includes(tag),
+        isCustomElement: (tag) => ['v-icon'].includes(tag),
       }
     }
   })],
