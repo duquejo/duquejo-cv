@@ -1,6 +1,5 @@
-// translation.test.ts
-import Translation from '../../../src/i18n/Translation';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { Translation } from '../../../src/i18n/Translation';
 
 describe('Translation', () => {
 

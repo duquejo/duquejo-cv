@@ -11,5 +11,10 @@
       "node",
       "jsdom"
     ],
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   }
 }
