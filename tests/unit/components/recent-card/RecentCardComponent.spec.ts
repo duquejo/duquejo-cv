@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import { describe, expect, it, vi, beforeEach } from 'vitest';
+import { describe, expect, it, vi, afterEach } from 'vitest';
 
 import RecentCardComponent from '../../../../src/components/recent-card/RecentCardComponent.vue';
 import PillComponent from '../../../../src/components/pill/PillComponent.vue';
