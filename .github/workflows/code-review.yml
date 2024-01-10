@@ -1,4 +1,4 @@
-name: Code quality workflow
+name: Deployment workflow
 on:
  push:
   branches:
@@ -17,5 +17,9 @@ jobs:
      uses: actions/setup-node@v3
      with:
       node-version: ${{ matrix.node-version }}
-   - run: yarn install
-   - run: yarn test:coverage
+   - name: Install packages
+     run: yarn install
+   - name: Unit tests coverage
+     run: yarn test:coverage
+   - name: Build
+     run: yarn build
