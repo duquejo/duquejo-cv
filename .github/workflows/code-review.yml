@@ -9,7 +9,7 @@ jobs:
   runs-on: ubuntu-latest
   strategy:
    matrix:
-    node-version: [18.x, 20.X]
+    node-version: [20.X]
 
   steps:
    - uses: actions/checkout@v3
@@ -18,4 +18,4 @@ jobs:
      with:
       node-version: ${{ matrix.node-version }}
    - run: yarn install
-   - run: yarn test
+   - run: yarn test:coverage
