@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { Translation } from '../../../src/i18n/Translation';
+import Translation from '../../../src/i18n/TranslationClass';
 
 describe('Translation', () => {
 

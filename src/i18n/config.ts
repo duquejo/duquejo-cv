@@ -1,5 +1,5 @@
 import {  createI18n } from 'vue-i18n';
-import Translation from './Translation';
+import Translation from './TranslationClass';
 
 import en from '@/i18n/locale/en-US/config.json';
 import es from '@/i18n/locale/es-CO/config.json';
