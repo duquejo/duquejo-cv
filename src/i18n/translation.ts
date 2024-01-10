@@ -1,4 +1,4 @@
-class Translation {
+export class Translation {
 
   private static instance: Translation;
 
@@ -110,5 +110,3 @@ class Translation {
     localStorage.setItem('user-locale', newLocale); // Persistency
   }
 };
-
-export default Translation;
