@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article ref="top">
     <section class="row items-center mx-0 mt-0">
       <div class="w-full order-2 lg:basis-1/2 lg:order-1 px-8 pt-8 lg:m-auto">
         <span class="text-gray-400 text-lg">{{ t('general.role') }}</span>
@@ -26,6 +26,14 @@ import { htmlSanitizer } from '@/shared/helpers/htmlSanitizer';
 import useLanguageContext from '@/composables/useLanguageContext';
 
 import avatar from '@/assets/avatar.jpg';
+import { onMounted, ref } from 'vue';
 
 const { t } = useLanguageContext();
+const top = ref<null | HTMLDivElement>(null);
+
+onMounted(() => {
+  if( top.value ) {
+    top.value.scrollIntoView({ behavior: 'instant' });
+  }
+});
 </script>

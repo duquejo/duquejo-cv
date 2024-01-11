@@ -1,12 +1,12 @@
 <template>
   <SidebarComponent :social-links="SOCIAL_LINKS" :isOpen="isOpen" @toggle="onToggleMenu"/>
   <UpperHeaderComponent :isOpen="isOpen" @click="onToggleMenu"/>
-  <main class="overflow-y-scroll bg-white scroll-smooth transition-all duration-1000 relative" :class="mainClasses" @click="onOutsideClick">
-    <router-view v-slot="{ Component }">
-      <transition name="slide" mode="out-in">
-        <component :is="Component" :key="$route.path" />
+  <main class="overflow-y-scroll bg-white transition-all duration-1000 relative" :class="mainClasses" @click="onOutsideClick">
+    <router-view v-slot="{ Component, route }">
+      <transition name="slide" mode="out-in" @leave="onLeave" @enter="onEnter">
+        <component :is="Component" :key="route.path" />
       </transition>
-      <FooterComponent :social-links="SOCIAL_LINKS" />
+      <FooterComponent :social-links="SOCIAL_LINKS" v-show="isTransitionLoaded" />
     </router-view>
   </main>
   <MenuComponent v-if="events && ! isLoading" :events="events" :isOpen="isOpenMenu" @toggle="onToggleSidebarMenu"/>
@@ -29,6 +29,7 @@ const { isMobile } = useScreenResize();
 
 const isOpen = ref<boolean>(false);
 const isOpenMenu = ref<boolean>(false);
+const isTransitionLoaded = ref<boolean>(false);
 
 const { events, isLoading } = useQueryClient();
 
@@ -39,7 +40,10 @@ onMounted( async () => {
 });
 
 const onToggleMenu = () => {
-  isOpen.value = ! isOpen.value;
+  // Bugfix: Mobile event overlapping
+  if(isMobile()) {
+    isOpen.value = ! isOpen.value;
+  }
 };
 
 const onOutsideClick = () => {
@@ -55,6 +59,17 @@ const onToggleSidebarMenu = () => {
 const mainClasses = computed(() => ({
   'blur-sm': isOpenMenu.value,
 }));
+
+/**
+ * bugfix: Visual transition effect suggestion
+ */
+const onEnter = () => {
+  isTransitionLoaded.value = true;
+}
+
+const onLeave = () => {
+  isTransitionLoaded.value = false;
+};
 </script>
 
 <style scoped>

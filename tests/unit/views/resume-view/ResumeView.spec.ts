@@ -10,6 +10,9 @@ describe('+ ResumeView tests', () => {
   const i18n = createVueI18n('en');
   const htmlSanitizerSpy = vi.spyOn(utils, 'htmlSanitizer');
 
+  const scrollIntoViewSpy = vi.fn();
+  window.HTMLElement.prototype.scrollIntoView = scrollIntoViewSpy;
+
   it('Should match the snapshot', () => {
     const wrapper = mount(ResumeView, {
       global: {
@@ -21,5 +24,10 @@ describe('+ ResumeView tests', () => {
     expect(htmlSanitizerSpy).toHaveBeenCalledTimes(2);
     expect(htmlSanitizerSpy).toHaveBeenCalledWith('general.resume.excerpt');
     expect(htmlSanitizerSpy).toHaveBeenCalledWith('general.resume.description.content');
+
+    expect(scrollIntoViewSpy).toHaveBeenCalled();
+    expect(scrollIntoViewSpy).toHaveBeenCalledWith({
+      behavior: 'instant'
+    });
   });
 });
