@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article ref="top">
     <section class="row items-center mx-0 mt-0">
       <div class="w-full order-2 lg:basis-1/2 lg:order-1 px-8 pt-8 lg:m-auto">
         <span class="text-gray-400 text-lg">{{ t('general.role') }}</span>
@@ -10,7 +10,7 @@
         </div>
       </div>
       <picture class="w-full order-1 lg:basis-1/2 lg:order-2 overflow-hidden">
-        <img class="shadow grayscale hover:grayscale-0 transition-all duration-500 scale-110 hover:rotate-3 delay-200" src="../assets/avatar.png" alt="José Duque" />
+        <img class="shadow grayscale hover:grayscale-0 transition-all duration-500 scale-110 hover:rotate-3 delay-200" :src="avatar" alt="José Duque" />
       </picture>
     </section>
     <section>
@@ -25,5 +25,15 @@ import TECH_STACK from '@/shared/data/stack.json';
 import { htmlSanitizer } from '@/shared/helpers/htmlSanitizer';
 import useLanguageContext from '@/composables/useLanguageContext';
 
+import avatar from '@/assets/avatar.jpg';
+import { onMounted, ref } from 'vue';
+
 const { t } = useLanguageContext();
+const top = ref<null | HTMLDivElement>(null);
+
+onMounted(() => {
+  if( top.value ) {
+    top.value.scrollIntoView({ behavior: 'instant' });
+  }
+});
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article ref="top">
     <section>
       <h1 class="text-h1 leading-tight">
         {{ t('general.services.title') }} & <br />{{ t('general.services.title2') }}
@@ -68,7 +68,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 
 import { Order, Type, Bars } from '../interfaces';
 
@@ -82,7 +82,14 @@ import IconCardComponent from '@/components/card/IconCardComponent.vue';
 import { orderObjectListByKey } from '@/shared/helpers/orderByValue';
 
 const { t, languageSources } = useLanguageContext();
+const top = ref<null | HTMLDivElement>(null);
 
 const orderedLanguages = computed(() => orderObjectListByKey<Bars>(languageSources.value.main_languages, 'value'));
 const orderedFrameLibs = computed(() => orderObjectListByKey<Bars>(languageSources.value.framelibs, 'value'));
+
+onMounted(() => {
+  if( top.value ) {
+    top.value.scrollIntoView({ behavior: 'instant' });
+  }
+});
 </script>

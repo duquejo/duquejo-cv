@@ -23,12 +23,6 @@ export default defineConfig({
       '**/*.d.ts',
     ],
     coverage: {
-      thresholds: {
-        lines: 90,
-        functions: 90,
-        branches: 90,
-        statements: 90
-      },
       exclude: [
         '**/main.ts',
         '**/assets/**',

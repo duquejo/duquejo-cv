@@ -3,7 +3,7 @@
     <UpperHeaderComponent :isOpen="isOpen" @click="emit('toggle')"/>
     <div class="flex flex-col justify-center items-center w-full lg:p-0 px-8 py-10 text-center text-base">
       <picture class="mb-5">
-        <img class="rounded-full w-32 h-32 sm:w-40 sm:h-40 object-cover grayscale hover:grayscale-0 transition-all duration-200" src="../../assets/avatar-small.jpg" alt="José Duque" />
+        <img class="rounded-full w-32 h-32 sm:w-40 sm:h-40 object-cover grayscale hover:grayscale-0 transition-all duration-200" :src="smallAvatar" alt="José Duque" />
       </picture>
       <NameTagComponent classes="mb-1 before:bg-transparent text-gray-700 hidden lg:block" size="small"/>
       <span class="text-2xl font-semibold sm:text-xl">José Duque</span>
@@ -42,6 +42,8 @@ import { SocialLinks } from '@/interfaces';
 import UpperHeaderComponent from '@/components/upper-header/UpperHeaderComponent.vue';
 import LangSelectComponent from '@/components/language-select/LangSelectComponent.vue';
 import NameTagComponent from '@/components/name-tag/NameTagComponent.vue';
+
+import smallAvatar from '@/assets/avatar-small.jpg';
 
 interface Props {
   isOpen: boolean;

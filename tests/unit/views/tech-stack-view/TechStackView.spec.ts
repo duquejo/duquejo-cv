@@ -14,6 +14,9 @@ describe('+ TechStackView tests', () => {
   const orderByValueSpy = vi.spyOn(orderByValue, 'orderObjectListByKey');
   const useLanguageContextSpy = vi.spyOn(useLanguageContext, 'default');
 
+  const scrollIntoViewSpy = vi.fn();
+  window.HTMLElement.prototype.scrollIntoView = scrollIntoViewSpy;
+
   it('Should match the snapshot', () => {
     const wrapper = mount(TechStackView, {
       global: {
@@ -25,5 +28,10 @@ describe('+ TechStackView tests', () => {
     expect(orderByValueSpy).toHaveBeenCalledTimes(2);
     
     expect(useLanguageContextSpy).toHaveBeenCalled();
+
+    expect(scrollIntoViewSpy).toHaveBeenCalled();
+    expect(scrollIntoViewSpy).toHaveBeenCalledWith({
+      behavior: 'instant'
+    });
   });
 });
