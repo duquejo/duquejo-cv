@@ -92,7 +92,7 @@
  /** Navigation links **/
 
  ul.navigation li {
-  @apply text-base;
+  @apply text-lg;
  }
 
  ul.navigation li a.router-link-active span {

@@ -1,6 +1,10 @@
 {
   "general": {
     "role": "Desarrollador Fullstack",
+    "sidebar": {
+      "network_links": "Contáctame por",
+      "theme_options": "Opciones adicionales"
+    },
     "menu": {
       "resume": "Currículo",
       "services": "Servicios",
