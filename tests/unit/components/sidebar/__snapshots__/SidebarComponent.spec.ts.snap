@@ -5,15 +5,15 @@ exports[`+ SidebarComponent.vue tests > Should match the snapshot 1`] = `
   <upper-header-component-stub isopen="false"></upper-header-component-stub>
   <div class="flex flex-col justify-center items-center w-full lg:p-0 px-8 py-10 text-center text-base">
     <picture class="mb-5"><img class="rounded-full w-32 h-32 sm:w-40 sm:h-40 object-cover grayscale hover:grayscale-0 transition-all duration-200" src="/src/assets/avatar-small.jpg" alt="José Duque"></picture>
-    <name-tag-component-stub classes="mb-1 before:bg-transparent text-gray-700 hidden lg:block" size="small"></name-tag-component-stub><span class="text-2xl font-semibold sm:text-xl">José Duque</span><span class="text-gray-500">general.role</span>
-    <div class="sidebar-news--container"><i class="icon"><a href="https://github.com" target="_blank">
+    <name-tag-component-stub classes="mb-1 before:bg-transparent text-gray-700 hidden lg:block" size="small"></name-tag-component-stub><span class="text-2xl font-semibold sm:text-xl">José Duque</span><span class="text-gray-500">general.role</span><small class="border-t border-gray-200 pt-px mt-5 mb-0 lg:hidden">general.sidebar.network_links</small>
+    <div class="flex flex-row justify-evenly lg:my-2 gap-x-3"><i class="icon"><a href="https://github.com" target="_blank">
           <v-icon name="bi-github" scale="1.3" class="fill-gray-400 hover:fill-yellow-500 transition-colors"></v-icon>
         </a></i><i class="icon"><a href="https://linkedin.com" target="_blank">
           <v-icon name="bi-linkedin" scale="1.3" class="fill-gray-400 hover:fill-yellow-500 transition-colors"></v-icon>
-        </a></i></div>
+        </a></i></div><small class="border-t border-gray-200 pt-px mt-3 mb-0 lg:hidden">general.sidebar.theme_options</small>
     <lang-select-component-stub id="sidebar-language-selector" class="lg:hidden"></lang-select-component-stub>
   </div>
-  <ul class="navigation text-right my-5 space-y-2 w-full lg:p-0 px-8 py-10">
+  <ul class="invisible lg:visible navigation text-right my-5 space-y-2 w-full lg:p-0 px-8 py-10">
     <li><a>general.menu.resume<span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9"></v-icon></span></a></li>
     <li><a>general.menu.services<span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9"></v-icon></span></a></li>
   </ul>
@@ -25,11 +25,11 @@ exports[`+ SidebarComponent.vue tests > Should match the snapshot if socialLinks
   <upper-header-component-stub isopen="false"></upper-header-component-stub>
   <div class="flex flex-col justify-center items-center w-full lg:p-0 px-8 py-10 text-center text-base">
     <picture class="mb-5"><img class="rounded-full w-32 h-32 sm:w-40 sm:h-40 object-cover grayscale hover:grayscale-0 transition-all duration-200" src="/src/assets/avatar-small.jpg" alt="José Duque"></picture>
-    <name-tag-component-stub classes="mb-1 before:bg-transparent text-gray-700 hidden lg:block" size="small"></name-tag-component-stub><span class="text-2xl font-semibold sm:text-xl">José Duque</span><span class="text-gray-500">general.role</span>
-    <!--v-if-->
+    <name-tag-component-stub classes="mb-1 before:bg-transparent text-gray-700 hidden lg:block" size="small"></name-tag-component-stub><span class="text-2xl font-semibold sm:text-xl">José Duque</span><span class="text-gray-500">general.role</span><small class="border-t border-gray-200 pt-px mt-5 mb-0 lg:hidden">general.sidebar.network_links</small>
+    <!--v-if--><small class="border-t border-gray-200 pt-px mt-3 mb-0 lg:hidden">general.sidebar.theme_options</small>
     <lang-select-component-stub id="sidebar-language-selector" class="lg:hidden"></lang-select-component-stub>
   </div>
-  <ul class="navigation text-right my-5 space-y-2 w-full lg:p-0 px-8 py-10">
+  <ul class="invisible lg:visible navigation text-right my-5 space-y-2 w-full lg:p-0 px-8 py-10">
     <li><a>general.menu.resume<span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9"></v-icon></span></a></li>
     <li><a>general.menu.services<span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9"></v-icon></span></a></li>
   </ul>

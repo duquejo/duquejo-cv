@@ -15,21 +15,19 @@
     </section>
     <section class="row">
       <div class="basis-full">
-
         <!-- Experience -->
         <h3 class="text-h3 mb-6 mt-5">{{ t('general.services.experience.title') }}</h3>
         <TimelineComponent
-          v-for="({ role, type, additional_info, date_range, enterprise, isRecent, project, resume }, index) in languageSources.experience"
-          :role="role" :type="(type as Type)" :additional_info="additional_info" :date_range="date_range"
+          v-for="({ role, type, additional_info, start_date, end_date, enterprise, isRecent, project, resume }, index) in languageSources.experience"
+          :role="role" :type="(type as Type)" :additional_info="additional_info" :start_date="start_date" :end_date="end_date"
           :enterprise="enterprise" :is-recent="isRecent" :project="project" :resume="resume" :key="index" />
 
         <!-- Education -->
         <h3 class="text-h3 mb-6 mt-10">{{ t('general.services.education.title') }}</h3>
         <TimelineComponent
-          v-for="({ role, type, additional_info, date_range, enterprise, isRecent, project, resume }, index) in languageSources.education"
-          :role="role" :type="(type as Type)" :additional_info="additional_info" :date_range="date_range"
+          v-for="({ role, type, additional_info, start_date, end_date, enterprise, isRecent, project, resume }, index) in languageSources.education"
+          :role="role" :type="(type as Type)" :additional_info="additional_info" :start_date="start_date" :end_date="end_date"
           :enterprise="enterprise" :is-recent="isRecent" :project="project" :resume="resume" :key="index" />
-
       </div>
       <div class="basis-1/2">
 

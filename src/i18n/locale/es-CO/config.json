@@ -45,9 +45,10 @@
   },
   "education": [
     {
-      "date_range": "Noviembre 2021",
+      "start_date": "Noviembre 2021",
+      "end_date": "",
       "enterprise": "Corporación Ruta N - Ceiba Software S.A.S - Globant",
-      "isRecent": false,
+      "isRecent": true,
       "project": "Certificación",
       "role": "Boot-camp Node JS",
       "type": "paragraph",
@@ -55,9 +56,10 @@
       "additional_info": ""
     },
     {
-      "date_range": "2010 - 2016",
+      "start_date": "2010",
+      "end_date": "2016",
       "enterprise": "Politécnico Colombiano Jaime Isaza Cadavid",
-      "isRecent": false,
+      "isRecent": true,
       "project": "Profesional",
       "role": "Ingeniería Informática",
       "type": "paragraph",
@@ -67,7 +69,8 @@
   ],
   "experience": [
     {
-      "date_range": "2023 - Actualidad",
+      "start_date": "2023",
+      "end_date": "Actualidad",
       "enterprise": "SURA Seguros",
       "isRecent": true,
       "project": "SURA - Bus de integraciones",
@@ -77,7 +80,8 @@
       "additional_info": "Aptitudes: Azure Functions, Azure Service Bus, CosmoDB, Terraform, Microservicios, Node.js, JMeter, Unit Tests, Integration Tests, SonarQube, Git Flow, JWT, Scrum."
     },
     {
-      "date_range": "11/07/2022 - 28/04/2023",
+      "start_date": "11/07/2022",
+      "end_date": "28/04/2023",
       "enterprise": "Aval Digital Labs - Grupo Aval AV Villas",
       "isRecent": false,
       "project": "Aval Digital Labs - Migración infraestructura Banco AV Villas Tarjeta de crédito",
@@ -87,7 +91,8 @@
       "additional_info": "Aptitudes: DynamoDB, Node.js, Spring Framework, Express, Angular, HTML, AWS, Gradle, Jira, Maven, JMeter, Jenkins, Docker, Unit Test, Functional test, AWS Cognito, Microservicios, Git Flow, JWT."
     },
     {
-      "date_range": "07/02/2022 - 06/07/2022",
+      "start_date": "07/02/2022",
+      "end_date": "06/07/2022",
       "enterprise": "Aval Digital Labs & Colegio los Nogales - MentuApp",
       "isRecent": false,
       "project": "Mentu App",
@@ -97,7 +102,8 @@
       "additional_info": "Aptitudes: MySQL, MongoDB, PostgreSQL, Nest JS, AWS SQS, Node.js, HTML, CSS, React.js, Tailwind, AWS Cognito, Typescript, Serverless Framework."
     },
     {
-      "date_range": "12/12/2021 - 27/12/2021",
+      "start_date": "12/12/2021",
+      "end_date": "27/12/2021",
       "enterprise": "Ceiba Software S.A.S",
       "isRecent": false,
       "project": "ADN Ceiba",
@@ -107,7 +113,8 @@
       "additional_info": "Aptitudes: PostgreSQL, MySQL, SASS, HTML, CSS3, React.js, TypeScript, Redux, Nest JS, JMeter, NPM, Jenkins, Sonar, Git, Unit test, Integration test, E2E Test."
     },
     {
-      "date_range": "05/05/2021 - 10/12/2021",
+      "start_date": "05/05/2021",
+      "end_date": "10/12/2021",
       "enterprise": "SM Digital",
       "isRecent": false,
       "project": "SM Digital - Creación de sitios web e integraciones entre terceros",
@@ -117,7 +124,8 @@
       "additional_info": "Aptitudes: MySQL, MongoDB, jQuery, Node.js, Express, React.js, Bootstrap, SASS, HTML5, CSS3, Jira, Trello, WordPress CMS, WooCommerce, JavaScript, TypeScript, PHP, Auth0, JWT, Laravel."
     },
     {
-      "date_range": "05/04/2020 - 29/11/2020",
+      "start_date": "05/04/2020",
+      "end_date": "29/11/2020",
       "enterprise": "Grupo Nutresa - SM Digital",
       "isRecent": false,
       "project": "E-learning Escuela de clientes",
@@ -127,7 +135,8 @@
       "additional_info": "Aptitudes: MySQL, Angular JS, Bootstrap, SASS, HTML, CSS3, AWS, Jira, Trello, Git, Javascript, PHP, MVC."
     },
     {
-      "date_range": "14/12/2019 - 04/05/2021",
+      "start_date": "14/12/2019",
+      "end_date": "04/05/2021",
       "enterprise": "SURA Seguros",
       "isRecent": false,
       "project": "SURA Asesores",
@@ -137,7 +146,8 @@
       "additional_info": "Aptitudes: SASS, CSS3, jQuery, Bootstrap, Wordpress, WooCommerce, NPM, Jira, Trello, SAML, PHP, JWT, Azure Active Directory MySQL, Git, JavaScript."
     },
     {
-      "date_range": "16/05/2019 - 23/06/2019",
+      "start_date": "16/05/2019",
+      "end_date": "23/06/2019",
       "enterprise": "Alimentos cárnicos Zenú",
       "isRecent": false,
       "project": "Zenú corporativo - Juego ¡Avanza y aprende!",
@@ -147,7 +157,8 @@
       "additional_info": "Aptitudes: Angular JS, AWS, Jira, Trello, PHP, JavaScript, TypeScript, Functional Test."
     },
     {
-      "date_range": "16/05/2019 - 23/06/2019",
+      "start_date": "16/05/2019",
+      "end_date": "23/06/2019",
       "enterprise": "Grupo Familia",
       "isRecent": false,
       "project": ">Grupo familia - Simulador de servilletas",
@@ -157,7 +168,8 @@
       "additional_info": "Aptitudes: MySQL, Bootstrap, SASS, HTML, Jira, Trello, WordPress, PHP, MVC, jQuery."
     },
     {
-      "date_range": "14/12/2019 - 04/05/2021",
+      "start_date": "14/12/2019",
+      "end_date": "04/05/2021",
       "enterprise": "COLGAS",
       "isRecent": false,
       "project": "Insa (NORGAS) - Cotizador energético",
@@ -167,7 +179,8 @@
       "additional_info": "Aptitudes: MySQL, Bootstrap, SASS, HTML, Jira, JavaScript."
     },
     {
-      "date_range": "03/02/2019 - 12/06/2021",
+      "start_date": "03/02/2019",
+      "end_date": "12/06/2021",
       "enterprise": "Grupo Presente Éxito",
       "isRecent": false,
       "project": "Cotizador de centros vacacionales",
@@ -177,7 +190,8 @@
       "additional_info": "Aptitudes: MySQL, Bootstrap, SASS, HTML, CSS, WordPress, Jira, JavaScript, MVC, Trello, PHP, jQuery."
     },
     {
-      "date_range": "07/11/2017 - 10/10/2018",
+      "start_date": "07/11/2017",
+      "end_date": "10/10/2018",
       "enterprise": "Universidad EAFIT",
       "isRecent": false,
       "project": "Universidad EAFIT - Plataforma Línea en Informática Educativa (Conexa EAFIT)",
