@@ -3,10 +3,9 @@
   <UpperHeaderComponent :isOpen="isOpen" @click="onToggleMenu"/>
   <main class="overflow-y-scroll bg-white transition-all duration-1000 relative" :class="mainClasses" @click="onOutsideClick">
     <router-view v-slot="{ Component, route }">
-      <transition name="slide" mode="out-in" @leave="onLeave" @enter="onEnter">
-        <component :is="Component" :key="route.path" />
+      <transition name="slide" mode="out-in">
+        <component :is="Component" :key="route.path"/>
       </transition>
-      <FooterComponent :social-links="SOCIAL_LINKS" v-show="isTransitionLoaded" />
     </router-view>
   </main>
   <MenuComponent v-if="events && ! isLoading" :events="events" :isOpen="isOpenMenu" @toggle="onToggleSidebarMenu"/>
@@ -23,13 +22,11 @@ import useQueryClient from '@/composables/useQueryClient';
 import SidebarComponent from '@/components/sidebar/SidebarComponent.vue';
 import MenuComponent from '@/components/menu/MenuComponent.vue';
 import UpperHeaderComponent from '@/components/upper-header/UpperHeaderComponent.vue';
-import FooterComponent from '@/components/footer/FooterComponent.vue';
 
 const { isMobile } = useScreenResize();
 
 const isOpen = ref<boolean>(false);
 const isOpenMenu = ref<boolean>(false);
-const isTransitionLoaded = ref<boolean>(false);
 
 const { events, isLoading } = useQueryClient();
 
@@ -59,17 +56,6 @@ const onToggleSidebarMenu = () => {
 const mainClasses = computed(() => ({
   'blur-sm': isOpenMenu.value,
 }));
-
-/**
- * bugfix: Visual transition effect suggestion
- */
-const onEnter = () => {
-  isTransitionLoaded.value = true;
-}
-
-const onLeave = () => {
-  isTransitionLoaded.value = false;
-};
 </script>
 
 <style scoped>

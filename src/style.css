@@ -90,6 +90,11 @@
  }
 
  /** Navigation links **/
+
+ ul.navigation li {
+  @apply text-base;
+ }
+
  ul.navigation li a.router-link-active span {
   @apply opacity-100 decoration-yellow-500;
  }
@@ -110,14 +115,6 @@
   @apply opacity-0 transition-opacity;
  }
 
- .timeline--current-detail {
-  @apply absolute w-2 h-2 rounded-full mt-1.5 -start-1;
- }
-
- .timeline--time {
-  @apply border-2 rounded px-2 py-1 font-semibold text-xs;
- }
-
  .text-h1 {
   @apply mt-10 text-center font-semibold underline underline-offset-8 decoration-yellow-500;
  }
@@ -132,10 +129,6 @@
 
  .text-h4 {
   @apply font-semibold underline-offset-2 underline decoration-yellow-500;
- }
-
- .sidebar-news--container {
-  @apply flex flex-row justify-evenly my-2 gap-x-3;
  }
 }
 

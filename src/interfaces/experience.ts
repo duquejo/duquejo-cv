@@ -1,6 +1,7 @@
 
 export interface Experience {
-  date_range:       string;
+  start_date:      string;
+  end_date:        string;
   enterprise:      string;
   isRecent:        boolean;
   project:         string;

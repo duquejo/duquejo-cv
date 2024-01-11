@@ -32,28 +32,31 @@ describe('+ TimelineComponent.vue tests', () => {
     const timeline = new TimelineBuilder().withParagraph().build();
     const wrapper = generateWrapper(timeline);
 
-    const time = wrapper.find('time');
+    const time = wrapper.findAll('time');
+    const timeSpan = wrapper.find('[data-test="time"]');
     const content = wrapper.find('p');
     const small = wrapper.find('small');
     
-    expect(time.text()).toBe(timeline.date_range);
+    expect(time[0].text()).toBe(timeline.start_date);
+    expect(time[1].text()).toBe(timeline.end_date);
     expect(content.text()).toBe(timeline.resume);
     expect(small.text()).toBe(timeline.additional_info);
 
-    expect(time.classes()).toContain('border-gray-400');
-    expect(time.classes()).not.toContain('border-yellow-500');
+    expect(timeSpan.classes()).toContain('border-gray-400');
+    expect(timeSpan.classes()).not.toContain('border-yellow-500');
   });
 
   it('should map the properties as expected with the list type', () => {
     const timelineList = new TimelineBuilder().withList().build();
     const wrapper = generateWrapper(timelineList);
 
-    const detail = wrapper.find('.timeline--current-detail');
-    const time = wrapper.find('time');
+    const detail = wrapper.find('[data-test="detail"]');
+    const time = wrapper.findAll('time');
     const content = wrapper.findAll('ul li');
     const small = wrapper.find('small');
     
-    expect(time.text()).toBe(timelineList.date_range);
+    expect(time[0].text()).toBe(timelineList.start_date);
+    expect(time[1].text()).toBe(timelineList.end_date);
     expect(content).toHaveLength(2);
     expect(small.text()).toBe(timelineList.additional_info);
 
@@ -65,19 +68,35 @@ describe('+ TimelineComponent.vue tests', () => {
     const timelineList = new TimelineBuilder().withParagraph().setIsRecent(true).build();
     const wrapper = generateWrapper(timelineList);
 
-    const time = wrapper.find('time');
+    const timeSpan = wrapper.find('[data-test="time"]');
 
-    expect(time.classes()).toContain('border-yellow-500');
-    expect(time.classes()).not.toContain('border-gray-400');
+    expect(timeSpan.classes()).toContain('border-yellow-500');
+    expect(timeSpan.classes()).not.toContain('border-gray-400');
   });
 
   it('should conditionate detail classes - Recent detail', () => {
     const timelineList = new TimelineBuilder().withParagraph().setIsRecent(true).build();
     const wrapper = generateWrapper(timelineList);
 
-    const detail = wrapper.find('.timeline--current-detail');
+    const detail = wrapper.find('[data-test="detail"]');
 
     expect(detail.classes()).toContain('bg-yellow-500');
     expect(detail.classes()).not.toContain('bg-gray-400');
+  });
+
+  it('should validate conditional start and end dates', () => {
+
+    const timelineList = new TimelineBuilder()
+      .withParagraph()
+      .setStartDate('')
+      .setEndDate('')
+      .setIsRecent(true)
+      .build();
+
+    const wrapper = generateWrapper(timelineList);
+
+    const time = wrapper.findAll('time');
+
+    expect(time).toHaveLength(0);
   });
 });

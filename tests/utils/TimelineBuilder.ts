@@ -10,7 +10,8 @@ export class TimelineBuilder {
 
   public withParagraph() {
     this.timeline = {
-      date_range: '2023 - Present',
+      start_date: '2023',
+      end_date: 'Present',
       enterprise: 'John Doe Co',
       isRecent: false,
       project: 'John Doe Company Project',
@@ -24,7 +25,8 @@ export class TimelineBuilder {
 
   public withList() {
     this.timeline = {
-      date_range: '11/07/2022 - 28/04/2023',
+      start_date: '11/07/2022',
+      end_date: '28/04/2023',
       enterprise: 'Foo bar SAS',
       isRecent: false,
       project: 'Foo Bar SAS - Project',
@@ -32,6 +34,22 @@ export class TimelineBuilder {
       type: Type.List,
       resume: '<li>foo bar</li><li>lorem ipsum sit amet.</li>',
       additional_info: 'Skills: Git Flow, JWT.'
+    };
+    return this;
+  }
+
+  public setEndDate(endDate: string) {
+    this.timeline = {
+      ...this.timeline,
+      end_date: endDate,
+    };
+    return this;
+  }
+
+  public setStartDate(startDate: string) {
+    this.timeline = {
+      ...this.timeline,
+      start_date: startDate,
     };
     return this;
   }

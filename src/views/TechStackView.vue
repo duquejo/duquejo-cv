@@ -1,5 +1,5 @@
 <template>
-  <article ref="top">
+  <WrapperLayout>
     <section>
       <h1 class="text-h1 leading-tight">
         {{ t('general.services.title') }} & <br />{{ t('general.services.title2') }}
@@ -15,21 +15,19 @@
     </section>
     <section class="row">
       <div class="basis-full">
-
         <!-- Experience -->
         <h3 class="text-h3 mb-6 mt-5">{{ t('general.services.experience.title') }}</h3>
         <TimelineComponent
-          v-for="({ role, type, additional_info, date_range, enterprise, isRecent, project, resume }, index) in languageSources.experience"
-          :role="role" :type="(type as Type)" :additional_info="additional_info" :date_range="date_range"
+          v-for="({ role, type, additional_info, start_date, end_date, enterprise, isRecent, project, resume }, index) in languageSources.experience"
+          :role="role" :type="(type as Type)" :additional_info="additional_info" :start_date="start_date" :end_date="end_date"
           :enterprise="enterprise" :is-recent="isRecent" :project="project" :resume="resume" :key="index" />
 
         <!-- Education -->
         <h3 class="text-h3 mb-6 mt-10">{{ t('general.services.education.title') }}</h3>
         <TimelineComponent
-          v-for="({ role, type, additional_info, date_range, enterprise, isRecent, project, resume }, index) in languageSources.education"
-          :role="role" :type="(type as Type)" :additional_info="additional_info" :date_range="date_range"
+          v-for="({ role, type, additional_info, start_date, end_date, enterprise, isRecent, project, resume }, index) in languageSources.education"
+          :role="role" :type="(type as Type)" :additional_info="additional_info" :start_date="start_date" :end_date="end_date"
           :enterprise="enterprise" :is-recent="isRecent" :project="project" :resume="resume" :key="index" />
-
       </div>
       <div class="basis-1/2">
 
@@ -64,15 +62,17 @@
         </div>
       </div>
     </section>
-  </article>
+  </WrapperLayout>
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed } from 'vue';
 
 import { Order, Type, Bars } from '../interfaces';
 
 import useLanguageContext from '@/composables/useLanguageContext';
+
+import WrapperLayout from '@/layouts/WrapperLayout.vue';
 import TimelineComponent from '@/components/timeline/TimelineComponent.vue';
 import CCardComponent from '@/components/certification-card/CCardComponent.vue';
 import ProgressBarComponent from '@/components/progress-bar/ProgressBarComponent.vue';
@@ -82,14 +82,7 @@ import IconCardComponent from '@/components/card/IconCardComponent.vue';
 import { orderObjectListByKey } from '@/shared/helpers/orderByValue';
 
 const { t, languageSources } = useLanguageContext();
-const top = ref<null | HTMLDivElement>(null);
 
 const orderedLanguages = computed(() => orderObjectListByKey<Bars>(languageSources.value.main_languages, 'value'));
 const orderedFrameLibs = computed(() => orderObjectListByKey<Bars>(languageSources.value.framelibs, 'value'));
-
-onMounted(() => {
-  if( top.value ) {
-    top.value.scrollIntoView({ behavior: 'instant' });
-  }
-});
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <article ref="top">
+  <WrapperLayout>
     <section class="row items-center mx-0 mt-0">
       <div class="w-full order-2 lg:basis-1/2 lg:order-1 px-8 pt-8 lg:m-auto">
         <span class="text-gray-400 text-lg">{{ t('general.role') }}</span>
@@ -17,23 +17,16 @@
       <h2 class="text-h2" v-text="t('general.resume.description.title')" />
       <p v-html="htmlSanitizer(t('general.resume.description.content'))" />
     </section>
-  </article>
+  </WrapperLayout>
 </template>
 
 <script setup lang="ts">
-import TECH_STACK from '@/shared/data/stack.json';
-import { htmlSanitizer } from '@/shared/helpers/htmlSanitizer';
-import useLanguageContext from '@/composables/useLanguageContext';
-
 import avatar from '@/assets/avatar.jpg';
-import { onMounted, ref } from 'vue';
+import TECH_STACK from '@/shared/data/stack.json';
+import useLanguageContext from '@/composables/useLanguageContext';
+import WrapperLayout from '@/layouts/WrapperLayout.vue';
+
+import { htmlSanitizer } from '@/shared/helpers/htmlSanitizer';
 
 const { t } = useLanguageContext();
-const top = ref<null | HTMLDivElement>(null);
-
-onMounted(() => {
-  if( top.value ) {
-    top.value.scrollIntoView({ behavior: 'instant' });
-  }
-});
 </script>
