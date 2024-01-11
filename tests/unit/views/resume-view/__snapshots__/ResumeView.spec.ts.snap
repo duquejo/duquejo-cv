@@ -20,5 +20,15 @@ exports[`+ ResumeView tests > Should match the snapshot 1`] = `
     <h2 class="text-h2">general.resume.description.title</h2>
     <p>general.resume.description.content</p>
   </section>
+  <footer>
+    <ul class="flex gap-x-4">
+      <li class="icon"><a href="https://github.com/duquejo01" target="_blank" title="Github">
+          <v-icon name="bi-github" scale="1"></v-icon>
+        </a></li>
+      <li class="icon"><a href="https://www.linkedin.com/in/duquejo" target="_blank" title="LinkedLn">
+          <v-icon name="co-linkedin-in" scale="1"></v-icon>
+        </a></li>
+    </ul><span>©️ 2024 José Duque</span>
+  </footer>
 </article>"
 `;

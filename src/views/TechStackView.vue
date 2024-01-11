@@ -1,5 +1,5 @@
 <template>
-  <article ref="top">
+  <WrapperLayout>
     <section>
       <h1 class="text-h1 leading-tight">
         {{ t('general.services.title') }} & <br />{{ t('general.services.title2') }}
@@ -64,15 +64,17 @@
         </div>
       </div>
     </section>
-  </article>
+  </WrapperLayout>
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed } from 'vue';
 
 import { Order, Type, Bars } from '../interfaces';
 
 import useLanguageContext from '@/composables/useLanguageContext';
+
+import WrapperLayout from '@/layouts/WrapperLayout.vue';
 import TimelineComponent from '@/components/timeline/TimelineComponent.vue';
 import CCardComponent from '@/components/certification-card/CCardComponent.vue';
 import ProgressBarComponent from '@/components/progress-bar/ProgressBarComponent.vue';
@@ -82,14 +84,7 @@ import IconCardComponent from '@/components/card/IconCardComponent.vue';
 import { orderObjectListByKey } from '@/shared/helpers/orderByValue';
 
 const { t, languageSources } = useLanguageContext();
-const top = ref<null | HTMLDivElement>(null);
 
 const orderedLanguages = computed(() => orderObjectListByKey<Bars>(languageSources.value.main_languages, 'value'));
 const orderedFrameLibs = computed(() => orderObjectListByKey<Bars>(languageSources.value.framelibs, 'value'));
-
-onMounted(() => {
-  if( top.value ) {
-    top.value.scrollIntoView({ behavior: 'instant' });
-  }
-});
 </script>

@@ -1,8 +1,8 @@
-import { mount } from "@vue/test-utils";
-import { describe, expect, it, vi } from "vitest";
+import { mount } from '@vue/test-utils';
+import { describe, expect, it, vi } from 'vitest';
 
 import ResumeView from '../../../../src/views/ResumeView.vue';
-import createVueI18n from "../../../mocks/mock-i18n";
+import createVueI18n from '../../../mocks/mock-i18n';
 import * as utils from '../../../../src/shared/helpers/htmlSanitizer';
 
 describe('+ ResumeView tests', () => {
