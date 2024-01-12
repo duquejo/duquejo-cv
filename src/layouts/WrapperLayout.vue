@@ -18,7 +18,7 @@ const top = ref<null | HTMLDivElement>(null);
 
 onMounted(() => {
   if (top.value) {
-    top.value!.scrollIntoView({ behavior: 'instant' });
+    top.value.scrollIntoView({ behavior: 'instant' });
   }
 });
 </script>

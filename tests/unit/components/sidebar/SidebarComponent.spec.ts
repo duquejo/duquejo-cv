@@ -29,6 +29,7 @@ describe('+ SidebarComponent.vue tests', () => {
       plugins: [i18n],
       stubs: {
         RouterLink: RouterLinkStub,
+        UpperHeaderComponent: UpperHeaderComponent,
       }
     },
   });

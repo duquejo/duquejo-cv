@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import avatar from '@/assets/avatar.jpg';
+import avatar from '@/assets/avatar.webp';
 import TECH_STACK from '@/shared/data/stack.json';
 import useLanguageContext from '@/composables/useLanguageContext';
 import WrapperLayout from '@/layouts/WrapperLayout.vue';

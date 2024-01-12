@@ -24,11 +24,7 @@ exports[`+ TechStackView tests > Should match the snapshot 1`] = `
         <h3 class="text-h3 mb-6 mt-10">general.services.tech_languages.title</h3><!-- Framework & Libraries -->
         <h3 class="text-h3 mb-6 mt-10">general.services.framelibs.title</h3><!-- Knowledges -->
         <h3 class="text-h3 mb-6 mt-10">general.services.knowledges.title</h3>
-        <div class="flex flex-wrap gap-2 lg:gap-3 justify-evenly lg:justify-normal"></div><!-- Certifications -->
-        <h3 class="text-h3 mb-6 mt-10">general.services.certifications.title</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-4">
-          <!---->
-        </div>
+        <div class="flex flex-wrap gap-2 lg:gap-3 justify-evenly lg:justify-normal"></div>
       </div>
     </section>
   </article>

@@ -14,13 +14,13 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, defineAsyncComponent } from 'vue';
+import SidebarComponent from '@/components/sidebar/SidebarComponent.vue';
 
 import SOCIAL_LINKS from '@/shared/data/social.json';
 
 import useScreenResize from '@/composables/useScreenResize';
 
 const MenuComponent = defineAsyncComponent(() => import('@/components/menu/MenuComponent.vue'));
-const SidebarComponent = defineAsyncComponent(() => import('@/components/sidebar/SidebarComponent.vue'));
 const UpperHeaderComponent = defineAsyncComponent(() => import('@/components/upper-header/UpperHeaderComponent.vue'));
 const NavigationLinks = defineAsyncComponent(() => import('@/components/navigation-links/NavigationLinks.vue'));
 
@@ -60,7 +60,7 @@ const mainClasses = computed(() => ({
 
 <style scoped>
 .slide-enter-active, .slide-leave-active {
-  transition: opacity 0.3s, transform 0.8s;
+  transition: opacity 0.5s, transform 0.8s;
 }
 .slide-enter-from, .slide-leave-to {
   opacity: 0;
