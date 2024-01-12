@@ -54,12 +54,6 @@
           <PillComponent v-for="(knowledge, i) in languageSources.knowledges" :key="`${knowledge}-${i}`"
             :text="knowledge" />
         </div>
-
-        <!-- Certifications -->
-        <h3 class="text-h3 mb-6 mt-10">{{ t('general.services.certifications.title') }}</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-1 gap-4">
-          <CCardComponent />
-        </div>
       </div>
     </section>
   </WrapperLayout>
@@ -76,7 +70,6 @@ import WrapperLayout from '@/layouts/WrapperLayout.vue';
 import IconCardComponent from '@/components/card/IconCardComponent.vue';
 
 const TimelineComponent = defineAsyncComponent(() => import('@/components/timeline/TimelineComponent.vue'));
-const CCardComponent = defineAsyncComponent(() => import('@/components/certification-card/CCardComponent.vue'));
 const ProgressBarComponent = defineAsyncComponent(() => import('@/components/progress-bar/ProgressBarComponent.vue'));
 const PillComponent = defineAsyncComponent(() => import('@/components/pill/PillComponent.vue'));
 
