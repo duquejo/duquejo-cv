@@ -2,7 +2,7 @@
   <WrapperLayout>
     <section class="row items-center mx-0 mt-0">
       <div class="w-full order-2 lg:basis-1/2 lg:order-1 px-8 pt-8 lg:m-auto">
-        <span class="text-gray-400 text-lg">{{ t('general.role') }}</span>
+        <span class="text-gray-500 text-lg">{{ t('general.role') }}</span>
         <h1 class="mt-2">{{ t('general.resume.greetings') }} <strong>José Duque.</strong></h1>
         <p v-html="htmlSanitizer(t('general.resume.excerpt'))" />
         <div class="button-container">

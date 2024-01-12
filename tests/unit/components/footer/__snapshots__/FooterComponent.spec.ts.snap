@@ -3,10 +3,10 @@
 exports[`+ FooterComponent.vue tests > Should match the snapshot 1`] = `
 "<footer>
   <ul class="flex gap-x-4">
-    <li class="icon"><a href="https://github.com" target="_blank" title="gitHub">
+    <li class="icon"><a href="https://github.com" target="_blank" title="gitHub" aria-label="general.sidebar.network_links_label GitHub">
         <v-icon name="bi-github" scale="1"></v-icon>
       </a></li>
-    <li class="icon"><a href="https://linkedin.com" target="_blank" title="linkedIn">
+    <li class="icon"><a href="https://linkedin.com" target="_blank" title="linkedIn" aria-label="general.sidebar.network_links_label LinkedIn">
         <v-icon name="bi-linkedin" scale="1"></v-icon>
       </a></li>
   </ul><span>©️ 2024 José Duque</span>

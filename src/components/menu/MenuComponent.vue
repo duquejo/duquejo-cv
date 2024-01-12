@@ -6,7 +6,7 @@
       <div class="overflow-y-auto">
         <RecentCardComponent v-for="event in events" :key="event.id" :event="event" />
         <p class="mx-4 mt-0 text-xs text-center">
-          <a href="https://github.com/duquejo01" target="_blank">{{ t('general.menu.events_repo_general_link') }}</a>
+          <a href="https://github.com/duquejo01" target="_blank" :aria-label="t('general.menu.events_repo_general_link_label')">{{ t('general.menu.events_repo_general_link') }}</a>
         </p>
       </div>
     </div>

@@ -37,10 +37,10 @@ exports[`+ TechStackView tests > Should match the snapshot 1`] = `
   </article>
   <footer>
     <ul class="flex gap-x-4">
-      <li class="icon"><a href="https://github.com/duquejo01" target="_blank" title="Github">
+      <li class="icon"><a href="https://github.com/duquejo01" target="_blank" title="Github" aria-label="general.sidebar.network_links_label github">
           <v-icon name="bi-github" scale="1"></v-icon>
         </a></li>
-      <li class="icon"><a href="https://www.linkedin.com/in/duquejo" target="_blank" title="LinkedLn">
+      <li class="icon"><a href="https://www.linkedin.com/in/duquejo" target="_blank" title="LinkedLn" aria-label="general.sidebar.network_links_label linkedln">
           <v-icon name="co-linkedin-in" scale="1"></v-icon>
         </a></li>
     </ul><span>©️ 2024 José Duque</span>

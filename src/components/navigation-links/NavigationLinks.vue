@@ -1,5 +1,5 @@
 <template>
-  <ul class="navigation w-full" :class="layoutClasses" role="menu">
+  <ul class="navigation w-full" :class="layoutClasses">
     <li v-for="route in ROUTES" :key="route" class="border-r border-gray-300 w-full text-center last:border-none lg:border-none lg:w-auto lg:text-right" :class="sizesClasses">
       <router-link :to="{ name: route }" @click="emit('link-click')">
         {{ generateMenuLink(route) }}

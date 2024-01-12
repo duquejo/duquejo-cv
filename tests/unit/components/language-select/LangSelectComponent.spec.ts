@@ -23,7 +23,7 @@ describe('+ LangSelectComponent.vue tests', () => {
   });
 
   it('Should append the available classes', () => {
-    expect(wrapper.classes()).toEqual(['text-gray-500', 'lg:text-gray-800', 'bg-transparent', 'text-base', 'lg:appearance-none', 'lg:w-10/12', 'text-center', 'outline-gray-300', 'cursor-pointer', 'capitalize' ]);
+    expect(wrapper.classes()).toEqual(['text-gray-600', 'lg:text-gray-800', 'bg-transparent', 'text-base', 'lg:appearance-none', 'lg:w-10/12', 'text-center', 'outline-gray-300', 'cursor-pointer', 'capitalize' ]);
   });
 
   it('Should render a select element with the whole available locales', () => {
