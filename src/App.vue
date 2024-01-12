@@ -1,6 +1,6 @@
 <template>
-  <SidebarComponent :social-links="SOCIAL_LINKS" :isOpen="isOpen" @toggle="onToggleMenu"/>
-  <UpperHeaderComponent :isOpen="isOpen" @click="onToggleMenu"/>
+  <SidebarComponent :isOpen="isOpen" @toggle="onToggleMenu"/>
+  <UpperHeaderComponent :isOpen="isOpen" @menu-click="onToggleMenu"/>
   <main class="overflow-y-scroll bg-white transition-all duration-1000 relative" :class="mainClasses" @click="onOutsideClick">
     <router-view v-slot="{ Component, route }">
       <transition name="slide" mode="out-in">
@@ -14,12 +14,10 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, defineAsyncComponent } from 'vue';
-import SidebarComponent from '@/components/sidebar/SidebarComponent.vue';
-
-import SOCIAL_LINKS from '@/shared/data/social.json';
 
 import useScreenResize from '@/composables/useScreenResize';
 
+const SidebarComponent = defineAsyncComponent(() => import('@/components/sidebar/SidebarComponent.vue'));
 const MenuComponent = defineAsyncComponent(() => import('@/components/menu/MenuComponent.vue'));
 const UpperHeaderComponent = defineAsyncComponent(() => import('@/components/upper-header/UpperHeaderComponent.vue'));
 const NavigationLinks = defineAsyncComponent(() => import('@/components/navigation-links/NavigationLinks.vue'));
@@ -37,10 +35,7 @@ onMounted( async () => {
 });
 
 const onToggleMenu = () => {
-  // Bugfix: Mobile event overlapping
-  if(isAMobileDevice) {
-    isOpen.value = ! isOpen.value;
-  }
+  isOpen.value = ! isOpen.value;
 };
 
 const onOutsideClick = () => {
