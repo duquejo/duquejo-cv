@@ -10,8 +10,8 @@
       <span class="text-gray-600">{{ t('general.role') }}</span>
 
       <small class="border-t border-gray-200 pt-px mt-5 mb-0 lg:hidden">{{ t('general.sidebar.network_links') }}</small>
-      <div v-if="props.socialLinks?.length" class="flex flex-row justify-evenly lg:my-2 gap-x-3">
-        <i class="icon" v-for="link in props.socialLinks" :key="link.name">
+      <div v-if="SOCIAL_LINKS.length" class="flex flex-row justify-evenly lg:my-2 gap-x-3">
+        <i class="icon" v-for="link in SOCIAL_LINKS" :key="link.name">
           <a :href="link.url" target="_blank" :aria-label="`${t('general.sidebar.network_links_label')} ${link.name}`">
             <v-icon :name="link.icon" scale="1.3" class="fill-gray-400 hover:fill-yellow-500 transition-colors" />
           </a>
@@ -28,9 +28,10 @@
 <script setup lang="ts">
 import { computed, defineAsyncComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
+import SOCIAL_LINKS from '@/shared/data/social.json';
+
 
 import smallAvatar from '@/assets/avatar-small.webp';
-import { SocialLinks } from '@/interfaces';
 
 const UpperHeaderComponent = defineAsyncComponent(() => import('@/components/upper-header/UpperHeaderComponent.vue'));
 const LangSelectComponent = defineAsyncComponent(() => import('@/components/language-select/LangSelectComponent.vue'));
@@ -40,7 +41,6 @@ const NavigationLinks = defineAsyncComponent(() => import('@/components/navigati
 
 interface Props {
   isOpen: boolean;
-  socialLinks?: SocialLinks[];
 }
 
 interface Emit {

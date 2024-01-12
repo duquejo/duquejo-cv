@@ -110,7 +110,7 @@ describe('+ RecentCardComponent.vue tests', () => {
 
     expect(typeContainer.text()).toBe(pullRequestEvent.type);
     expect(typeIcon.attributes()).toEqual({ name: 'io-git-pull-request-sharp', scale: '1' });
-    expect(typeSpan.classes()).toContain('bg-yellow-400');
+    expect(typeSpan.classes()).toContain('bg-yellow-500');
   });
 
   

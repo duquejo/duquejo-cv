@@ -26,7 +26,7 @@
 
 @layer base {
  body {
-  @apply font-primary text-sm leading-normal bg-gray-100 selection:bg-yellow-200;
+  @apply font-primary text-base leading-normal bg-gray-100 selection:bg-yellow-200;
  }
 
  #app {
@@ -43,10 +43,10 @@
  main { grid-area: content; }
  nav { grid-area: aside; }
 
- h1 { @apply text-4xl lg:text-5xl mb-5; }
- h2 { @apply text-lg lg:text-xl mb-3; }
- h3 { @apply text-base lg:text-lg mb-3; }
- h4 { @apply text-base font-semibold; }
+ h1 { @apply text-4xl lg:text-6xl mb-5; }
+ h2 { @apply text-lg lg:text-2xl mb-3; }
+ h3 { @apply text-base lg:text-xl mb-3; }
+ h4 { @apply text-lg font-semibold; }
  
  a { @apply hover:text-yellow-500 transition-all; }
  p { @apply my-2 text-justify; }
@@ -120,7 +120,7 @@
  }
 
  .text-h2 {
-  @apply text-xl font-semibold underline-offset-8 underline decoration-yellow-500;
+  @apply font-semibold underline-offset-4 underline decoration-yellow-500;
  }
 
  .text-h3 {
