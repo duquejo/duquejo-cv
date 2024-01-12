@@ -1,8 +1,10 @@
 <template>
-  <article ref="top">
-    <slot />
+  <div class="animated-container">
+    <article ref="top">
+      <slot />
+    </article>
     <FooterComponent :social-links="SOCIAL_LINKS" />
-  </article>
+  </div>
 </template>
 
 <script setup lang="ts">

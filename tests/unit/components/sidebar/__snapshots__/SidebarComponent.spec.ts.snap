@@ -13,10 +13,7 @@ exports[`+ SidebarComponent.vue tests > Should match the snapshot 1`] = `
         </a></i></div><small class="border-t border-gray-200 pt-px mt-3 mb-0 lg:hidden">general.sidebar.theme_options</small>
     <lang-select-component-stub id="sidebar-language-selector" class="lg:hidden"></lang-select-component-stub>
   </div>
-  <ul class="invisible lg:visible navigation text-right my-5 space-y-2 w-full lg:p-0 px-8 py-10">
-    <li><a>general.menu.resume<span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9"></v-icon></span></a></li>
-    <li><a>general.menu.services<span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9"></v-icon></span></a></li>
-  </ul>
+  <navigation-links-stub layout="menu" size="large"></navigation-links-stub>
 </aside>"
 `;
 
@@ -29,9 +26,6 @@ exports[`+ SidebarComponent.vue tests > Should match the snapshot if socialLinks
     <!--v-if--><small class="border-t border-gray-200 pt-px mt-3 mb-0 lg:hidden">general.sidebar.theme_options</small>
     <lang-select-component-stub id="sidebar-language-selector" class="lg:hidden"></lang-select-component-stub>
   </div>
-  <ul class="invisible lg:visible navigation text-right my-5 space-y-2 w-full lg:p-0 px-8 py-10">
-    <li><a>general.menu.resume<span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9"></v-icon></span></a></li>
-    <li><a>general.menu.services<span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9"></v-icon></span></a></li>
-  </ul>
+  <navigation-links-stub layout="menu" size="large"></navigation-links-stub>
 </aside>"
 `;

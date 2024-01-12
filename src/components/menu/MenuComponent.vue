@@ -1,7 +1,7 @@
 <template>
   <nav class="lg:flex lg:flex-col lg:items-center lg:justify-between hidden lg:my-4 relative">
     <LangSelectComponent id="menu-language-selector" />
-    <div v-if="events" class="fixed w-80 h-auto top-0 bottom-0 my-4 rounded z-10 bg-gray-100 shadow-md flex flex-col justify-between gap-2 transition-all duration-500 ease-in-out" :class="menuClasses">
+    <div v-if="! isLoading && events" class="fixed w-80 h-auto top-0 bottom-0 my-4 rounded z-10 bg-gray-100 shadow-md flex flex-col justify-between gap-2 transition-all duration-500 ease-in-out" :class="menuClasses">
       <h4 class="mt-8 mb-2.5 text-h4 mx-4 text-center">{{ t('general.menu.events') }}</h4>
       <div class="overflow-y-auto">
         <RecentCardComponent v-for="event in events" :key="event.id" :event="event" />
@@ -10,24 +10,25 @@
         </p>
       </div>
     </div>
-    <i v-if="events" class="icon" @click="emit('toggle')">
+    <i v-if="! isLoading && events" class="icon" @click="emit('toggle')">
       <v-icon name="co-hamburger-menu" scale="1.5" fill="gray"/>
     </i>
+    <i v-else class="icon cursor-default" :title="t('general.menu.events_loading_description')">
+      <v-icon class="animate-spin" name="fa-spinner" scale="1" fill="gray" />
+    </i>
   </nav>
-
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
-import type { Event } from '@/interfaces/github-events';
 
 import LangSelectComponent from '@/components/language-select/LangSelectComponent.vue';
 import RecentCardComponent from '@/components/recent-card/RecentCardComponent.vue';
+import useQueryClient from '@/composables/useQueryClient';
 
 interface Props {
   isOpen?: boolean;
-  events?: Event[],
 }
 
 interface Emits {
@@ -35,6 +36,8 @@ interface Emits {
 }
 
 const { t } = useI18n();
+const { events, isLoading } = useQueryClient();
+
 const props = withDefaults(defineProps<Props>(), {
   isOpen: false,
 });

@@ -1,7 +1,8 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`+ WrapperLayout tests > Should match the snapshot 1`] = `
-"<article>
+"<div class="animated-container">
+  <article></article>
   <footer-component-stub sociallinks="[object Object],[object Object]"></footer-component-stub>
-</article>"
+</div>"
 `;

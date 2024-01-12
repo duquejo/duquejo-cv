@@ -1,25 +1,27 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`+ ResumeView tests > Should match the snapshot 1`] = `
-"<article>
-  <section class="row items-center mx-0 mt-0">
-    <div class="w-full order-2 lg:basis-1/2 lg:order-1 px-8 pt-8 lg:m-auto"><span class="text-gray-400 text-lg">general.role</span>
-      <h1 class="mt-2">general.resume.greetings <strong>José Duque.</strong></h1>
-      <p>general.resume.excerpt</p>
-      <div class="button-container">
-        <v-icon class="hover:animate-wiggle" name="vi-file-type-typescript-official" scale="2.5" title="Typescript"></v-icon>
-        <v-icon class="hover:animate-wiggle" name="vi-file-type-node" scale="2.5" title="Node JS"></v-icon>
-        <v-icon class="hover:animate-wiggle" name="vi-file-type-tailwind" scale="2.5" title="Tailwind"></v-icon>
-        <v-icon class="hover:animate-wiggle" name="vi-file-type-vue" scale="2.5" title="Vue JS"></v-icon>
-        <v-icon class="hover:animate-wiggle" name="vi-file-type-reactjs" scale="2.5" title="React JS"></v-icon>
+"<div class="animated-container">
+  <article>
+    <section class="row items-center mx-0 mt-0">
+      <div class="w-full order-2 lg:basis-1/2 lg:order-1 px-8 pt-8 lg:m-auto"><span class="text-gray-400 text-lg">general.role</span>
+        <h1 class="mt-2">general.resume.greetings <strong>José Duque.</strong></h1>
+        <p>general.resume.excerpt</p>
+        <div class="button-container">
+          <v-icon class="hover:animate-wiggle" name="vi-file-type-typescript-official" scale="2.5" title="Typescript"></v-icon>
+          <v-icon class="hover:animate-wiggle" name="vi-file-type-node" scale="2.5" title="Node JS"></v-icon>
+          <v-icon class="hover:animate-wiggle" name="vi-file-type-tailwind" scale="2.5" title="Tailwind"></v-icon>
+          <v-icon class="hover:animate-wiggle" name="vi-file-type-vue" scale="2.5" title="Vue JS"></v-icon>
+          <v-icon class="hover:animate-wiggle" name="vi-file-type-reactjs" scale="2.5" title="React JS"></v-icon>
+        </div>
       </div>
-    </div>
-    <picture class="w-full order-1 lg:basis-1/2 lg:order-2 overflow-hidden"><img class="shadow grayscale hover:grayscale-0 transition-all duration-500 scale-110 hover:rotate-3 delay-200" src="/src/assets/avatar.jpg" alt="José Duque"></picture>
-  </section>
-  <section>
-    <h2 class="text-h2">general.resume.description.title</h2>
-    <p>general.resume.description.content</p>
-  </section>
+      <picture class="w-full order-1 lg:basis-1/2 lg:order-2 overflow-hidden"><img class="shadow grayscale hover:grayscale-0 transition-all duration-500 scale-110 hover:rotate-3 delay-200" src="/src/assets/avatar.jpg" alt="José Duque"></picture>
+    </section>
+    <section>
+      <h2 class="text-h2">general.resume.description.title</h2>
+      <p>general.resume.description.content</p>
+    </section>
+  </article>
   <footer>
     <ul class="flex gap-x-4">
       <li class="icon"><a href="https://github.com/duquejo01" target="_blank" title="Github">
@@ -30,5 +32,5 @@ exports[`+ ResumeView tests > Should match the snapshot 1`] = `
         </a></li>
     </ul><span>©️ 2024 José Duque</span>
   </footer>
-</article>"
+</div>"
 `;
