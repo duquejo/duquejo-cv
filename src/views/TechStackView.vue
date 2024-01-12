@@ -66,18 +66,19 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, defineAsyncComponent } from 'vue';
 
-import { Order, Type, Bars } from '../interfaces';
+import { Order, Type, Bars } from '@/interfaces';
 
 import useLanguageContext from '@/composables/useLanguageContext';
 
 import WrapperLayout from '@/layouts/WrapperLayout.vue';
-import TimelineComponent from '@/components/timeline/TimelineComponent.vue';
-import CCardComponent from '@/components/certification-card/CCardComponent.vue';
-import ProgressBarComponent from '@/components/progress-bar/ProgressBarComponent.vue';
-import PillComponent from '@/components/pill/PillComponent.vue';
 import IconCardComponent from '@/components/card/IconCardComponent.vue';
+
+const TimelineComponent = defineAsyncComponent(() => import('@/components/timeline/TimelineComponent.vue'));
+const CCardComponent = defineAsyncComponent(() => import('@/components/certification-card/CCardComponent.vue'));
+const ProgressBarComponent = defineAsyncComponent(() => import('@/components/progress-bar/ProgressBarComponent.vue'));
+const PillComponent = defineAsyncComponent(() => import('@/components/pill/PillComponent.vue'));
 
 import { orderObjectListByKey } from '@/shared/helpers/orderByValue';
 

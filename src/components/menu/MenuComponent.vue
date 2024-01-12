@@ -14,18 +14,19 @@
       <v-icon name="co-hamburger-menu" scale="1.5" fill="gray"/>
     </i>
     <i v-else class="icon cursor-default" :title="t('general.menu.events_loading_description')">
-      <v-icon class="animate-spin" name="fa-spinner" scale="1" fill="gray" />
+      <v-icon name="fa-spinner" scale="1" fill="gray" animation="spin"/>
     </i>
   </nav>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, defineAsyncComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-import LangSelectComponent from '@/components/language-select/LangSelectComponent.vue';
-import RecentCardComponent from '@/components/recent-card/RecentCardComponent.vue';
 import useQueryClient from '@/composables/useQueryClient';
+
+const LangSelectComponent = defineAsyncComponent(() => import('@/components/language-select/LangSelectComponent.vue'));
+const RecentCardComponent = defineAsyncComponent(() => import('@/components/recent-card/RecentCardComponent.vue'));
 
 interface Props {
   isOpen?: boolean;

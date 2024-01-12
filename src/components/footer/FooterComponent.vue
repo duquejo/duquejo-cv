@@ -13,9 +13,8 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { SocialLinks } from '@/interfaces/social-links';
-
 import { useI18n } from 'vue-i18n';
+import { SocialLinks } from '@/interfaces/social-links';
 
 interface Props {
   socialLinks?: SocialLinks[];

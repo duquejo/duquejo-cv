@@ -33,5 +33,10 @@
     "vite": "^5.0.0",
     "vitest": "^1.1.0",
     "vue-tsc": "^1.8.22"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 11",
+    "defaults"
+  ]
 }
