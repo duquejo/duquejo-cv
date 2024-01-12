@@ -9,35 +9,36 @@
     </router-view>
   </main>
   <NavigationLinks size="small" layout="fixed" />
-  <MenuComponent :isOpen="isOpenMenu" @toggle="onToggleSidebarMenu"/>
+  <MenuComponent v-if="! isAMobileDevice" :isOpen="isOpenMenu" @toggle="onToggleSidebarMenu"/>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, defineAsyncComponent } from 'vue';
 
 import SOCIAL_LINKS from '@/shared/data/social.json';
 
 import useScreenResize from '@/composables/useScreenResize';
 
-import SidebarComponent from '@/components/sidebar/SidebarComponent.vue';
-import MenuComponent from '@/components/menu/MenuComponent.vue';
-import UpperHeaderComponent from '@/components/upper-header/UpperHeaderComponent.vue';
-import NavigationLinks from '@/components/navigation-links/NavigationLinks.vue';
+const MenuComponent = defineAsyncComponent(() => import('@/components/menu/MenuComponent.vue'));
+const SidebarComponent = defineAsyncComponent(() => import('@/components/sidebar/SidebarComponent.vue'));
+const UpperHeaderComponent = defineAsyncComponent(() => import('@/components/upper-header/UpperHeaderComponent.vue'));
+const NavigationLinks = defineAsyncComponent(() => import('@/components/navigation-links/NavigationLinks.vue'));
 
 const { isMobile } = useScreenResize();
+const isAMobileDevice = isMobile();
 
 const isOpen = ref<boolean>(false);
 const isOpenMenu = ref<boolean>(false);
 
 onMounted( async () => {
-  if(isMobile()) {
+  if(isAMobileDevice) {
     isOpen.value = true;
   }
 });
 
 const onToggleMenu = () => {
   // Bugfix: Mobile event overlapping
-  if(isMobile()) {
+  if(isAMobileDevice) {
     isOpen.value = ! isOpen.value;
   }
 };

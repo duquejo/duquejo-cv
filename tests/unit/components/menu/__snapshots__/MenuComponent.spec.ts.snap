@@ -4,7 +4,7 @@ exports[`+ MenuComponent.vue tests > Should match the snapshot with the defaults
 "<nav class="lg:flex lg:flex-col lg:items-center lg:justify-between hidden lg:my-4 relative">
   <lang-select-component-stub id="menu-language-selector"></lang-select-component-stub>
   <!--v-if--><i class="icon cursor-default" title="general.menu.events_loading_description">
-    <v-icon class="animate-spin" name="fa-spinner" scale="1" fill="gray"></v-icon>
+    <v-icon name="fa-spinner" scale="1" fill="gray" animation="spin"></v-icon>
   </i>
 </nav>"
 `;

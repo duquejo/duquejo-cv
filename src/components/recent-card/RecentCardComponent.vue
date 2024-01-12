@@ -47,14 +47,14 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs, computed } from 'vue';
+import { toRefs, computed, defineAsyncComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
-import * as emoji from 'node-emoji';
+import { emojify } from 'node-emoji';
 
 import type { Event } from '@/interfaces/github-events';
 import { EventType } from '@/interfaces/github-events';
-import PillComponent from '@/components/pill/PillComponent.vue';
 
+const PillComponent = defineAsyncComponent(() => import('@/components/pill/PillComponent.vue'));
 
 interface Props {
   event: Event
@@ -65,7 +65,7 @@ const { event } = toRefs(props);
 
 const { t } = useI18n();
 
-const markdownText = (text: string): string => emoji.emojify(text);
+const markdownText = (text: string): string => emojify(text);
 
 const icon = computed(() => {
   switch (event.value.type) {

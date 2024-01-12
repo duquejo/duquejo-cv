@@ -24,6 +24,9 @@ describe('+ RecentCardComponent.vue tests', () => {
     },
     global: {
       plugins: [i18n],
+      stubs: {
+        PillComponent: PillComponent,
+      }
     }
   });
   
