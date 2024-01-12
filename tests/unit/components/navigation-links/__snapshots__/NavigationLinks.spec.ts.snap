@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`+ NavigationLinks.vue tests > Should match the snapshot 1`] = `
+"<ul class="navigation w-full invisible lg:visible text-right my-5 space-y-2  lg:p-0 px-8 py-10" role="menu">
+  <li class="border-r border-gray-300 w-full text-center last:border-none lg:border-none lg:w-auto lg:text-right text-base"><a>general.menu.resume <span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9"></v-icon></span></a></li>
+  <li class="border-r border-gray-300 w-full text-center last:border-none lg:border-none lg:w-auto lg:text-right text-base"><a>general.menu.services <span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9"></v-icon></span></a></li>
+</ul>"
+`;

@@ -23,6 +23,7 @@ import {
   OiRepoPush,
   IoGitPullRequestSharp,
   IoGitBranch,
+  FaSpinner,
 } from 'oh-vue-icons/icons';
 
 export const iconsToAdd: CustomizeIconType[] = [
@@ -49,4 +50,5 @@ export const iconsToAdd: CustomizeIconType[] = [
   OiRepoPush,
   IoGitPullRequestSharp,
   IoGitBranch,
+  FaSpinner,
 ];

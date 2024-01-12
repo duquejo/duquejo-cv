@@ -8,7 +8,8 @@
       </transition>
     </router-view>
   </main>
-  <MenuComponent v-if="events && ! isLoading" :events="events" :isOpen="isOpenMenu" @toggle="onToggleSidebarMenu"/>
+  <NavigationLinks size="small" layout="fixed" />
+  <MenuComponent :isOpen="isOpenMenu" @toggle="onToggleSidebarMenu"/>
 </template>
 
 <script setup lang="ts">
@@ -17,18 +18,16 @@ import { ref, computed, onMounted } from 'vue';
 import SOCIAL_LINKS from '@/shared/data/social.json';
 
 import useScreenResize from '@/composables/useScreenResize';
-import useQueryClient from '@/composables/useQueryClient';
 
 import SidebarComponent from '@/components/sidebar/SidebarComponent.vue';
 import MenuComponent from '@/components/menu/MenuComponent.vue';
 import UpperHeaderComponent from '@/components/upper-header/UpperHeaderComponent.vue';
+import NavigationLinks from '@/components/navigation-links/NavigationLinks.vue';
 
 const { isMobile } = useScreenResize();
 
 const isOpen = ref<boolean>(false);
 const isOpenMenu = ref<boolean>(false);
-
-const { events, isLoading } = useQueryClient();
 
 onMounted( async () => {
   if(isMobile()) {

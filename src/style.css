@@ -91,10 +91,6 @@
 
  /** Navigation links **/
 
- ul.navigation li {
-  @apply text-lg;
- }
-
  ul.navigation li a.router-link-active span {
   @apply opacity-100 decoration-yellow-500;
  }
@@ -106,9 +102,13 @@
  ul.navigation li a.router-link-active {
   @apply underline underline-offset-8 decoration-yellow-500;
  }
+ 
+ ul.navigation li:hover a {
+  @apply text-inherit decoration-yellow-500;
+ }
 
  ul.navigation li:hover a span {
-  @apply opacity-70;
+  @apply opacity-70 ;
  }
 
  ul.navigation li a span {

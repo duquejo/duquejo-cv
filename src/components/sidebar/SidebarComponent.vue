@@ -21,18 +21,7 @@
       <small class="border-t border-gray-200 pt-px mt-3 mb-0 lg:hidden">{{ t('general.sidebar.theme_options') }}</small>
       <LangSelectComponent id="sidebar-language-selector" class="lg:hidden" />
     </div>
-    <ul class="invisible lg:visible navigation text-right my-5 space-y-2 w-full lg:p-0 px-8 py-10">
-      <li>
-        <router-link :to="{ name: ROUTES.RESUME }" @click="emit('toggle')">
-          {{ t('general.menu.resume') }}<span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9" /></span>
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: ROUTES.SERVICES }" @click="emit('toggle')">
-          {{ t('general.menu.services') }}<span><v-icon class="ml-2" name="bi-chevron-right" scale="0.9" /></span>
-        </router-link>
-      </li>
-    </ul>
+    <NavigationLinks @link-click="emit('toggle')" />
   </aside>
 </template>
 
@@ -40,12 +29,12 @@
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-import { ROUTES } from '@/router';
 import { SocialLinks } from '@/interfaces';
 
 import UpperHeaderComponent from '@/components/upper-header/UpperHeaderComponent.vue';
 import LangSelectComponent from '@/components/language-select/LangSelectComponent.vue';
 import NameTagComponent from '@/components/name-tag/NameTagComponent.vue';
+import NavigationLinks from '@/components/navigation-links/NavigationLinks.vue';
 
 import smallAvatar from '@/assets/avatar-small.jpg';
 
