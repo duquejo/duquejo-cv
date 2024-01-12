@@ -7,12 +7,12 @@
       </picture>
       <NameTagComponent classes="mb-1 before:bg-transparent text-gray-700 hidden lg:block" size="small"/>
       <span class="text-2xl font-semibold sm:text-xl">José Duque</span>
-      <span class="text-gray-500">{{ t('general.role') }}</span>
+      <span class="text-gray-600">{{ t('general.role') }}</span>
 
       <small class="border-t border-gray-200 pt-px mt-5 mb-0 lg:hidden">{{ t('general.sidebar.network_links') }}</small>
       <div v-if="props.socialLinks?.length" class="flex flex-row justify-evenly lg:my-2 gap-x-3">
         <i class="icon" v-for="link in props.socialLinks" :key="link.name">
-          <a :href="link.url" target="_blank">
+          <a :href="link.url" target="_blank" :aria-label="`${t('general.sidebar.network_links_label')} ${link.name}`">
             <v-icon :name="link.icon" scale="1.3" class="fill-gray-400 hover:fill-yellow-500 transition-colors" />
           </a>
         </i>

@@ -3,7 +3,8 @@
     "role": "Desarrollador Fullstack",
     "sidebar": {
       "network_links": "Contáctame por",
-      "theme_options": "Opciones adicionales"
+      "theme_options": "Opciones adicionales",
+      "network_links_label": "Visitar"
     },
     "menu": {
       "resume": "Currículo",
@@ -11,7 +12,9 @@
       "events": "Actividad reciente en programación",
       "events_repo_commit_link": "Ir a Github",
       "events_repo_general_link": "Ver más actividad en Github",
-      "events_loading_description": "Cargando eventos"
+      "events_repo_general_link_label": "Obtiene más información acerca de mis proyectos actuales",
+      "events_loading_description": "Cargando eventos",
+      "language_selector_label": "Cambiar language del sitio"
     },
     "resume": {
       "greetings": "Hola, soy ",

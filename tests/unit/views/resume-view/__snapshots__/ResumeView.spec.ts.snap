@@ -4,7 +4,7 @@ exports[`+ ResumeView tests > Should match the snapshot 1`] = `
 "<div class="animated-container">
   <article>
     <section class="row items-center mx-0 mt-0">
-      <div class="w-full order-2 lg:basis-1/2 lg:order-1 px-8 pt-8 lg:m-auto"><span class="text-gray-400 text-lg">general.role</span>
+      <div class="w-full order-2 lg:basis-1/2 lg:order-1 px-8 pt-8 lg:m-auto"><span class="text-gray-500 text-lg">general.role</span>
         <h1 class="mt-2">general.resume.greetings <strong>José Duque.</strong></h1>
         <p>general.resume.excerpt</p>
         <div class="button-container">
@@ -24,10 +24,10 @@ exports[`+ ResumeView tests > Should match the snapshot 1`] = `
   </article>
   <footer>
     <ul class="flex gap-x-4">
-      <li class="icon"><a href="https://github.com/duquejo01" target="_blank" title="Github">
+      <li class="icon"><a href="https://github.com/duquejo01" target="_blank" title="Github" aria-label="general.sidebar.network_links_label github">
           <v-icon name="bi-github" scale="1"></v-icon>
         </a></li>
-      <li class="icon"><a href="https://www.linkedin.com/in/duquejo" target="_blank" title="LinkedLn">
+      <li class="icon"><a href="https://www.linkedin.com/in/duquejo" target="_blank" title="LinkedLn" aria-label="general.sidebar.network_links_label linkedln">
           <v-icon name="co-linkedin-in" scale="1"></v-icon>
         </a></li>
     </ul><span>©️ 2024 José Duque</span>

@@ -3,7 +3,8 @@
     "role": "Fullstack developer",
     "sidebar": {
       "network_links": "Business contact links",
-      "theme_options": "Theme additional options"
+      "theme_options": "Theme additional options",
+      "network_links_label": "Visit"
     },
     "menu": {
       "resume": "Resume",
@@ -11,7 +12,9 @@
       "events": "Recent coding activity",
       "events_repo_commit_link": "Check in Github",
       "events_repo_general_link": "See more activity in Github",
-      "events_loading_description": "Loading events"
+      "events_repo_general_link_label": "Get more information about my current projects",
+      "events_loading_description": "Loading events",
+      "language_selector_label": "Change site language"
     },
     "resume": {
       "greetings": "Hi, I'm",
