@@ -72,7 +72,7 @@ const icon = computed(() => {
     case EventType.PullRequestEvent:
       return {
         icon: 'io-git-pull-request-sharp',
-        color: 'bg-yellow-400',
+        color: 'bg-yellow-500',
       };
     case EventType.CreateEvent:
       return {
