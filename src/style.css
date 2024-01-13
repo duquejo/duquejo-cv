@@ -16,7 +16,7 @@
  
  /* Handle */
  ::-webkit-scrollbar-thumb {
-  background: #bbb;
+  background: #aaa;
  }
  
  /* Handle on hover */
@@ -48,7 +48,7 @@
  h3 { @apply text-base lg:text-xl mb-3; }
  h4 { @apply text-lg font-semibold; }
  
- a { @apply hover:text-yellow-500 transition-all; }
+ a { @apply hover:text-yellow-400 transition-all; }
  p { @apply my-2 text-justify; }
 
  button, .button {
@@ -56,7 +56,7 @@
  }
 
  footer {
-  @apply flex items-center justify-between bg-gray-100 p-5 font-normal text-gray-600;
+  @apply flex items-center justify-between bg-gray-100 pb-14 lg:py-4 px-9 py-4 font-normal text-gray-600;
  }
 
  strong, b {
@@ -89,46 +89,20 @@
   @apply bg-white text-black hover:bg-black hover:text-white;
  }
 
- /** Navigation links **/
-
- ul.navigation li a.router-link-active span {
-  @apply opacity-100 decoration-yellow-500;
- }
-
- ul.navigation li a.router-link-active span svg {
-  @apply fill-yellow-500;
- }
-
- ul.navigation li a.router-link-active {
-  @apply underline underline-offset-8 decoration-yellow-500;
- }
- 
- ul.navigation li:hover a {
-  @apply text-inherit decoration-yellow-500;
- }
-
- ul.navigation li:hover a span {
-  @apply opacity-70 ;
- }
-
- ul.navigation li a span {
-  @apply opacity-0 transition-opacity;
- }
-
  .text-h1 {
-  @apply mt-10 text-center font-semibold underline underline-offset-8 decoration-yellow-500;
+  @apply mt-10 text-center font-semibold underline underline-offset-8 decoration-yellow-400;
  }
 
  .text-h2 {
-  @apply font-semibold underline-offset-4 underline decoration-yellow-500;
+  @apply font-semibold underline-offset-4 underline decoration-yellow-400;
  }
 
  .text-h3 {
-  @apply font-semibold underline-offset-8 underline decoration-yellow-500;
+  @apply font-semibold underline-offset-8 underline decoration-yellow-400;
  }
 
  .text-h4 {
-  @apply font-semibold underline-offset-2 underline decoration-yellow-500;
+  @apply font-semibold underline-offset-2 underline decoration-yellow-400;
  }
 }
 

@@ -9,6 +9,6 @@ exports[`+ FooterComponent.vue tests > Should match the snapshot 1`] = `
     <li class="icon"><a href="https://linkedin.com" target="_blank" title="linkedIn" aria-label="general.sidebar.network_links_label LinkedIn">
         <v-icon name="bi-linkedin" scale="1"></v-icon>
       </a></li>
-  </ul><span>©️ 2024 José Duque</span>
+  </ul><span class="text-gray-800 text-sm">©️ 2024 José Duque</span>
 </footer>"
 `;

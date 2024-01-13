@@ -4,7 +4,7 @@
       <router-link :to="{ name: route }" @click="emit('link-click')">
         {{ generateMenuLink(route) }}
         <span v-if="layout === 'menu'">
-          <v-icon class="ml-2" name="bi-chevron-right" scale="0.9" />
+          <v-icon class="ml-2" name="fa-chevron-right" scale="0.9" />
         </span>
       </router-link>
     </li>
@@ -48,3 +48,32 @@ const sizesClasses = computed(() => ({
 
 const generateMenuLink = (routeName: ROUTES): string => t(`general.menu.${routeName}`);
 </script>
+
+<style scoped lang="postcss">
+
+ /** Navigation links **/
+
+ ul.navigation li a.router-link-active span {
+  @apply opacity-100 decoration-yellow-400;
+ }
+
+ ul.navigation li a.router-link-active span svg {
+  @apply fill-yellow-400;
+ }
+
+ ul.navigation li a.router-link-active {
+  @apply underline underline-offset-8 decoration-yellow-400 decoration-2;
+ }
+ 
+ ul.navigation li:hover a {
+  @apply text-inherit decoration-yellow-400;
+ }
+
+ ul.navigation li:hover a span {
+  @apply opacity-70 ;
+ }
+
+ ul.navigation li a span {
+  @apply opacity-0 transition-opacity;
+ }
+</style>

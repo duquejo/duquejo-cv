@@ -10,7 +10,7 @@
         </div>
       </div>
       <picture class="w-full order-1 lg:basis-1/2 lg:order-2 overflow-hidden">
-        <img class="shadow grayscale hover:grayscale-0 transition-all duration-500 scale-110 hover:rotate-3 delay-200" :src="avatar" alt="José Duque" />
+        <img class="shadow transition-all duration-500 scale-110 hover:rotate-3 delay-200" :src="avatar" alt="José Duque" />
       </picture>
     </section>
     <section>

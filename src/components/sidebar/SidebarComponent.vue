@@ -2,8 +2,8 @@
   <aside id="sidebar" class="transition-all duration-500 absolute flex flex-col items-center justify-between lg:px-8 lg:py-10 lg:my-2 lg:mx-2 rounded-lg bg-white lg:h-auto z-10 w-full lg:w-auto lg:relative lg:opacity-100 lg:left-0 h-screen" :class="classes">
     <UpperHeaderComponent :isOpen="isOpen" @click="emit('toggle')"/>
     <div class="flex flex-col justify-center items-center w-full lg:p-0 px-8 py-10 text-center text-base">
-      <picture class="mb-5">
-        <img class="rounded-full w-32 h-32 sm:w-40 sm:h-40 object-cover grayscale hover:grayscale-0 transition-all duration-200" :src="smallAvatar" width="160" height="160" alt="José Duque" />
+      <picture class="mb-5 max-h-40 max-w-40 overflow-hidden rounded-full">
+        <img class="sm:w-40 sm:h-40 object-cover hover:grayscale-0 transition-all duration-200 hover:scale-110 delay-200" :src="smallAvatar" width="160" height="160" alt="José Duque" />
       </picture>
       <NameTagComponent classes="mb-1 before:bg-transparent text-gray-700 hidden lg:block" size="small"/>
       <span class="text-2xl font-semibold sm:text-xl">José Duque</span>
@@ -13,7 +13,7 @@
       <div v-if="SOCIAL_LINKS.length" class="flex flex-row justify-evenly lg:my-2 gap-x-3">
         <i class="icon" v-for="link in SOCIAL_LINKS" :key="link.name">
           <a :href="link.url" target="_blank" :aria-label="`${t('general.sidebar.network_links_label')} ${link.name}`">
-            <v-icon :name="link.icon" scale="1.3" class="fill-gray-400 hover:fill-yellow-500 transition-colors" />
+            <v-icon :name="link.icon" scale="1.3" class="fill-gray-400 hover:fill-yellow-400 transition-colors" />
           </a>
         </i>
       </div>
