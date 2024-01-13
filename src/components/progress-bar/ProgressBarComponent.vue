@@ -5,8 +5,8 @@
     <strong class="text-xs">{{ props.tag }}</strong>
     <strong class="text-xs">{{ progress }}%</strong>
   </div>
-  <div class="w-full bg-gray-100 rounded-full mb-4">
-    <div data-test="progress" class="h-1.5 rounded-full" :style="{ 'width': `${progress}%`, backgroundColor: props.color }"></div>
+  <div class="w-full bg-gray-100 rounded-full mb-3">
+    <div data-test="progress" class="h-2 rounded-full" :style="{ 'width': `${progress}%`, backgroundColor: props.color }"></div>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ const progress = ref<number>(0);
 
 onMounted(() => {
   let progressInterval: ReturnType<typeof setInterval>;
-  let intervalSpeed = 20;
+  let intervalSpeed = 30;
   let incrementSpeed = 1;
 
   progressInterval = setInterval(() => {

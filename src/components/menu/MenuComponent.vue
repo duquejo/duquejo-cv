@@ -11,7 +11,7 @@
       </div>
     </div>
     <i v-if="! isLoading && events" class="icon" @click="emit('toggle')">
-      <v-icon name="co-hamburger-menu" scale="1.5" fill="gray"/>
+      <v-icon :class="eventIconClass" :name="eventIcon" scale="1.5" fill="black"/>
     </i>
     <i v-else class="icon cursor-default" :title="t('general.menu.events_loading_description')">
       <v-icon name="fa-spinner" scale="1" fill="gray" animation="spin"/>
@@ -47,6 +47,12 @@ const emit = defineEmits<Emits>();
 const menuClasses = computed(() => ({
   'opacity-0 translate-x-full right-0': ! props.isOpen,
   'opacity-100 translate-x-0 right-12': props.isOpen,
+}));
+
+const eventIcon = computed(() => props.isOpen ? 'hi-solid-light-bulb' : 'hi-light-bulb' );
+const eventIconClass = computed(() => ({
+  'animate-bounce': ! props.isOpen,
+  'animate-pulse': props.isOpen,
 }));
 
 </script>

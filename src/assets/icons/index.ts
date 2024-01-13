@@ -3,7 +3,7 @@ import {
   BiGithub,
   CoLinkedinIn,
   MdEmailOutlined,
-  BiChevronRight,
+  FaChevronRight,
   BiChevronUp,
   CoHamburgerMenu,
   HiDatabase,
@@ -24,13 +24,15 @@ import {
   IoGitPullRequestSharp,
   IoGitBranch,
   FaSpinner,
+  HiLightBulb,
+  HiSolidLightBulb,
 } from 'oh-vue-icons/icons';
 
 export const iconsToAdd: CustomizeIconType[] = [
   BiGithub,
   CoLinkedinIn,
   MdEmailOutlined,
-  BiChevronRight,
+  FaChevronRight,
   CoHamburgerMenu,
   HiDatabase,
   BiChevronUp,
@@ -51,4 +53,6 @@ export const iconsToAdd: CustomizeIconType[] = [
   IoGitPullRequestSharp,
   IoGitBranch,
   FaSpinner,
+  HiLightBulb,
+  HiSolidLightBulb,
 ];

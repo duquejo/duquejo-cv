@@ -172,7 +172,7 @@
       "project": ">Grupo familia - Napkin simulator - SM Digital",
       "role": "Full-Stack developer",
       "type": "list",
-      "resume": "<li>Full-Stack interactive project developed from scratch, under the WordPress CMS Framework</li><li>Due to the infrastructure suggested by the client, it was necessary to use jQuery and libraries focused on manipulating the DOM.< /li><li>The project required respecting very specific brand directives directly related to the functional requirements.</li>",
+      "resume": "<li>Full-Stack interactive project developed from scratch, under the WordPress CMS Framework</li><li>Due to the infrastructure suggested by the client, it was necessary to use jQuery and libraries focused on manipulating the DOM.</li><li>The project required respecting very specific brand directives directly related to the functional requirements.</li>",
       "additional_info": "Skills: MySQL, Bootstrap, SASS, HTML, Jira, Trello, WordPress, PHP, MVC, jQuery."
     },
     {

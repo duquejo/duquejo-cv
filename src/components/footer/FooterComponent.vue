@@ -7,7 +7,7 @@
         </a>
       </li>
     </ul>
-    <span>©️ {{ currentYear }} José Duque</span>
+    <span class="text-gray-800 text-sm">©️ {{ currentYear }} José Duque</span>
   </footer>
 </template>
 

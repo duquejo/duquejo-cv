@@ -3,7 +3,7 @@
   <select 
     v-if="availableLocales" 
     :id="props.id" 
-    class="text-gray-600 lg:text-gray-800 bg-transparent text-base lg:appearance-none lg:w-10/12 text-center outline-gray-300 cursor-pointer capitalize"
+    class="font-semibold text-gray-600 lg:text-gray-800 bg-transparent text-base lg:appearance-none lg:w-10/12 text-center outline-gray-300 cursor-pointer capitalize"
     v-model="locale"
     :aria-label="t('general.menu.language_selector_label')">
     <option

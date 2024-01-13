@@ -43,7 +43,7 @@ describe('+ TimelineComponent.vue tests', () => {
     expect(small.text()).toBe(timeline.additional_info);
 
     expect(timeSpan.classes()).toContain('border-gray-400');
-    expect(timeSpan.classes()).not.toContain('border-yellow-500');
+    expect(timeSpan.classes()).not.toContain('border-yellow-400');
   });
 
   it('should map the properties as expected with the list type', () => {
@@ -61,7 +61,7 @@ describe('+ TimelineComponent.vue tests', () => {
     expect(small.text()).toBe(timelineList.additional_info);
 
     expect(detail.classes()).toContain('bg-gray-400');
-    expect(detail.classes()).not.toContain('bg-yellow-500');
+    expect(detail.classes()).not.toContain('bg-yellow-400');
   });
 
   it('should conditionate date classes - Recent date', () => {
@@ -70,7 +70,7 @@ describe('+ TimelineComponent.vue tests', () => {
 
     const timeSpan = wrapper.find('[data-test="time"]');
 
-    expect(timeSpan.classes()).toContain('border-yellow-500');
+    expect(timeSpan.classes()).toContain('border-yellow-400');
     expect(timeSpan.classes()).not.toContain('border-gray-400');
   });
 
@@ -80,7 +80,7 @@ describe('+ TimelineComponent.vue tests', () => {
 
     const detail = wrapper.find('[data-test="detail"]');
 
-    expect(detail.classes()).toContain('bg-yellow-500');
+    expect(detail.classes()).toContain('bg-yellow-400');
     expect(detail.classes()).not.toContain('bg-gray-400');
   });
 

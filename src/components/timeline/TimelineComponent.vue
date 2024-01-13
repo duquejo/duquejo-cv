@@ -35,12 +35,12 @@ const { additional_info, start_date, end_date, enterprise, isRecent, project, ro
 
 const dateClass = computed(() => ({
   'border-gray-400': ! isRecent.value,
-  'border-yellow-500': isRecent.value,
+  'border-yellow-400': isRecent.value,
 }));
 
 const currentDetail = computed(() => ({
   'bg-gray-400': ! isRecent.value,
-  'bg-yellow-500': isRecent.value,
+  'bg-yellow-400': isRecent.value,
 }));
 
 </script>

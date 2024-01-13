@@ -1,5 +1,5 @@
 <template>
-  <span class="border-yellow-500 border-2 font-semibold rounded hover:translate-y-0.5 transition-transform" :class="elementClasses">{{ props.text }}</span>
+  <span class="border-yellow-400 border-2 font-semibold rounded hover:translate-y-0.5 transition-transform" :class="elementClasses">{{ props.text }}</span>
 </template>
 
 <script setup lang="ts">
