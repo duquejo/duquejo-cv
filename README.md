@@ -1,18 +1,51 @@
-# Vue 3 + TypeScript + Vite
+# José Duque Curriculum Vitae
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**Site URL: [www.duquejo.com](https://www.duquejo.com/)**
 
-## Recommended IDE Setup
+Welcome to my GitHub repository dedicated to showcasing my professional journey! This repository serves as an interactive and dynamic Curriculum Vitae, providing an in-depth look at my skills, experiences, and projects.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Thank you for visiting, and I look forward to connecting with you!
 
-## Type Support For `.vue` Imports in TS
+## Table of Contents
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- [Tecnologies & Tools](#tecnologies)
+- [Installation](#installation)
+- [Live Screenshots](#screenshots)
+- [Support](#support)
+- [Contributing](#contributing)
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Tecnologies
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+- Typescript (Strong typed JS language)
+- Vue JS (Frontend framework )
+- Vue Router (Routing & SPA features)
+- Vite (Bundling, HMR Development, etc)
+- Vitest (Vite-native testing framework)
+- Tailwind (Utility-first CSS Framework)
+- TanStack Vue-Query (HTTP Requests state management)
+- Axios (External HTTP Requestshandling)
+- Vue I18N (Internationalization)
+- Vercel (Deployment & Statistics)
+
+## Installation
+
+Download the project directory and follow the next steps:
+
+- 1. Copy the `.env.sample` file, rename it as `.env`, and complete the local environment variables for the Github connection and the site translation features.
+- 2. Install the packages using `yarn install`.
+- 3. Run `yarn dev` for start the vite development environment or `yarn build` to start the production bundling package process.
+
+## Screenshots
+
+<div style="display: block; text-align: center;"> 
+  <img src="live-preview.gif" width="60%" />
+  <img src="mobile.png" width="35%" />
+</div>
+
+## Support
+
+Please [open an issue](https://github.com/duquejo01/vue-cv/issues/new/) for support.
+
+## Contributing
+
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/duquejo01/vue-cv/compare/).
