@@ -31,6 +31,7 @@ export default defineConfig({
         '**/*.d.ts',
         '**/interfaces/*.ts',
         '**/config.ts',
+        '**/components/certification-card/**',
       ]
     },
   },

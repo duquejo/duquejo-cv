@@ -2,7 +2,7 @@
 
 exports[`+ SidebarComponent.vue tests > Should match the snapshot 1`] = `
 "<aside id="sidebar" class="transition-all duration-500 absolute flex flex-col items-center justify-between lg:px-8 lg:py-10 lg:my-2 lg:mx-2 rounded-lg bg-white lg:h-auto z-10 w-full lg:w-auto lg:relative lg:opacity-100 lg:left-0 h-screen opacity-100 left-0" sociallinks="[object Object],[object Object]">
-  <div class="flex justify-between w-full p-2 lg:hidden items-center"><span class="p-4"></span>
+  <div class="sticky lg:relative flex justify-between w-full p-2 lg:hidden items-center"><span class="p-4"></span>
     <name-tag-component-stub classes="before:bg-gray-100" size="medium"></name-tag-component-stub>
     <v-icon name="pr-times" scale="1.5"></v-icon>
   </div>
@@ -22,7 +22,7 @@ exports[`+ SidebarComponent.vue tests > Should match the snapshot 1`] = `
 
 exports[`+ SidebarComponent.vue tests > Should match the snapshot if socialLinks are not given 1`] = `
 "<aside id="sidebar" class="transition-all duration-500 absolute flex flex-col items-center justify-between lg:px-8 lg:py-10 lg:my-2 lg:mx-2 rounded-lg bg-white lg:h-auto z-10 w-full lg:w-auto lg:relative lg:opacity-100 lg:left-0 h-screen opacity-100 left-0" sociallinks="">
-  <div class="flex justify-between w-full p-2 lg:hidden items-center"><span class="p-4"></span>
+  <div class="sticky lg:relative flex justify-between w-full p-2 lg:hidden items-center"><span class="p-4"></span>
     <name-tag-component-stub classes="before:bg-gray-100" size="medium"></name-tag-component-stub>
     <v-icon name="pr-times" scale="1.5"></v-icon>
   </div>
