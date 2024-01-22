@@ -21,7 +21,7 @@
         size="small"
       />
     </div>
-    <p v-if="! [EventType.PullRequestEvent, EventType.WatchEvent].includes(event.type)" class="bg-gray-100 rounded-lg p-3 my- text-xs leading-relaxed text-left">
+    <p v-if="! [EventType.PullRequestEvent, EventType.WatchEvent].includes(event.type)" class="bg-gray-100 rounded-lg p-3 my- text-xs leading-relaxed text-left break-words">
       <strong>{{ event.payload.description }}</strong>
       <ul v-if="event.payload.commits" class="block">
         <li v-for="commit in event.payload.commits" :key="commit.sha">

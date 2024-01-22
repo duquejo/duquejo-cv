@@ -5,7 +5,7 @@ exports[`+ RecentCardComponent.vue tests > Should match the snapshot 1`] = `
   <div class="flex items-center text-xs mb-2 justify-between gap-x-5"><span class="flex items-center gap-x-2"><img src="https://avatars.githubusercontent.com/u/47703424?" alt="@foo" class="max-h-7 rounded-full" width="28" height="28"><a class="font-semibold underline underline-offset-2" href="https://github.com/foo/vue-cv" target="_blank">foo/vue-cv</a></span>
     <!--v-if-->
   </div>
-  <p class="bg-gray-100 rounded-lg p-3 my- text-xs leading-relaxed text-left"><strong></strong>
+  <p class="bg-gray-100 rounded-lg p-3 my- text-xs leading-relaxed text-left break-words"><strong></strong>
   <ul class="block">
     <li>✨ Translation manager helper class <a class="text-[0.7rem] font-semibold text-gray-700" target="_blank" href="https://xyz.abc/repos/foo/vue-cv/commits/9e288ef7b8ade3c0f1be25902f08e0754ea479b4" title="general.menu.events_repo_commit_link">
         <v-icon name="bi-github" scale="0.8"></v-icon>
