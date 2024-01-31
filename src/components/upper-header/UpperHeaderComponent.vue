@@ -1,6 +1,6 @@
 
 <template>
-  <div class="sticky lg:relative flex justify-between w-full p-2 lg:hidden items-center">
+  <div class="fixed top-0 z-20 lg:relative flex justify-between w-full p-2 lg:hidden items-center transition-all" :class="{ 'shadow-sm bg-gray-50': isOpen }">
     <span class="p-4" />
     <NameTagComponent classes="before:bg-gray-100"/>
     <v-icon :name="menuIcon" scale="1.5" @click="emit('menu-click')" />

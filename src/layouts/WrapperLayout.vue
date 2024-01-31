@@ -1,6 +1,6 @@
 <template>
   <div class="animated-container">
-    <article ref="top">
+    <article ref="top" class="mt-5 lg:mt-0">
       <slot />
     </article>
     <FooterComponent :social-links="SOCIAL_LINKS" />
