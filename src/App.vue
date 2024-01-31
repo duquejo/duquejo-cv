@@ -3,7 +3,7 @@
   <UpperHeaderComponent :isOpen="isOpen" @menu-click="onToggleMenu"/>
   <main class="overflow-y-scroll bg-white transition-all duration-1000 relative" :class="mainClasses" @click="onOutsideClick">
     <router-view v-slot="{ Component, route }">
-      <transition name="slide" mode="out-in">
+      <transition name="slide" mode="out-in" >
         <component :is="Component" :key="route.path"/>
       </transition>
     </router-view>
