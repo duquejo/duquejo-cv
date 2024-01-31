@@ -2,7 +2,7 @@
 
 exports[`+ WrapperLayout tests > Should match the snapshot 1`] = `
 "<div class="animated-container">
-  <article></article>
+  <article class="mt-5 lg:mt-0"></article>
   <footer-component-stub social-links="[object Object],[object Object]"></footer-component-stub>
 </div>"
 `;

@@ -1,9 +1,10 @@
 <template>
-  <aside id="sidebar" class="transition-all duration-500 absolute flex flex-col items-center justify-between lg:px-8 lg:py-10 lg:my-2 lg:mx-2 rounded-lg bg-white lg:h-auto z-10 w-full lg:w-auto lg:relative lg:opacity-100 lg:left-0 h-screen" :class="classes">
-    <UpperHeaderComponent :isOpen="isOpen" @click="emit('toggle')"/>
-    <div class="flex flex-col justify-center items-center w-full lg:p-0 px-8 py-10 text-center text-base">
-      <picture class="mb-5 max-h-40 max-w-40 overflow-hidden rounded-full">
-        <img class="sm:w-40 sm:h-40 object-cover hover:grayscale-0 transition-all duration-200 hover:scale-110 delay-200" :src="smallAvatar" width="160" height="160" alt="José Duque" />
+  <aside id="sidebar" class="transition-all duration-500 fixed top-0 flex lg:flex-col lg:items-center lg:justify-between lg:px-8 lg:py-10 lg:my-2 lg:mx-2 rounded-lg bg-white lg:h-auto z-10 w-full lg:w-auto lg:relative lg:opacity-100 lg:left-0 h-screen" :class="classes">
+
+    <!-- Middle Section -->
+    <div class="flex flex-col justify-center items-center w-full lg:p-0 text-center text-base">
+      <picture class="mb-5 overflow-hidden rounded-full w-40 h-40">
+        <img class="object-cover hover:grayscale-0 transition-all duration-200 hover:scale-110 delay-200" :src="smallAvatar" width="160" height="160" alt="José Duque" />
       </picture>
       <NameTagComponent classes="mb-1 before:bg-transparent text-gray-700 hidden lg:block" size="small"/>
       <span class="text-2xl font-semibold sm:text-xl">José Duque</span>
@@ -21,6 +22,8 @@
       <small class="border-t border-gray-200 pt-px mt-3 mb-0 lg:hidden">{{ t('general.sidebar.theme_options') }}</small>
       <LangSelectComponent id="sidebar-language-selector" class="lg:hidden" />
     </div>
+
+    <!-- Lower section -->
     <NavigationLinks @link-click="emit('toggle')" />
   </aside>
 </template>
@@ -33,7 +36,6 @@ import SOCIAL_LINKS from '@/shared/data/social.json';
 
 import smallAvatar from '@/assets/avatar-small.webp';
 
-const UpperHeaderComponent = defineAsyncComponent(() => import('@/components/upper-header/UpperHeaderComponent.vue'));
 const LangSelectComponent = defineAsyncComponent(() => import('@/components/language-select/LangSelectComponent.vue'));
 const NameTagComponent = defineAsyncComponent(() => import('@/components/name-tag/NameTagComponent.vue'));
 const NavigationLinks = defineAsyncComponent(() => import('@/components/navigation-links/NavigationLinks.vue'));

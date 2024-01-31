@@ -36,7 +36,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const layoutClasses = computed(() => ({
-  'invisible lg:visible text-right my-5 space-y-2  lg:p-0 px-8 py-10': props.layout === 'menu',
+  'hidden lg:block text-right my-5 space-y-2  lg:p-0 px-8 py-10': props.layout === 'menu',
   'fixed flex bottom-0 bg-gray-100 justify-around px-4 pb-4 py-2.5 border-t border-gray-200 lg:hidden': props.layout === 'fixed',
 }));
 
