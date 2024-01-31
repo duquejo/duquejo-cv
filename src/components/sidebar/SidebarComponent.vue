@@ -1,5 +1,5 @@
 <template>
-  <aside id="sidebar" class="transition-all duration-500 fixed top-0 flex lg:px-8 lg:py-10 lg:my-2 lg:mx-2 rounded-lg bg-white lg:h-auto z-10 w-full lg:w-auto lg:relative lg:opacity-100 lg:left-0 h-screen" :class="classes">
+  <aside id="sidebar" class="transition-all duration-500 fixed top-0 flex lg:flex-col lg:items-center lg:justify-between lg:px-8 lg:py-10 lg:my-2 lg:mx-2 rounded-lg bg-white lg:h-auto z-10 w-full lg:w-auto lg:relative lg:opacity-100 lg:left-0 h-screen" :class="classes">
 
     <!-- Middle Section -->
     <div class="flex flex-col justify-center items-center w-full lg:p-0 text-center text-base">
@@ -36,7 +36,6 @@ import SOCIAL_LINKS from '@/shared/data/social.json';
 
 import smallAvatar from '@/assets/avatar-small.webp';
 
-// const UpperHeaderComponent = defineAsyncComponent(() => import('@/components/upper-header/UpperHeaderComponent.vue'));
 const LangSelectComponent = defineAsyncComponent(() => import('@/components/language-select/LangSelectComponent.vue'));
 const NameTagComponent = defineAsyncComponent(() => import('@/components/name-tag/NameTagComponent.vue'));
 const NavigationLinks = defineAsyncComponent(() => import('@/components/navigation-links/NavigationLinks.vue'));

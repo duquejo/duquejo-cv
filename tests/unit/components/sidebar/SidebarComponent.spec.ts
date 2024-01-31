@@ -64,11 +64,4 @@ describe('+ SidebarComponent.vue tests', () => {
     expect(sidebar.classes()).toContain('left-full');
     expect(sidebar.classes()).not.toContain('left-0');
   });
-
-  it('should emit "toggle" event when UpperHeaderComponent is clicked', async () => {
-    const wrapper = createWrapper();
-    const upperHeader = wrapper.findComponent(UpperHeaderComponent);
-    await upperHeader.trigger('click');
-    expect(wrapper.emitted()).toHaveProperty('toggle');
-  });
 });

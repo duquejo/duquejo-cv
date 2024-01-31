@@ -62,8 +62,8 @@ describe('+ NavigationLinks.vue tests', () => {
     expect(wrapper.find('.navigation').classes()).toEqual([
       'navigation', 
       'w-full',
-      'invisible', 
-      'lg:visible', 
+      'hidden', 
+      'lg:block', 
       'text-right', 
       'my-5',
       'space-y-2',

@@ -2,7 +2,7 @@
 
 exports[`+ ResumeView tests > Should match the snapshot 1`] = `
 "<div class="animated-container">
-  <article>
+  <article class="mt-5 lg:mt-0">
     <section class="row items-center mx-0 mt-0">
       <div class="w-full order-2 lg:basis-1/2 lg:order-1 px-8 pt-8 lg:m-auto"><span class="text-gray-500 text-lg">general.role</span>
         <h1 class="mt-2">general.resume.greetings <strong>José Duque.</strong></h1>
