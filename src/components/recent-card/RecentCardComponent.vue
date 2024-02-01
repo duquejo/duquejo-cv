@@ -21,19 +21,21 @@
         size="small"
       />
     </div>
-    <p v-if="! [EventType.PullRequestEvent, EventType.WatchEvent].includes(event.type)" class="bg-gray-100 rounded-lg p-3 my- text-xs leading-relaxed text-left break-words">
+    <p v-if="! [EventType.PullRequestEvent, EventType.WatchEvent, EventType.PullRequestReviewEvent].includes(event.type)" class="bg-gray-100 rounded-lg p-3 my- text-xs leading-relaxed text-left break-words">
       <strong>{{ event.payload.description }}</strong>
       <ul v-if="event.payload.commits" class="block">
         <li v-for="commit in event.payload.commits" :key="commit.sha">
-          {{ markdownText(commit.message) }}
-          <a
-            v-if="event.type === 'PushEvent'"
-            class="text-[0.7rem] font-semibold text-gray-700"
-            target="_blank"
-            :href="`${commit.url.replace('https://api.github.com/repos', 'https://github.com')}`"
-            :title="t('general.menu.events_repo_commit_link')">
-            <v-icon name="bi-github" scale="0.8"/>
-          </a>
+          <template v-if="!['dependabot[bot]'].includes(commit.author.name)">
+            {{ markdownText(commit.message) }}
+            <a
+              v-if="event.type === 'PushEvent'"
+              class="text-[0.7rem] font-semibold text-gray-700"
+              target="_blank"
+              :href="`${commit.url.replace('https://api.github.com/repos', 'https://github.com')}`"
+              :title="t('general.menu.events_repo_commit_link')">
+              <v-icon name="bi-github" scale="0.8"/>
+            </a>
+          </template>
         </li>
       </ul>
     </p>
@@ -84,14 +86,16 @@ const icon = computed(() => {
         icon: 'oi-repo-push',
         color: 'bg-red-400',
       };
-    case EventType.WatchEvent: 
+    case EventType.WatchEvent:
+    case EventType.PullRequestReviewEvent: 
       return {
         icon: 'ri-eye-2-line',
         color: 'bg-cyan-300',
       };
     default:
       return {
-        icon: 'oi-repo-push'
+        icon: 'oi-repo-push',
+        color: 'bg-purple-400'
       };
   };
 });
