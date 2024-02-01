@@ -17,6 +17,7 @@ const useQueryClient = () => {
     queryKey: ['events'],
     queryFn: getEvents,
     staleTime: 1000 * 60 * 60,
+    gcTime: 1000 * 60,
   });
 
   return {
