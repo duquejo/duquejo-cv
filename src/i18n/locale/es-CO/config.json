@@ -202,7 +202,7 @@
       "end_date": "10/10/2018",
       "enterprise": "Universidad EAFIT",
       "isRecent": false,
-      "project": "Universidad EAFIT - Plataforma Línea en Informática Educativa (Conexa EAFIT)",
+      "project": "Universidad EAFIT - Plataforma Línea en Informática Educativa (Imaginar futuros)",
       "role": "Programador Full-Stack",
       "type": "list",
       "resume": "<li>Proyecto Full-Stack desarrollado desde cero, bajo el Framework del CMS WordPress (PHP).</li><li>Requería emplear buenas prácticas del CMS para su construcción, por lo que sus módulos se desarrollaron bajo la arquitectura Kernel/Plugin, común en CMS como WordPress.</li><li>Requería manejar información dinámicamente desde el frontend usando jQuery y Ajax.</li><li>Debían mantenerse diferentes estructuras de servicios en la nube para sus usuarios y colaboradores, empleando la suite de AWS para ello. (S3, Glacier, Cloudfront, Route 53, etc) y administración de servicios Cloud de Azure y Office 365.</li>",
