@@ -3,8 +3,8 @@
 exports[`+ MenuComponent.vue tests > Should match the snapshot with the defaults 1`] = `
 "<nav class="lg:flex lg:flex-col lg:items-center lg:justify-between hidden lg:my-4 relative">
   <lang-select-component-stub id="menu-language-selector"></lang-select-component-stub>
-  <!--v-if--><i class="icon cursor-default" title="general.menu.events_loading_description">
-    <v-icon name="fa-spinner" scale="1" fill="gray" animation="spin"></v-icon>
+  <!--v-if--><i class="icon">
+    <v-icon class="animate-bounce" name="hi-light-bulb" scale="1.5" fill="black"></v-icon>
   </i>
 </nav>"
 `;

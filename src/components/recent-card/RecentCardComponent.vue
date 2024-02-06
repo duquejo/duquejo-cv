@@ -2,10 +2,10 @@
 <template>
   <div class="bg-white rounded pl-5 pr-4 py-4 last:mb-8 first:mt-1 mx-2 my-4 shadow flex-col">
     <time v-if="parseDate" class="text-xs font-extrabold text-right">{{ parseDate }}</time>
-    <div class="flex items-center text-xs mb-2 justify-between gap-x-5">
-      <span class="flex items-center gap-x-2">
+    <div class="flex items-center text-xs mb-2 justify-between">
+      <span class="flex w-full items-center gap-x-2">
         <img :src="event.actor.avatar_url" :alt="`@${event.actor.display_login}`" class="max-h-7 rounded-full" width="28" height="28" />
-        <a class="font-semibold underline underline-offset-2" :href="`https://github.com/${event.repo.name}`" target="_blank">{{ event.repo.name }}</a>
+        <a class="font-semibold underline underline-offset-2 truncate max-w-40" :href="`https://github.com/${event.repo.name}`" target="_blank">{{ event.repo.name }}</a>
       </span>
       <PillComponent 
         v-if="event.payload.ref && event.type === EventType.CreateEvent" 

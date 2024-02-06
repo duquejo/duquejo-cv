@@ -4,6 +4,7 @@ import { describe, expect, it, vi } from 'vitest';
 import ResumeView from '../../../../src/views/ResumeView.vue';
 import createVueI18n from '../../../mocks/mock-i18n';
 import * as utils from '../../../../src/shared/helpers/htmlSanitizer';
+import { nextTick } from 'vue';
 
 describe('+ ResumeView tests', () => {
 
@@ -29,5 +30,21 @@ describe('+ ResumeView tests', () => {
     expect(scrollIntoViewSpy).toHaveBeenCalledWith({
       behavior: 'instant'
     });
+  });
+
+  it('should load the image after tick', async () => {
+    // Arrange
+    const wrapper = mount(ResumeView, {
+      global: {
+        plugins: [i18n],
+      }
+    }) as any;
+
+    // Act & Assert
+    expect(wrapper.find('img').classes('opacity-0'));
+    expect(wrapper.vm.isPortraitLoaded).toBeFalsy();
+    wrapper.vm.onLoaded();
+    expect(wrapper.find('img').classes('opacity-100'));
+    expect(wrapper.vm.isPortraitLoaded).toBeTruthy();
   });
 });
