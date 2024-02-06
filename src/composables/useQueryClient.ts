@@ -13,16 +13,19 @@ const getEvents = async () => {
 
 const useQueryClient = () => {
 
-  const { isLoading, data: events } = useQuery({
+  const { isLoading, data: events, refetch } = useQuery({
     queryKey: ['events'],
     queryFn: getEvents,
     staleTime: 1000 * 60 * 60,
     gcTime: 1000 * 60,
+    enabled: false // Don't load at start
   });
 
   return {
     events,
     isLoading,
+
+    refetch,
   };
 };
 

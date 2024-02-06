@@ -2,7 +2,7 @@
 
 exports[`+ RecentCardComponent.vue tests > Should match the snapshot 1`] = `
 "<div class="bg-white rounded pl-5 pr-4 py-4 last:mb-8 first:mt-1 mx-2 my-4 shadow flex-col"><time class="text-xs font-extrabold text-right">12/22/2023, 1:00:00 PM</time>
-  <div class="flex items-center text-xs mb-2 justify-between gap-x-5"><span class="flex items-center gap-x-2"><img src="https://avatars.githubusercontent.com/u/47703424?" alt="@foo" class="max-h-7 rounded-full" width="28" height="28"><a class="font-semibold underline underline-offset-2" href="https://github.com/foo/vue-cv" target="_blank">foo/vue-cv</a></span>
+  <div class="flex items-center text-xs mb-2 justify-between"><span class="flex w-full items-center gap-x-2"><img src="https://avatars.githubusercontent.com/u/47703424?" alt="@foo" class="max-h-7 rounded-full" width="28" height="28"><a class="font-semibold underline underline-offset-2 truncate max-w-40" href="https://github.com/foo/vue-cv" target="_blank">foo/vue-cv</a></span>
     <!--v-if-->
   </div>
   <p class="bg-gray-100 rounded-lg p-3 my- text-xs leading-relaxed text-left break-words"><strong></strong>

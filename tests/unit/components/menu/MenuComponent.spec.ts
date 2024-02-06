@@ -43,7 +43,7 @@ describe('+ MenuComponent.vue tests', () => {
 
     const eventsIcon = wrapper.find('.icon');
     expect(eventsIcon.exists()).toBeTruthy();
-    expect(eventsIcon.attributes('title')).toBe('general.menu.events_loading_description');
+    expect(eventsIcon.attributes('title')).not.toBe('general.menu.events_loading_description');
   });
 
   it('Should retrieve the translations', () => {
