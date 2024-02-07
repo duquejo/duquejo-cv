@@ -44,8 +44,8 @@ Download the project directory and follow the next steps:
 
 ## Support
 
-Please [open an issue](https://github.com/duquejo01/vue-cv/issues/new/) for support.
+Please [open an issue](https://github.com/duquejo/vue-cv/issues/new/) for support.
 
 ## Contributing
 
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/duquejo01/vue-cv/compare/).
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/duquejo/vue-cv/compare/).
