@@ -21,7 +21,7 @@
         size="small"
       />
     </div>
-    <p v-if="! [EventType.PullRequestEvent, EventType.WatchEvent, EventType.PullRequestReviewEvent].includes(event.type)" class="bg-gray-100 rounded-lg p-3 my- text-xs leading-relaxed text-left break-words">
+    <p v-if="! [EventType.PullRequestEvent, EventType.WatchEvent, EventType.PullRequestReviewEvent, EventType.CreateEvent].includes(event.type)" class="bg-gray-100 rounded-lg p-3 my- text-xs leading-relaxed text-left break-words">
       <strong>{{ event.payload.description }}</strong>
       <ul v-if="event.payload.commits" class="block">
         <li v-for="commit in event.payload.commits" :key="commit.sha">
@@ -39,11 +39,12 @@
         </li>
       </ul>
     </p>
-    <div data-test="rc-type" class="flex items-center px-2 py-2 rounded-3xl gap-x-3 shadow-md relative hover:translate-y-0.5 transition-transform ring-1 ring-gray-200 text-xs">
+    <div data-test="rc-type" class="flex items-center px-2 py-2 rounded-3xl gap-x-3 shadow-md relative hover:translate-y-0.5 transition-transform ring-1 ring-gray-200 text-sm">
       <span class="p-1 rounded-full leading-none max-h-7" :class="icon.color">
         <component is="v-icon" :name="icon.icon" scale="1" />
       </span>
-      {{ event.type }}
+      <span>{{ event.type }}</span>
+      <span v-if="event.payload.ref_type" class="relative left-[-0.5rem] capitalize">({{ event.payload.ref_type }})</span>
     </div>
   </div>
 </template>

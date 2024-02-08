@@ -91,7 +91,7 @@ describe('+ RecentCardComponent.vue tests', () => {
     expect(a.exists()).toBeFalsy();
     expect(wrapper.findComponent(PillComponent).exists()).toBeTruthy();
 
-    expect(typeContainer.text()).toBe(createEvent.type);
+    expect(typeContainer.text()).toContain(createEvent.type);
     expect(typeIcon.attributes()).toEqual({ name: 'io-git-branch', scale: '1' });
     expect(typeSpan.classes()).toContain('bg-teal-400');
   });
