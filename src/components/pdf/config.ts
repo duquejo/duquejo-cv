@@ -2,7 +2,8 @@ import type { Ref } from 'vue';
 import type { MessageSchema } from '@/i18n/config';
 import type { Schema, Template } from '@pdfme/common';
 import { calculateYears } from '@/shared/helpers/calculateYears';
-import { BASE_PDF_EN, BASE_PDF_ES } from '@/shared/constants/image';
+
+const loadBaseTemplates = () => import('@/shared/constants/image');
 
 const schema: Record<string, Schema>[] = [
   {
@@ -169,9 +170,12 @@ const generateInputs = (languageSources: Ref<MessageSchema>): Record<string, str
   website_bottom: document.location.origin,
 }]);
 
-const generateBaseTemplate = (locale: Ref<string>): Template => ({
-  basePdf: locale.value === 'es' ? BASE_PDF_ES : BASE_PDF_EN,
-  schemas: schema,
-});
+const generateBaseTemplate = async (locale: Ref<string>): Promise<Template> => {
+  const { BASE_PDF_EN, BASE_PDF_ES } = await loadBaseTemplates();
+  return {
+    basePdf: locale.value === 'es' ? BASE_PDF_ES : BASE_PDF_EN,
+    schemas: schema,
+  };
+};
 
 export { generateInputs, generateBaseTemplate };
