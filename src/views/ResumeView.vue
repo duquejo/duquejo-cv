@@ -4,7 +4,8 @@
       <div class="w-full order-2 lg:basis-1/2 lg:order-1 px-8 pt-8 lg:m-auto">
         <span class="text-gray-500 text-lg">{{ t('general.role') }}</span>
         <h1 class="mt-2">{{ t('general.resume.greetings') }} <strong>José Duque.</strong></h1>
-        <p v-html="htmlSanitizer(t('general.resume.excerpt', { numYear: calculateYears }))" />
+        <p v-text="t('general.resume.excerpt1', { numYear: calculateYears })" />
+        <p v-html="htmlSanitizer(t('general.resume.excerpt2'))" />
         <div class="button-container">
           <v-icon v-for="stack in TECH_STACK" class="hover:animate-wiggle" :name="stack.icon" scale="2.5"
             :title="stack.title" />
@@ -24,6 +25,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import avatar from '@/assets/avatar.webp';
 import TECH_STACK from '@/shared/data/stack.json';
 import useLanguageContext from '@/composables/useLanguageContext';
@@ -31,7 +33,6 @@ import WrapperLayout from '@/layouts/WrapperLayout.vue';
 
 import { htmlSanitizer } from '@/shared/helpers/htmlSanitizer';
 import { calculateYears } from '@/shared/helpers/calculateYears';
-import { ref } from 'vue';
 
 const isPortraitLoaded = ref<boolean>(false);
 const { t } = useLanguageContext();

@@ -4,7 +4,6 @@ import { describe, expect, it, vi } from 'vitest';
 import ResumeView from '../../../../src/views/ResumeView.vue';
 import createVueI18n from '../../../mocks/mock-i18n';
 import * as utils from '../../../../src/shared/helpers/htmlSanitizer';
-import { nextTick } from 'vue';
 
 describe('+ ResumeView tests', () => {
 
@@ -23,7 +22,7 @@ describe('+ ResumeView tests', () => {
     expect(wrapper.html()).toMatchSnapshot();
     expect(htmlSanitizerSpy).toHaveBeenCalled();
     expect(htmlSanitizerSpy).toHaveBeenCalledTimes(2);
-    expect(htmlSanitizerSpy).toHaveBeenCalledWith('general.resume.excerpt');
+    expect(htmlSanitizerSpy).toHaveBeenCalledWith('general.resume.excerpt2');
     expect(htmlSanitizerSpy).toHaveBeenCalledWith('general.resume.description.content');
 
     expect(scrollIntoViewSpy).toHaveBeenCalled();

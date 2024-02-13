@@ -6,6 +6,7 @@ import createVueI18n from "../../../mocks/mock-i18n";
 
 import * as orderByValue from '../../../../src/shared/helpers/orderByValue';
 import * as useLanguageContext from '../../../../src/composables/useLanguageContext';
+import { nextTick } from "vue";
 
 describe('+ TechStackView tests', () => {
 
@@ -17,7 +18,7 @@ describe('+ TechStackView tests', () => {
   const scrollIntoViewSpy = vi.fn();
   window.HTMLElement.prototype.scrollIntoView = scrollIntoViewSpy;
 
-  it('Should match the snapshot', () => {
+  it('Should match the snapshot', async () => {
     const wrapper = mount(TechStackView, {
       global: {
         plugins: [i18n],

@@ -15,18 +15,26 @@
 </template>
 
 <script setup lang="ts">
-import { generate } from '@pdfme/generator';
-import { Template } from '@pdfme/common';
-import { text } from '@pdfme/schemas';
 
-import { BASE_PDF_ES, BASE_PDF_EN } from '@/shared/constants';
-import { schema } from '@/components/pdf/config';
+const loadGenerate = () => import('@pdfme/generator');
+const loadSchema = () => import('@/components/pdf/config');
+const loadBasePDF = () => import('@/shared/constants/image');
+const loadTextPlugin = () => import('@pdfme/schemas');
+const loadUtilYears = () => import('@/shared/helpers/calculateYears');
+
+import type { Template } from '@pdfme/common';
 import useLanguageContext from '@/composables/useLanguageContext';
-import { calculateYears } from '@/shared/helpers/calculateYears';
 
 const { t, languageSources, locale } = useLanguageContext();
 
-const handleGeneratePdf = () => {
+const handleGeneratePdf = async () => {
+
+  const deps = await Promise.all([loadGenerate(), loadSchema(), loadBasePDF(), loadTextPlugin(), loadUtilYears()]);
+  const { generate } = deps[0];
+  const { schema } = deps[1];
+  const { BASE_PDF_ES, BASE_PDF_EN } = deps[2];
+  const{ text } = deps[3];
+  const { calculateYears } = deps[4];
 
   const template: Template = {
     basePdf: locale.value === 'es' ? BASE_PDF_ES : BASE_PDF_EN,

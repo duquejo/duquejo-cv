@@ -18,7 +18,8 @@
     },
     "resume": {
       "greetings": "Hi, I'm",
-      "excerpt": "Computer engineer from Colombia with more than {numYear} years of experience in developing web applications using the most influential languages ​​on the labor market, using both <strong>monolithic architectures</strong> and <strong>microservices-oriented architectures</strong>.",
+      "excerpt1": "Colombian computer engineer with more than {numYear} years of experience in web application development.",
+      "excerpt2": "I am focused on guaranteeing quality solutions based on good practices with technologies on <strong>monolithic architectures</strong> as well as <strong>microservices architectures</strong>.",
       "description": {
         "title": "What have I done?",
         "content": "During my working life, I have had the opportunity to have a broad view of the client's specific needs to solve any technological challenge that arises; I have played roles as advisor and coordinator in development teams for public sector companies such as the <strong>Alcaldia de Itagüí</strong>, <strong>Alcaldía de Bogotá</strong>, <strong>Ministerio de Educación Nacional</strong > and <strong>EAFIT University</strong>. I have also participated in custom development projects and website development with <strong>Marketing agencies</strong> full-time and alternatively as a <strong>Freelancer</strong> part-time.<br/></ br />With <strong>software factories</strong> I have had the opportunity to work for <strong>Educational Startups</strong> with great regional reach, as well as for the <strong>Banking</strong> sector, < strong>Insurance</strong> and <strong>Health</strong>, which have allowed us to expand knowledge and comply with the rigidity of the policies of said market.<br/></br />In accordance with the search for a more specialized orientation to the most popular technologies, I have participated in national intensive learning sessions of <strong>Node JS</strong> and carried out individual studies on Frontend technologies such as <strong>React JS</strong>, <strong> Vue JS</strong>, as well as other basic approaches in <strong>Angular</strong>.<br/></br />From the Backend, studies in <strong>architectures based on microservices</strong> using < strong>Amazon Web Services</strong> and <strong>Azure DevOps</strong>, this in search of profiling myself as a competent Full Stack developer for the needs of the current market."
@@ -371,7 +372,7 @@
     }
   ],
   "pdf": {
-    "introduction": "I consider myself a person with a profile based on responsibility, I am an active, recursive, creative, and orderly developer. I have knowledge in TypeScript, Javascript, and PHP with UML, XML, SQL/NoSQL.\n\nI like so much web programming in general and I am pretty interested in developing a Full-Stack profile. I have a special taste for new technologies and give it all in each project.",
+    "introduction": "I consider myself a person with a profile based on responsibility, I am an active, recursive, creative, and orderly developer. I have knowledge in TypeScript, Javascript, and PHP with UML, XML, SQL/NoSQL.\nI like so much web programming in general and I am pretty interested in developing a Full-Stack profile. I have a special taste for new technologies and give it all in each project.",
     "databases": "MongoDB, PostgreSQL, MySQL, Redis.",
     "cicd": "Jenkins, Github Actions, SonarQube, Docker, CircleCI.",
     "backend": "Nest JS, Node JS, Express, Spring, RabbitMQ, Azure Service Bus, Amazon SQS, Laravel.",

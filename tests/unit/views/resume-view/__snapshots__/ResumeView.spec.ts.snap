@@ -6,7 +6,8 @@ exports[`+ ResumeView tests > Should match the snapshot 1`] = `
     <section class="row items-center mx-0 mt-0 px-0">
       <div class="w-full order-2 lg:basis-1/2 lg:order-1 px-8 pt-8 lg:m-auto"><span class="text-gray-500 text-lg">general.role</span>
         <h1 class="mt-2">general.resume.greetings <strong>José Duque.</strong></h1>
-        <p>general.resume.excerpt</p>
+        <p>general.resume.excerpt1</p>
+        <p>general.resume.excerpt2</p>
         <div class="button-container">
           <v-icon class="hover:animate-wiggle" name="vi-file-type-typescript-official" scale="2.5" title="Typescript"></v-icon>
           <v-icon class="hover:animate-wiggle" name="vi-file-type-node" scale="2.5" title="Node JS"></v-icon>
