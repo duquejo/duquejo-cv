@@ -10,9 +10,14 @@ import './style.css';
 
 addIcons(...iconsToAdd);
 
-createApp(App)
+const app = createApp(App)
   .component('v-icon', OhVueIcon )
   .use(VueQueryPlugin)
   .use(i18n)
-  .use(router)
-  .mount('#app');
+  .use(router);
+
+if (process.env.NODE_ENV === 'development') {
+  app.config.performance = true;
+}
+
+app.mount('#app');

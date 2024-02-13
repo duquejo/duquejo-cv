@@ -1,8 +1,10 @@
 
 <template>
   <button @click.stop="handleGeneratePdf"
-    class="group animate-bounce-subtle inline-flex items-center justify-center text-xs overflow-hidden rounded-2xl px-6 font-medium hover:bg-gray-100 hover:text-black bg-gray-100 leading-none py-0">
-    <div v-if="areDepsLoaded" class="relative inline-flex -translate-x-0 items-center transition group-hover:-translate-x-6">
+    class="group animate-bounce-subtle inline-flex items-center justify-center text-xs overflow-hidden rounded-2xl px-6 font-medium hover:bg-gray-100 hover:text-black bg-gray-100 leading-none py-0"
+    :disabled="!areDepsLoaded">
+    <div v-if="areDepsLoaded"
+      class="relative inline-flex -translate-x-0 items-center transition group-hover:-translate-x-6">
       <div class="absolute translate-x-0 opacity-100 transition group-hover:-translate-x-6 group-hover:opacity-0">
         <v-icon name="md-pictureaspdf" scale="0.9" />
       </div>
@@ -12,65 +14,23 @@
       </div>
     </div>
     <div class="cursor-wait" v-else>
-      <v-icon name="fa-spinner" scale="1" fill="gray" animation="spin"/>
+      <v-icon name="fa-spinner" scale="1" animation="spin" />
     </div>
   </button>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-
-const loadGenerate = () => import('@pdfme/generator');
-const loadSchema = () => import('@/components/pdf/config');
-const loadBasePDF = () => import('@/shared/constants/image');
-const loadTextPlugin = () => import('@pdfme/schemas');
-const loadUtilYears = () => import('@/shared/helpers/calculateYears');
-
-import type { Template } from '@pdfme/common';
 import useLanguageContext from '@/composables/useLanguageContext';
-
-const areDepsLoaded = ref<boolean>(true);
+const loadGeneratePdf = () => import('@/composables/useGeneratePdf');
 const { t, languageSources, locale } = useLanguageContext();
 
+const areDepsLoaded = ref<boolean>(true);
+
 const handleGeneratePdf = async () => {
-
   areDepsLoaded.value = false;
-  const deps = await Promise.all([loadGenerate(), loadSchema(), loadBasePDF(), loadTextPlugin(), loadUtilYears()]);
-  const { generate } = deps[0];
-  const { schema } = deps[1];
-  const { BASE_PDF_ES, BASE_PDF_EN } = deps[2];
-  const{ text } = deps[3];
-  const { calculateYears } = deps[4];
+  const useGeneratePdf = await loadGeneratePdf();
+  useGeneratePdf.default(locale, languageSources).createPdf();
   areDepsLoaded.value = true;
-
-  const template: Template = {
-    basePdf: locale.value === 'es' ? BASE_PDF_ES : BASE_PDF_EN,
-    schemas: schema,
-  };
-
-  const plugins = { text };
-
-  const inputs = [{
-    introduction: languageSources.value.pdf.introduction,
-    experience: `${calculateYears.value} ${languageSources.value.pdf.experience}`,
-    languages: languageSources.value.languages.map(lang => `${lang.title} - ${lang.content}`).join('\n'),
-    databases: languageSources.value.pdf.databases,
-    tools: languageSources.value.pdf.cloud,
-    backend: languageSources.value.pdf.backend,
-    cicd: languageSources.value.pdf.cicd,
-    frontend: languageSources.value.pdf.frontend,
-    architecture: languageSources.value.pdf.architecture,
-    programming_languages: languageSources.value.pdf.programming_languages,
-    methodologies: languageSources.value.pdf.methodologies,
-    security: languageSources.value.pdf.security,
-    email_bottom: 'duquejo01@gmail.com',
-    website_bottom: document.location.origin,
-  }];
-
-  generate({ template, plugins, inputs }).then((pdf) => {
-    // Browser
-    const blob = new Blob([pdf.buffer], { type: 'application/pdf' });
-    window.open(URL.createObjectURL(blob));
-  });
 }
 </script>
