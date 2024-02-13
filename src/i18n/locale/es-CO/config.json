@@ -18,7 +18,8 @@
     },
     "resume": {
       "greetings": "Hola, soy ",
-      "excerpt": "Ingeniero informático de Colombia con más de {numYear} años de experiencia en desarrollo de aplicaciones para la web utilizando los lenguajes más influyentes del mercado laboral, empleando tanto <strong>arquitecturas monolíticas</strong> como <strong>arquitecturas orientadas a microservicios</strong>.",
+      "excerpt1": "Ingeniero informático de Colombia con más de {numYear} años de experiencia en desarrollo de aplicaciones para la web.",
+      "excerpt2": "Estoy enfocado en garantizar soluciones de calidad basadas en buenas prácticas con tecnologías sobre <strong>arquitecturas monolíticas</strong> así como <strong>arquitecturas de microservicios</strong>.",
       "description": {
         "title": "¿Qué he realizado?",
         "content": "Durante mi vida laboral, he tenido la oportunidad poder tener una vista amplia de las necesidades puntuales del cliente para resolver cualquier reto tecnológico que se presente; he desempeñado roles como asesor y coordinador en equipos de desarrollo para empresas del sector público como la <strong>Alcaldía de Itagüí</strong>, <strong>Alcaldía de Bogotá</strong>, <strong>Ministerio de Educación Nacional</strong> y la <strong>Universidad EAFIT</strong>. También he participado en proyectos de desarrollos a la medida y desarrollo de sitios web con <strong>agencias de Marketing</strong> a tiempo completo y alternativamente como <strong>Freelancer</strong> a tiempo parcial.<br/></br />Con <strong>fábricas de software</strong> he tenido la oportunidad de trabajar para <strong>Startups educativas</strong> con gran alcance regional, así como para el sector <strong>Banca</strong>, <strong>Seguros</strong> y <strong>Salud</strong>, los cuales han permitido expandir conocimientos e ir acorde a la rigidez de las políticas de dicho mercado.<br/></br />Conforme a la búsqueda de una orientación más especializada a las tecnologías más populares, he participado sesiones de aprendizaje intensivo nacionales de <strong>Node JS</strong> y realizado de manera individual estudios sobre tecnologías Frontend como <strong>React JS</strong>, <strong>Vue JS</strong>, así como otros acercamientos básicos en <strong>Angular</strong>.<br/></br />Desde el Backend, estudios en <strong>arquitecturas basadas en microservicios</strong> usando <strong>Amazon Web Services</strong> y <strong>Azure DevOps</strong>, esto en búsqueda de perfilarme como un desarrollador Full Stack competente para las necesidades del mercado actual."
@@ -371,7 +372,7 @@
     }
   ],
   "pdf": {
-    "introduction": "Me considero una persona con un perfil basado en la responsabilidad, soy activo, recursivo, creativo y ordenado. Tengo conocimientos en TypeScript, Javascript y PHP con UML, XML, SQL/NoSQL.\n\nMe gusta la programación web y me interesa desarrollar un perfil Full-Stack. Tengo un gusto especial por aprender nuevas tecnologías y dar el 110% en cada proyecto.",
+    "introduction": "Me considero una persona con un perfil basado en la responsabilidad, soy activo, recursivo, creativo y ordenado. Tengo conocimientos en TypeScript, Javascript y PHP con UML, XML, SQL/NoSQL.\nMe gusta la programación web y me interesa desarrollar un perfil Full-Stack. Tengo un gusto especial por aprender nuevas tecnologías y dar el 110% en cada proyecto.",
     "databases": "MongoDB, PostgreSQL, MySQL, Redis.",
     "cicd": "Jenkins, Github Actions, SonarQube, Docker, CircleCI.",
     "backend": "Nest JS, Node JS, Express, Spring, RabbitMQ, Azure Service Bus, Amazon SQS, Laravel, REST, Websockets.",

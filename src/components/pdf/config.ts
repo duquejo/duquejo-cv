@@ -141,7 +141,7 @@ const schema: Record<string, Schema>[] = [
         x: 147,
         y: 278.9
       },
-      width: 34.23,
+      width: 50,
       height: 5,
       fontSize: 10,
     }

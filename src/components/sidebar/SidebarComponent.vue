@@ -4,7 +4,7 @@
     <!-- Middle Section -->
     <div class="flex flex-col justify-center items-center w-full lg:p-0 text-center text-base">
       <picture class="mb-5 overflow-hidden rounded-full w-40 h-40">
-        <img class="object-cover hover:grayscale-0 transition-all duration-200 hover:scale-110 delay-200" :src="smallAvatar" width="160" height="160" alt="José Duque" />
+        <img class="object-cover hover:grayscale-0 transition-all duration-200 hover:scale-110 delay-200" :src="smallAvatar" width="160" height="160" alt="José Duque" loading="lazy" />
       </picture>
       <NameTagComponent classes="mb-1 before:bg-transparent text-gray-700 hidden lg:block" size="small"/>
       <span class="text-2xl font-semibold sm:text-xl">José Duque</span>
