@@ -56,7 +56,7 @@
  }
 
  footer {
-  @apply flex items-center justify-between bg-gray-100 pb-14 lg:py-4 px-9 py-4 font-normal text-gray-600;
+  @apply flex items-center justify-between bg-gray-100 mb-12 lg:mb-0 px-9 py-2 font-normal text-gray-600;
  }
 
  strong, b {
@@ -64,7 +64,7 @@
  }
 
  section {
-  @apply flex flex-col mx-8 my-7 gap-x-10 gap-y-2 lg:px-2;
+  @apply flex flex-col mx-8 my-8 gap-x-10 gap-y-2 lg:px-2;
  }
 }
 
