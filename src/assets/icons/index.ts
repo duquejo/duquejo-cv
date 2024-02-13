@@ -26,6 +26,8 @@ import {
   FaSpinner,
   HiLightBulb,
   HiSolidLightBulb,
+  MdPictureaspdf,
+  RiDownloadCloud2Line,
 } from 'oh-vue-icons/icons';
 
 export const iconsToAdd: CustomizeIconType[] = [
@@ -55,4 +57,6 @@ export const iconsToAdd: CustomizeIconType[] = [
   FaSpinner,
   HiLightBulb,
   HiSolidLightBulb,
+  MdPictureaspdf,
+  RiDownloadCloud2Line,
 ];

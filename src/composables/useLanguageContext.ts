@@ -19,6 +19,7 @@ const useLanguageContext = () => {
   return {
     t,
     languageSources,
+    locale,
   };
 };
 

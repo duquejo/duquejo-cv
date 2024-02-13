@@ -11,6 +11,9 @@
     "test:coverage": "vitest --coverage"
   },
   "dependencies": {
+    "@pdfme/common": "^3.2.3",
+    "@pdfme/generator": "^3.2.3",
+    "@pdfme/schemas": "^3.2.3",
     "@tanstack/vue-query": "^5.17.9",
     "axios": "^1.6.5",
     "node-emoji": "^2.1.3",

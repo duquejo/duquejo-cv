@@ -6,6 +6,7 @@ exports[`+ App.vue tests > should match the snapshot 1`] = `
 <main data-v-7a7a37b1="" class="overflow-y-scroll bg-white transition-all duration-1000 relative">
   <router-view-stub data-v-7a7a37b1=""></router-view-stub>
 </main>
+<floating-container-component-stub data-v-7a7a37b1="" bottom="false"></floating-container-component-stub>
 <navigation-links-stub data-v-7a7a37b1="" size="small" layout="fixed"></navigation-links-stub>
 <!--v-if-->"
 `;

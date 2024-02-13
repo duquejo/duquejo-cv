@@ -10,13 +10,18 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily:{
-        'primary': ['Poppins', ...defaultTheme.fontFamily.sans ],
+      fontFamily: {
+        'primary': ['Poppins', ...defaultTheme.fontFamily.sans],
       },
       animation: {
         typewriter: 'typewriter 2s steps(11) forwards',
         caret: 'typewriter 2s steps(11) forwards, blink 1s steps(11) infinite 2s',
         wiggle: 'wiggle 1s ease-in infinite',
+        'bounce-subtle': 'bounce-subtle 1s 5',
+      },
+      transitionTimingFunction: {
+        'in-bezier': 'cubic-bezier(0.8,0,1,1)',
+        'out-bezier': 'cubic-bezier(0,0,0.2,1)',
       },
       keyframes: {
         typewriter: {
@@ -44,6 +49,10 @@ export default {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
+        },
+        'bounce-subtle': {
+          '0%, 100%': { transform: 'translateY(-5%)', animationTimingFunction: 'cubic-bezier(0.8,0,1,1)' },
+          '50%': { transform: 'none', animationTimingFunction: 'cubic-bezier(0,0,0.2,1)' },
         }
       },
     },

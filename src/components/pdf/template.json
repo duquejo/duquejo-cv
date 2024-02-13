@@ -1,0 +1,289 @@
+{
+  "schemas": [
+    {
+      "introduction": {
+        "type": "text",
+        "position": {
+          "x": 20.05,
+          "y": 77.06
+        },
+        "width": 169.9,
+        "height": 44.99,
+        "rotate": 0,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "fontSize": 13,
+        "lineHeight": 1.5,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      },
+      "experience": {
+        "type": "text",
+        "position": {
+          "x": 46.64,
+          "y": 154.14
+        },
+        "width": 53.49,
+        "height": 8,
+        "rotate": 0,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "fontSize": 17,
+        "lineHeight": 1,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      },
+      "languages": {
+        "type": "text",
+        "position": {
+          "x": 138.54,
+          "y": 149.02
+        },
+        "width": 51.37,
+        "height": 13.03,
+        "rotate": 0,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "fontSize": 15,
+        "lineHeight": 1,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      },
+      "databases": {
+        "type": "text",
+        "position": {
+          "x": 20,
+          "y": 193
+        },
+        "width": 80,
+        "height": 13,
+        "rotate": 0,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "fontSize": 11,
+        "lineHeight": 1,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      },
+      "tools": {
+        "type": "text",
+        "position": {
+          "x": 110,
+          "y": 193
+        },
+        "width": 80,
+        "height": 13,
+        "rotate": 0,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "fontSize": 11,
+        "lineHeight": 1,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      },
+      "backend": {
+        "type": "text",
+        "position": {
+          "x": 20,
+          "y": 212
+        },
+        "width": 80,
+        "height": 13,
+        "rotate": 0,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "fontSize": 11,
+        "lineHeight": 1,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      },
+      "cicd": {
+        "type": "text",
+        "position": {
+          "x": 110,
+          "y": 212
+        },
+        "width": 80,
+        "height": 13,
+        "rotate": 0,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "fontSize": 11,
+        "lineHeight": 1,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      },
+      "frontend": {
+        "type": "text",
+        "position": {
+          "x": 20,
+          "y": 235
+        },
+        "width": 80,
+        "height": 13,
+        "rotate": 0,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "fontSize": 11,
+        "lineHeight": 1,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      },
+      "architecture": {
+        "type": "text",
+        "position": {
+          "x": 20,
+          "y": 260
+        },
+        "width": 80,
+        "height": 13,
+        "rotate": 0,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "fontSize": 11,
+        "lineHeight": 1,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      },
+      "programming_languages": {
+        "type": "text",
+        "position": {
+          "x": 110,
+          "y": 235
+        },
+        "width": 80,
+        "height": 8,
+        "rotate": 0,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "fontSize": 11,
+        "lineHeight": 1,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      },
+      "methodologies": {
+        "type": "text",
+        "position": {
+          "x": 110,
+          "y": 264
+        },
+        "width": 80,
+        "height": 5,
+        "rotate": 0,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "fontSize": 11,
+        "lineHeight": 1,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      },
+      "security": {
+        "type": "text",
+        "position": {
+          "x": 110,
+          "y": 250
+        },
+        "width": 80,
+        "height": 5,
+        "rotate": 0,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "fontSize": 11,
+        "lineHeight": 1,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      },
+      "email_bottom": {
+        "type": "text",
+        "position": {
+          "x": 138,
+          "y": 287.2
+        },
+        "width": 41.63,
+        "height": 5,
+        "rotate": 0,
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "fontSize": 10,
+        "lineHeight": 1,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      },
+      "website_bottom": {
+        "type": "text",
+        "position": {
+          "x": 145.65,
+          "y": 281.9
+        },
+        "width": 34.23,
+        "height": 5,
+        "rotate": 0,
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "fontSize": 10,
+        "lineHeight": 1,
+        "characterSpacing": 0,
+        "fontColor": "#000000",
+        "backgroundColor": "",
+        "opacity": 1,
+        "fontName": "Roboto"
+      }
+    }
+  ],
+  "basePdf": "",
+  "columns": [
+    "introduction",
+    "experience",
+    "languages",
+    "databases",
+    "tools",
+    "backend",
+    "cicd",
+    "frontend",
+    "architecture",
+    "programming_languages",
+    "methodologies",
+    "security",
+    "email_bottom",
+    "website_bottom"
+  ]
+}

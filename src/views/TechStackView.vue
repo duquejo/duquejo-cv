@@ -30,7 +30,6 @@
           :enterprise="enterprise" :is-recent="isRecent" :project="project" :resume="resume" :key="index" />
       </div>
       <div class="basis-1/2">
-
         <!-- Idiomas -->
         <h3 class="text-h3 mb-6 mt-5">{{ t('general.services.languages.title') }}</h3>
         <div class="grid grid-cols-2 gap-x-8 gap-y-6">
