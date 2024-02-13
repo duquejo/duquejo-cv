@@ -1,4 +1,8 @@
-import { Schema } from '@pdfme/common';
+import type { Ref } from 'vue';
+import type { MessageSchema } from '@/i18n/config';
+import type { Schema, Template } from '@pdfme/common';
+import { calculateYears } from '@/shared/helpers/calculateYears';
+import { BASE_PDF_EN, BASE_PDF_ES } from '@/shared/constants/image';
 
 const schema: Record<string, Schema>[] = [
   {
@@ -148,4 +152,26 @@ const schema: Record<string, Schema>[] = [
   }
 ];
 
-export { schema };
+const generateInputs = (languageSources: Ref<MessageSchema>): Record<string, string>[] => ([{
+  introduction: languageSources.value.pdf.introduction,
+  experience: `${calculateYears.value} ${languageSources.value.pdf.experience}`,
+  languages: languageSources.value.languages.map((lang: { title: string, content: string }) => `${lang.title} - ${lang.content}`).join('\n'),
+  databases: languageSources.value.pdf.databases,
+  tools: languageSources.value.pdf.cloud,
+  backend: languageSources.value.pdf.backend,
+  cicd: languageSources.value.pdf.cicd,
+  frontend: languageSources.value.pdf.frontend,
+  architecture: languageSources.value.pdf.architecture,
+  programming_languages: languageSources.value.pdf.programming_languages,
+  methodologies: languageSources.value.pdf.methodologies,
+  security: languageSources.value.pdf.security,
+  email_bottom: 'duquejo01@gmail.com',
+  website_bottom: document.location.origin,
+}]);
+
+const generateBaseTemplate = (locale: Ref<string>): Template => ({
+  basePdf: locale.value === 'es' ? BASE_PDF_ES : BASE_PDF_EN,
+  schemas: schema,
+});
+
+export { generateInputs, generateBaseTemplate };
