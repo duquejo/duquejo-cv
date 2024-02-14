@@ -18,7 +18,7 @@
     },
     "resume": {
       "greetings": "Hi, I'm",
-      "excerpt1": "Colombian computer engineer with more than {numYear} years of experience in web application development.",
+      "excerpt1": "Colombian Software Engineer with more than {numYear} years of experience in web application development.",
       "excerpt2": "I am focused on guaranteeing quality solutions based on good practices with technologies on <strong>monolithic architectures</strong> as well as <strong>microservices architectures</strong>.",
       "description": {
         "title": "What have I done?",
@@ -71,7 +71,7 @@
       "enterprise": "Politécnico Colombiano Jaime Isaza Cadavid",
       "isRecent": true,
       "project": "Professional",
-      "role": "Informatics Engineering",
+      "role": "Software Engineering",
       "type": "paragraph",
       "resume": "",
       "additional_info": ""

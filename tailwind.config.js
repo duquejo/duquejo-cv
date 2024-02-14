@@ -17,7 +17,7 @@ export default {
         typewriter: 'typewriter 2s steps(11) forwards',
         caret: 'typewriter 2s steps(11) forwards, blink 1s steps(11) infinite 2s',
         wiggle: 'wiggle 1s ease-in infinite',
-        'bounce-subtle': 'bounce-subtle 1s 5',
+        'bounce-subtle': 'bounce-subtle 1s 10',
       },
       transitionTimingFunction: {
         'in-bezier': 'cubic-bezier(0.8,0,1,1)',
