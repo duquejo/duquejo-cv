@@ -6,7 +6,6 @@ import createVueI18n from "../../../mocks/mock-i18n";
 
 import * as orderByValue from '../../../../src/shared/helpers/orderByValue';
 import * as useLanguageContext from '../../../../src/composables/useLanguageContext';
-import { nextTick } from "vue";
 
 describe('+ TechStackView tests', () => {
 
