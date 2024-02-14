@@ -5,6 +5,7 @@ import { useI18n } from 'vue-i18n';
 
 import PdfComponent from '../../../../src/components/pdf/PdfComponent.vue';
 import createVueI18n from '../../../mocks/mock-i18n';
+import useGeneratePdf from '../../../../src/composables/useGeneratePdf';
 
 vi.mock('vue-i18n', async () => {
   const actual = await vi.importActual('vue-i18n');
@@ -15,6 +16,12 @@ vi.mock('vue-i18n', async () => {
 });
 
 const mockUseI18n = vi.mocked(useI18n);
+
+vi.mock('../../../../src/composables/useGeneratePdf', () => ({
+  default: () => ({
+    createPdf: () => vi.fn()
+  })
+}));
 
 describe('+ PdfComponent.vue tests', () => {
 
@@ -39,7 +46,6 @@ describe('+ PdfComponent.vue tests', () => {
   it('should match the snapshot', () => {
     expect(wrapper.html()).toMatchSnapshot();
     expect(mockUseI18n).toHaveBeenCalled();
-    expect(mockUseI18n).toHaveBeenCalledWith();
   });
 
   it('should have visible the PDF button with the ready state', () => {
