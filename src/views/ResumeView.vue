@@ -12,7 +12,7 @@
         </div>
       </div>
       <picture class="w-full order-1 lg:basis-1/2 lg:order-2 overflow-hidden">
-        <img class="shadow transition-all duration-500 scale-110 hover:rotate-3" alt="José Miguel Duque"
+        <img class="shadow transition-all duration-500 scale-110 hover:rotate-3 aspect-[200/170]" alt="José Miguel Duque"
           :class="isPortraitLoaded ? 'opacity-100' : 'opacity-0'" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
           /static/img/avatar_w_200.webp 200w,
           /static/img/avatar_w_558.webp 558w,

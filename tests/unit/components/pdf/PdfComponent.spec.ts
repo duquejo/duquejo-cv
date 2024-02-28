@@ -5,7 +5,6 @@ import { useI18n } from 'vue-i18n';
 
 import PdfComponent from '../../../../src/components/pdf/PdfComponent.vue';
 import createVueI18n from '../../../mocks/mock-i18n';
-import useGeneratePdf from '../../../../src/composables/useGeneratePdf';
 
 vi.mock('vue-i18n', async () => {
   const actual = await vi.importActual('vue-i18n');
