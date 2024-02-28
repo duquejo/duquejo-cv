@@ -16,7 +16,7 @@ exports[`+ ResumeView tests > Should match the snapshot 1`] = `
           <v-icon class="hover:animate-wiggle" name="vi-file-type-reactjs" scale="2.5" title="React JS"></v-icon>
         </div>
       </div>
-      <picture class="w-full order-1 lg:basis-1/2 lg:order-2 overflow-hidden"><img class="shadow transition-all duration-500 scale-110 hover:rotate-3 opacity-0" alt="José Miguel Duque" sizes="(max-width: 1400px) 100vw, 1400px" srcset="/static/img/avatar_w_200.webp 200w, /static/img/avatar_w_558.webp 558w, /static/img/avatar_w_825.webp 825w, /static/img/avatar_w_1089.webp 1089w, /static/img/avatar_w_1255.webp 1255w, /static/img/avatar_w_1400.webp 1400w" src="/static/img/avatar_w_1400.webp"></picture>
+      <picture class="w-full order-1 lg:basis-1/2 lg:order-2 overflow-hidden"><img class="shadow transition-all duration-500 scale-110 hover:rotate-3 aspect-[200/170] opacity-0" alt="José Miguel Duque" sizes="(max-width: 1400px) 100vw, 1400px" srcset="/static/img/avatar_w_200.webp 200w, /static/img/avatar_w_558.webp 558w, /static/img/avatar_w_825.webp 825w, /static/img/avatar_w_1089.webp 1089w, /static/img/avatar_w_1255.webp 1255w, /static/img/avatar_w_1400.webp 1400w" src="/static/img/avatar_w_1400.webp"></picture>
     </section>
     <section>
       <h2 class="text-h2">general.resume.description.title</h2>
