@@ -23,7 +23,7 @@ Thank you for visiting, and I look forward to connecting with you!
 - Vitest (Vite-native testing framework)
 - Tailwind (Utility-first CSS Framework)
 - TanStack Vue-Query (HTTP Requests state management)
-- Axios (External HTTP Requestshandling)
+- Axios (External HTTP Requests handling)
 - Vue I18N (Internationalization)
 - Vercel (Deployment & Statistics)
 
