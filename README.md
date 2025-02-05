@@ -1,8 +1,6 @@
 # José Duque Curriculum Vitae (old)
 
-**Site URL: [www.duquejo.com](https://www.duquejo.com/)**
-
-Hi!, Welcome to my legacy GitHub CV repository dedicated to showcasing my professional journey! This repository serves as an interactive and dynamic Curriculum Vitae, providing an in-depth look at my skills, experiences, and projects. Please visit the renewed site, that has modern features like SSR and SEO optimization given by Next JS.
+Hi!, Welcome to my legacy GitHub CV repository dedicated to showcasing my professional journey! This repository serves as an interactive and dynamic Curriculum Vitae, providing an in-depth look at my skills, experiences, and projects. Please visit the renewed site, that has modern features like SSR and SEO optimization given by Next JS: https://github.com/duquejo/duquejo-cv-next
 
 Thank you for visiting, and I look forward to connecting with you!
 
